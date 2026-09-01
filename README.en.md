@@ -171,6 +171,8 @@ A free-text answer is carried into the register **in the user's own wording**. I
 
 Progress lives in the Grip Register, so ending a session mid-way resumes from the first `UNRESOLVED` topic next time. The state of waiting on more material (`MATERIAL_PENDING`) is preserved too, leaving a checklist of exactly what to bring.
 
+The same holds when a session ends by hitting its question cap (`BUDGET_REACHED`) — except that **the cap does not carry over**. On re-invocation you are told how many topics remain, and you set a fresh cap for this session.
+
 ---
 
 ## Three Pillars
@@ -307,7 +309,7 @@ B. Direction of interest — which ambiguity you want cleared
                            (e.g. business scope & pricing / membership & refund policy /
                             measurement & analysis design / deliverables & acceptance criteria)
 C. Completion condition  — how far to go (default: every unresolved topic in that direction RESOLVED)
-                           naming a question or turn cap makes it this session's limit
+                           naming a question cap makes it this session's limit (it does not carry over)
 D. OUTPUT target         — where decisions land (default: rationale docs + normative docs)
 ```
 
@@ -407,7 +409,7 @@ contract:
   register_file=docs/grip/GRIP_REGISTER.md  # counter "RESOLVED: n / DROPPED: d / TOTAL: m", resumable
   register_stub_on_material_pending=true
   stop_reasons=[ALL_RESOLVED, USER_PAUSED, MATERIAL_PENDING, BUDGET_REACHED]
-  budget=set in Intake C when the user names a question/turn cap; remaining topics stay in the register for resume
+  budget=set in Intake C when the user names a question cap; counted as questions actually asked (a re-confirm counts as one); never carried over between sessions; remaining topics stay in the register for resume
   output_separates_areas_with=horizontal rules (---) per turn
 ```
 

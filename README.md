@@ -171,6 +171,8 @@ cohort(코호트: 같은 시기에 유입된 사용자 묶음)
 
 진척이 결정 기록부에 남으므로, 세션을 중간에 끝내도 다음에 첫 `UNRESOLVED` 토픽부터 이어갑니다. 재료 보강을 기다리는 상태(`MATERIAL_PENDING`)도 그대로 보존되어, 무엇을 가져와야 하는지 목록이 남습니다.
 
+문항 수 상한에 걸려 끝난 경우(`BUDGET_REACHED`)도 마찬가지입니다. 다만 **상한은 이월되지 않습니다** — 다시 부르면 남은 토픽 수를 알려드리고, 이번에는 몇 개까지 할지 새로 정합니다.
+
 ---
 
 ## 3대 핵심 요건 (Three Pillars)
@@ -308,7 +310,7 @@ curl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.age
 A. 참조 범위        — 근거로 삼을 자료 (R1~R5 역할로 판단, 형식·도메인 무관)
 B. 핵심 관심 방향   — 무엇의 모호함을 정리하는가
 C. 작업 범위·완료조건 — 어디까지 (기본: 관심 방향 미해소 토픽 전부 RESOLVED)
-                       문항 수·턴 수를 지정하면 그것이 이번 세션의 상한이 됩니다
+                       문항 수를 지정하면 그것이 이번 세션의 상한이 됩니다 (이월되지 않음)
 D. 작업 결과 OUTPUT — 어디에 반영 (기본: 근거 문서 + 규범 문서)
 ```
 
@@ -408,7 +410,7 @@ contract:
   register_file=docs/grip/GRIP_REGISTER.md  # counter "RESOLVED: n / DROPPED: d / TOTAL: m", resumable
   register_stub_on_material_pending=true
   stop_reasons=[ALL_RESOLVED, USER_PAUSED, MATERIAL_PENDING, BUDGET_REACHED]
-  budget=set in Intake C when the user names a question/turn cap; remaining topics stay in the register for resume
+  budget=set in Intake C when the user names a question cap; counted as questions actually asked (a re-confirm counts as one); never carried over between sessions; remaining topics stay in the register for resume
   output_separates_areas_with=horizontal rules (---) per turn
 ```
 

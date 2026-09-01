@@ -79,23 +79,45 @@ code, pre { font-family: var(--font-mono); }
 .repo-link { font-size: 0.88rem; text-decoration: none; }
 .repo-link:hover { text-decoration: underline; }
 
-/* ---------- S0 히어로 (전체 폭) ---------- */
-.hero { position: relative; padding: 0 0 5rem; overflow: hidden; }
-.hero-visual {
-  position: relative;
-  width: 100%; height: 62vh; min-height: 340px; max-height: 680px;
-  background: linear-gradient(180deg, var(--sun-100), var(--sun-050));
+/* ---------- 손 연출 배경 레이어 (히어로 → S6 데모) ---------- */
+.hand-stage {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  will-change: opacity;
 }
-.hero-visual img {
-  width: 100%; height: 100%; object-fit: cover; object-position: center 45%;
+.hand-stage img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 48%;
   display: block;
 }
 .hand-flash {
-  position: absolute; inset: 0; pointer-events: none; opacity: 0;
-  background: radial-gradient(circle at 50% 55%, var(--glow) 0%, rgba(255, 217, 160, 0.35) 28%, rgba(255, 217, 160, 0) 62%);
+  position: absolute; inset: 0; opacity: 0;
+  background: radial-gradient(circle at 50% 52%, var(--glow) 0%, rgba(255, 217, 160, 0.4) 26%, rgba(255, 217, 160, 0) 60%);
   mix-blend-mode: screen;
 }
-.hero-copy { margin-top: -2.5rem; position: relative; }
+/* 본문 가독성용 막.
+   --scrim 은 hero.js가 스크롤에 따라 올린다 — 히어로에서는 거의 걷어 손이 또렷하게 보이고,
+   산문이 시작되면 짙어져 글자가 배경과 다투지 않게 한다. */
+.hand-scrim {
+  position: absolute; inset: 0;
+  --scrim: 0.12;
+  background: linear-gradient(180deg,
+    rgba(255, 250, 242, calc(var(--scrim) * 0.45)) 0%,
+    rgba(255, 250, 242, calc(var(--scrim) * 0.85)) 38%,
+    rgba(255, 250, 242, var(--scrim)) 70%,
+    rgba(255, 250, 242, calc(var(--scrim) * 1.08)) 100%);
+  transition: background 220ms linear;
+}
+
+/* 본문은 배경 위에 얹힌다 (.topbar는 sticky·z-index 20을 유지해야 하므로 제외) */
+main, .footer { position: relative; z-index: 1; }
+
+/* ---------- S0 히어로 (전체 폭) ---------- */
+.hero {
+  position: relative;
+  min-height: 96vh;
+  display: flex; align-items: flex-end;
+  padding: 26vh 0 5rem;
+}
+.hero-copy { position: relative; width: 100%; }
 .hero h1 {
   font-size: clamp(2rem, 5.4vw, 3.2rem); line-height: 1.25; margin: 0 0 0.6rem;
   letter-spacing: -0.02em;

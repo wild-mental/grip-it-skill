@@ -32,7 +32,7 @@ What this skill protects is not speed. It is **ownership of the work**.
 
 ### 1. What gets handled is the "problem," not "you"
 
-Many existing reverse-interview techniques lean on relentless, grilling questioning that simply wears the user down. Pressing someone for answers may extract information, but it also leaves them too tired to answer carefully — or ready to abandon the session altogether.
+Many existing reverse-interview techniques — where the AI questions the user rather than the other way round — lean on relentless, grilling questioning that simply wears the user down. Pressing someone for answers may extract information, but it also leaves them too tired to answer carefully — or ready to abandon the session altogether.
 
 Grip It drops that approach and moves the subject of the questioning from the person to the **problem**: "this point of this **problem** has not been decided yet." Every question comes with a **recommended option + rationale**, so you only need to **confirm or correct** rather than generate an answer from scratch.
 
@@ -40,15 +40,17 @@ Grip It drops that approach and moves the subject of the questioning from the pe
 
 Before asking anything, it verifies that your reference material provides the **baseline** needed to extract topics. Topics pulled without that baseline are not extraction but **invention**, and once invented items slip in, the whole record becomes untrustworthy.
 
-| | Material role | Grade |
+| | Material role | If it is empty |
 |---|---|---|
-| **R1** | Purpose · success criteria | Required · **extraction baseline** |
-| **R2** | Audience · stakeholders | Required · judgment basis |
-| **R3** | Scope · deliverable definition | Required · **extraction baseline** |
-| **R4** | Constraints (budget, schedule, regulation, ethics) | Recommended · judgment basis |
-| **R5** | Current progress · decisions already made | Recommended |
+| **R1** | Purpose · success criteria | **The skill cannot start — the gate opens** |
+| **R2** | Scope · deliverable definition | **The skill cannot start — the gate opens** |
+| **R3** | Audience · stakeholders | Raised as the first CORE topic and settled first |
+| **R4** | Constraints (budget, schedule, regulation, ethics) | Raised as the first CORE topic and settled first |
+| **R5** | Current progress · decisions already made | You may be asked again about something already settled |
 
-If R1 or R3 is missing, the gate opens and offers **exactly two paths** — **A) add material and re-invoke**, or **B) build the anchor in this conversation and continue.** There is deliberately no "proceed anyway" path. A missing R2 or R4 does not open the gate; it is **absorbed as the first CORE topic** and the session proceeds normally.
+The first two, **R1 and R2, are the extraction baseline**: without a purpose and a scope there is no way to judge what is missing.
+
+If R1 or R2 is empty, the gate opens and offers **exactly two paths** — **A) add material and re-invoke**, or **B) build the anchor in this conversation and continue.** There is deliberately no "proceed anyway" path. An empty R3 or R4 does not open the gate; it is **absorbed as the first CORE topic** and the session proceeds normally.
 
 ### 3. Any domain document can serve as material
 
@@ -57,8 +59,8 @@ Judgment is by **role**, not by document name, so no PRD/SRS is required.
 | Role | Business planning | Service planning | Research | General office |
 |---|---|---|---|---|
 | R1 | Business goals · KPIs | Service concept · target metrics | Research question · hypotheses | Statement-of-work purpose |
-| R2 | Target customers · competitive analysis | Customer segments · JTBD | Population · sample definition | Recipients · approval chain |
-| R3 | Business scope · BM canvas | Service scope · feature list | Research scope · measurement structure | Task scope (RFP/SOW) |
+| R2 | Business scope · BM canvas | Service scope · feature list | Research scope · measurement structure | Task scope (RFP/SOW) |
+| R3 | Target customers · competitive analysis | Customer segments · JTBD | Population · sample definition | Recipients · approval chain |
 | R4 | Budget · regulation | Operating capacity · policy | Research ethics · data access | Budget · internal rules |
 | R5 | Progress reports · decision log | Release notes | Prior work · research notes | Minutes · approval history |
 
@@ -88,7 +90,7 @@ A decision written down somewhere becomes a subject of debate again at the next 
 
 | Layer | What it holds | Example |
 |---|---|---|
-| **Gripping history** | The deciding as it happens: what is still open, what was decided and why, and where it was applied | One file, the Grip Register at `docs/grip/GRIP_REGISTER.md` |
+| **Gripping record** | The deciding as it happens: what is still open, what was decided and why, and where it was applied | One file, the Grip Register at `docs/grip/GRIP_REGISTER.md` |
 | **Active project docs** | The settled result: your real project documents, where confirmed decisions go to live | The two kinds below |
 
 Active project docs divide again by what they do.
@@ -98,7 +100,17 @@ Active project docs divide again by what they do.
 | **Rationale docs** | Hold the decision and its reasoning, so "why did we settle on this?" stays answerable later | Planning docs · business plans · research protocols · minutes |
 | **Normative docs** | Are read and complied with automatically by later work, so the same decision is not renegotiated | Team rules · approval criteria · operating policy · **preregistration** · `CLAUDE.md`, rules, hooks |
 
-Preregistration in research shows clearly what a normative doc is: register the analysis plan before collecting data, and later behavior is bound by it — departing from it requires an explicit stated reason. Fill only the rationale docs and leave the normative ones empty, and decisions get made but not kept.
+What counts as a normative doc differs by domain.
+
+| Domain | Rationale docs | Normative docs |
+|---|---|---|
+| Business planning | Business plan · decision log | Team rules · approval criteria · spending guidelines · standard templates |
+| Service planning | Service plan · policy docs | Operating policy · support-response criteria · release checklist |
+| Research | Research protocol · lab notes | **Preregistration** · IRB protocol · analysis plan |
+| General office | Minutes · memos | Work regulations · approval criteria · standard forms |
+| Software | PRD · SRS · ADR | `CLAUDE.md` · `AGENTS.md` · rules · hooks · settings |
+
+Preregistration in research shows most clearly what a normative doc is: register the analysis plan before collecting data, and later behavior is bound by it — departing from it requires an explicit stated reason. Fill only the rationale docs and leave the normative ones empty, and decisions get made but not kept.
 
 ### 7. It asks in a kind, explanatory conversational register
 
@@ -180,7 +192,7 @@ The skill does not advance unless all three hold at once.
 ### Prerequisites
 
 - Cursor, Claude Code, or Codex
-- **Reference material** (at minimum, something filling R1 and R3) and a **direction of interest**
+- **Reference material** (at minimum, something filling R1 and R2) and a **direction of interest**
 
 ### Installing the skill
 
@@ -253,6 +265,13 @@ Tell the agent which material to reference and what you want clarified, then ask
 - "Using the statement of work, let's settle the deliverable definition and the acceptance criteria"
 - "We stopped partway last time — pick up from the remaining topics"
 
+**If you want to fix the number of rounds in advance,** say so when you start. The number you name becomes this session's cap, and reaching it ends the session with `BUDGET_REACHED`. Remaining topics stay in the Grip Register, so you can pick them up later.
+
+- "Using the plan doc — **just five questions today**, and we'll continue the rest next time"
+- "Sort out the most important ones **within ten questions**"
+
+This lets you start without the worry of not knowing how long it will take. Since the full topic list is shown up front, you can also see at the outset which topics fit inside the cap and which will be left over.
+
 ---
 
 ## OUTPUT: what remains
@@ -270,11 +289,11 @@ Tell the agent which material to reference and what you want clarified, then ask
 | Step | Content |
 |------|------|
 | Step 0 — Intake & Scope Lock | Confirm reference scope (A), direction (B), completion condition (C), output target (D). Ask first if A or B is missing |
-| **Step 0.5 — Material Check** | Read only within scope to judge R1–R5. A missing baseline (R1/R3) opens the gate → **two options, A or B**. A missing judgment basis (R2/R4) is absorbed as the first CORE topic |
+| **Step 0.5 — Material Check** | Read only within scope to judge R1–R5. An empty baseline (R1/R2) opens the gate → **two options, A or B**. An empty judgment basis (R3/R4) is absorbed as the first CORE topic |
 | Step 1 — Topic Extraction | Read only within scope, extract every unresolved topic, present the register by CORE/MINOR and dependency order (end if zero) |
 | Step 2 — Grip the Topic | One first-UNRESOLVED topic: options + recommendation + **`[terms]` block** + **Other option** + a single question |
 | Step 3 — Resolve & Persist | On confirmation, update the rationale and normative docs and the register before moving on |
-| Step 4 — Advance or Stop | Next topic, or stop (ALL_RESOLVED / USER_PAUSED / **MATERIAL_PENDING** / BUDGET) |
+| Step 4 — Advance or Stop | Next topic, or stop (ALL_RESOLVED / USER_PAUSED / **MATERIAL_PENDING** / BUDGET_REACHED) |
 | Step 5 — Resume | On re-invocation, read the register and resume from material check or the first UNRESOLVED topic |
 | Step 6 — Closeout | Show the counter and stop reason, and summarize this session's changes |
 
@@ -288,10 +307,11 @@ B. Direction of interest — which ambiguity you want cleared
                            (e.g. business scope & pricing / membership & refund policy /
                             measurement & analysis design / deliverables & acceptance criteria)
 C. Completion condition  — how far to go (default: every unresolved topic in that direction RESOLVED)
+                           naming a question or turn cap makes it this session's limit
 D. OUTPUT target         — where decisions land (default: rationale docs + normative docs)
 ```
 
-A and B are your intent and cannot be substituted; if either is missing, the skill asks before starting. The material itself (R1-R5) is content and can be filled through conversation, so only a missing baseline (R1/R3) opens the gate, while a missing R2 or R4 is absorbed as the first CORE topic.
+A and B are your intent and cannot be substituted; if either is missing, the skill asks before starting. The material itself (R1-R5) is content and can be filled through conversation, so only an empty baseline (R1/R2) opens the gate, while an empty R3 or R4 is absorbed as the first CORE topic.
 
 ---
 
@@ -367,9 +387,9 @@ contract:
   refuse_until_present=[A, B]
   must_not_scan_outside_scope=true
   pillars=[Boundedness (scoped reference + extraction baseline present + bounded exploration), Visibility (extract full topic list up front + show progress each turn), Persistence (apply each decision to rationale + normative docs immediately, before next topic)]
-  material_roles=[R1 purpose/success-criteria (baseline), R2 audience/stakeholders (judgment), R3 scope/deliverable (baseline), R4 constraints (judgment), R5 current-progress]
-  material_gate=trigger only on R1/R3 deficit; options are exactly [A: add reference material and re-invoke -> STOP MATERIAL_PENDING, B: build anchor in-session then proceed]; never offer "proceed anyway"
-  material_gate_recommend=[B when zero refs or both R1+R3 missing, else A]
+  material_roles=[R1 purpose/success-criteria (baseline), R2 scope/deliverable (baseline), R3 audience/stakeholders (judgment), R4 constraints (judgment), R5 current-progress]
+  material_gate=trigger only when R1 or R2 is empty; options are exactly [A: add reference material and re-invoke -> STOP MATERIAL_PENDING, B: build anchor in-session then proceed]; never offer "proceed anyway"
+  material_gate_recommend=[B when zero refs or both R1+R2 missing, else A]
   r2_r4_deficit=absorb as first CORE topic, do not trigger gate
   step1_extract_before_questions=true
   one_topic_at_a_time=true
@@ -382,11 +402,12 @@ contract:
   language_tone_exception=structure blocks (register rows, counters, tables) stay terse for grep/resume
   term_notation_format=English Term(Korean equivalent: short gloss); gloss only when no established Korean equivalent
   term_notation=[keep English technical terms + short parenthetical gloss; transliteration only if established, else local term + original in parens; check polysemous mistranslations; priority = existing project notation > field standard > agent's own translation]
-  output_layers=[gripping-history = the Grip Register file (one), active project docs = rationale docs + normative docs]
+  output_layers=[gripping record = the Grip Register file (one), active project docs = rationale docs + normative docs]
   decision_class=[CORE = irreversible or constrains other decisions -> rationale+normative docs required, MINOR -> register + one-line doc]
   register_file=docs/grip/GRIP_REGISTER.md  # counter "RESOLVED: n / DROPPED: d / TOTAL: m", resumable
   register_stub_on_material_pending=true
-  stop_reasons=[ALL_RESOLVED, USER_PAUSED, MATERIAL_PENDING, BUDGET]
+  stop_reasons=[ALL_RESOLVED, USER_PAUSED, MATERIAL_PENDING, BUDGET_REACHED]
+  budget=set in Intake C when the user names a question/turn cap; remaining topics stay in the register for resume
   output_separates_areas_with=horizontal rules (---) per turn
 ```
 

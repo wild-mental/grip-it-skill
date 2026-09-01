@@ -20,7 +20,7 @@
 | 오너십이 새는 지점 | `grip-it`의 장치 |
 |---|---|
 | 근거가 부족해도 그럴듯한 항목을 지어낸다 | **재료 점검 게이트** — 기준선이 없으면 토픽을 뽑지 않습니다 |
-| 전체 판을 모른 채 질문에 끌려간다 | **토픽 전체 선(先)가시화** — 몇 번 문답할지 처음부터 압니다 |
+| 전체 판을 모른 채 질문에 끌려간다 | **토픽 전체를 미리 보여주기** — 몇 번 문답할지 처음부터 압니다 |
 | 뜻을 모르는 제안을 그대로 승인한다 | **`[용어]` 해설 + 설명적 대화체** — 이해한 것만 결정합니다 |
 | AI가 제시한 보기 안에서만 고른다 | **기타(직접 입력) 상시 옵션** — 내 방식으로 답할 수 있습니다 |
 | 정한 내용이 대화에 흩어진다 | **결정 기록부 + 근거 문서** — 무엇을 왜 정했는지 남습니다 |
@@ -32,7 +32,7 @@
 
 ### 1. 다루는 대상은 "나"가 아니라 "문제"다
 
-기존의 많은 사용자 역인터뷰 기술들은 지나치게 사용자를 피로하게 만드는 방식(relentless, grill)을 취하곤 했습니다. 답을 캐내기 위해 사용자를 몰아붙이면 정보는 얻어도, 정작 사용자가 지쳐 대충 답하거나 중간에 그만두게 됩니다.
+기존의 많은 reverse interview(역인터뷰: AI가 사용자에게 되묻는 방식) 기술들은 지나치게 사용자를 피로하게 만드는 방식(relentless, grill)을 취하곤 했습니다. 답을 캐내기 위해 사용자를 몰아붙이면 정보는 얻어도, 정작 사용자가 지쳐 대충 답하거나 중간에 그만두게 됩니다.
 
 Grip It 에서는 이런 방식을 버리고, 추궁의 대상을 사람이 아닌 **문제**로 옮깁니다. "이 **문제**의 이 지점이 아직 정해지지 않았습니다"처럼 문제를 주어로 다루고, 모든 질문에는 **권장안 + 근거**를 붙입니다. 사용자는 매번 답을 새로 생성하지 않고 **확인·교정**만 하면 됩니다.
 
@@ -40,15 +40,17 @@ Grip It 에서는 이런 방식을 버리고, 추궁의 대상을 사람이 아�
 
 질문을 시작하기 전에, 참조 자료가 토픽을 뽑을 **기준선**을 갖췄는지 확인합니다. 기준선 없이 뽑은 토픽은 추출이 아니라 **발명**이고, 지어낸 항목이 한 번 섞여 들어가면 기록 전체를 믿을 수 없게 됩니다.
 
-| | 재료 역할 | 등급 |
+| | 재료 역할 | 비어 있으면 |
 |---|---|---|
-| **R1** | 목적 · 성공 기준 | 필수 · **추출 기준선** |
-| **R2** | 대상 · 수요자 · 이해관계자 | 필수 · 판단 근거 |
-| **R3** | 범위 · 산출물 정의 | 필수 · **추출 기준선** |
-| **R4** | 제약조건 (예산·일정·규정·윤리) | 권장 · 판단 근거 |
-| **R5** | 현재 진척 · 기결정 사항 | 권장 |
+| **R1** | 목적 · 성공 기준 | **시작하지 못합니다 — 게이트가 열립니다** |
+| **R2** | 범위 · 산출물 정의 | **시작하지 못합니다 — 게이트가 열립니다** |
+| **R3** | 대상 · 수요자 · 이해관계자 | 첫 CORE 토픽으로 세워 먼저 정합니다 |
+| **R4** | 제약조건 (예산·일정·규정·윤리) | 첫 CORE 토픽으로 세워 먼저 정합니다 |
+| **R5** | 현재 진척 · 기결정 사항 | 이미 정한 것을 다시 물을 수 있습니다 |
 
-R1·R3가 비면 게이트가 열리고 **두 갈래만** 제시합니다 — **A) 자료를 보강한 뒤 재호출** 또는 **B) 지금 대화로 앵커를 세우고 이어서 시작.** "결손을 감수하고 그냥 시작"하는 경로는 두지 않습니다. R2·R4 결손은 게이트를 열지 않고 **첫 CORE 토픽으로 흡수**해 정상 진행합니다.
+앞의 둘 **R1·R2가 추출 기준선**입니다. 목적과 범위가 있어야 무엇이 빠졌는지 판정할 수 있기 때문입니다.
+
+R1·R2가 비면 게이트가 열리고 **두 갈래만** 제시합니다 — **A) 자료를 보강한 뒤 재호출** 또는 **B) 지금 대화로 앵커를 세우고 이어서 시작.** "비어 있는 채로 그냥 시작"하는 경로는 두지 않습니다. R3·R4가 비어 있을 때는 게이트를 열지 않고 **첫 CORE 토픽으로 흡수**해 정상 진행합니다.
 
 ### 3. 도메인 문서 무엇이든 재료가 된다
 
@@ -57,8 +59,8 @@ R1·R3가 비면 게이트가 열리고 **두 갈래만** 제시합니다 — **
 | 역할 | 사업기획 | 서비스기획 | 연구·리서치 | 일반 사무 |
 |---|---|---|---|---|
 | R1 | 사업목표·KPI | 서비스 컨셉·목표 지표 | 연구질문·가설 | 과업지시서 목적 |
-| R2 | 타깃 고객·경쟁 분석 | 고객 세그먼트·JTBD | 모집단·표본 정의 | 수신처·결재선 |
-| R3 | 사업 범위·BM 캔버스 | 서비스 범위·기능 목록 | 연구 범위·측정 구성 | 과업 범위(RFP/SOW) |
+| R2 | 사업 범위·BM 캔버스 | 서비스 범위·기능 목록 | 연구 범위·측정 구성 | 과업 범위(RFP/SOW) |
+| R3 | 타깃 고객·경쟁 분석 | 고객 세그먼트·JTBD | 모집단·표본 정의 | 수신처·결재선 |
 | R4 | 예산·법규 | 운영 역량·정책 | 연구윤리·데이터 접근권 | 예산·내부 규정 |
 | R5 | 경과보고·의사결정 로그 | 릴리즈 노트 | 선행연구·연구노트 | 회의록·결재 이력 |
 
@@ -88,7 +90,7 @@ MINOR = 되돌리기 쉽고, 다른 결정을 구속하지 않는 결정
 
 | 계층 | 무엇이 남는가 | 예 |
 |---|---|---|
-| **기록계층** (gripping-history) | 정해 가는 과정. 무엇이 아직 미결이고, 무엇을 왜 정했고, 어디에 반영했는가 | 결정 기록부 `docs/grip/GRIP_REGISTER.md` 한 파일 |
+| **기록계층** (gripping record) | 정해 가는 과정. 무엇이 아직 미결이고, 무엇을 왜 정했고, 어디에 반영했는가 | 결정 기록부 `docs/grip/GRIP_REGISTER.md` 한 파일 |
 | **확정계층** (active project docs) | 정해진 결과. 확정된 결정이 들어가 사는 실제 프로젝트 문서 | 아래 두 갈래 |
 
 확정계층은 다시 하는 일에 따라 둘로 나뉩니다.
@@ -98,7 +100,17 @@ MINOR = 되돌리기 쉽고, 다른 결정을 구속하지 않는 결정
 | **근거 문서** | 결정의 내용과 근거가 남아, 나중에 "왜 그렇게 정했는지" 조회할 수 있게 합니다 | 기획서 · 사업계획서 · 연구계획서 · 회의록 |
 | **규범 문서** | 이후 작업이 자동으로 참조하고 따르게 되어, 같은 결정을 다시 협상하지 않게 합니다 | 팀 규칙 · 승인 기준 · 운영 정책 · preregistration(사전등록) · `CLAUDE.md`·rules·hooks |
 
-연구에서 쓰는 **사전등록**이 규범 문서가 무엇인지 잘 보여 줍니다. 분석 계획을 데이터 수집 전에 등록해 두면 이후 행동이 그것에 묶이고, 벗어나려면 명시적인 사유를 대야 합니다. 근거 문서만 채우고 규범 문서를 비우면, 정해 놓고도 지켜지지 않습니다.
+"내 분야에서 규범 문서가 뭔데?"에 대한 답은 도메인마다 다릅니다.
+
+| 도메인 | 근거 문서 | 규범 문서 |
+|---|---|---|
+| 사업기획 | 사업계획서 · 의사결정 로그 | 팀 규칙 · 승인 기준 · 예산 집행 지침 · 표준 템플릿 |
+| 서비스기획 | 서비스 기획서 · 정책 문서 | 운영 정책 · CS 응대 기준 · 릴리즈 체크리스트 |
+| 연구·리서치 | 연구계획서 · 연구노트 | **사전등록** · IRB 프로토콜 · 분석계획서 |
+| 일반 사무 | 회의록 · 기안문 | 업무 규정 · 결재 기준 · 표준 양식 |
+| 소프트웨어 | PRD · SRS · ADR | `CLAUDE.md` · `AGENTS.md` · rules · hooks · settings |
+
+연구에서 쓰는 **사전등록**이 규범 문서가 무엇인지 가장 잘 보여 줍니다. 분석 계획을 데이터 수집 전에 등록해 두면 이후 행동이 그것에 묶이고, 벗어나려면 명시적인 사유를 대야 합니다. 근거 문서만 채우고 규범 문서를 비우면, 정해 놓고도 지켜지지 않습니다.
 
 ### 7. 친절한 설명적 대화체로 묻는다
 
@@ -106,14 +118,14 @@ MINOR = 되돌리기 쉽고, 다른 결정을 구속하지 않는 결정
 
 | 속성 | 규칙 |
 |---|---|
-| 완결 문장 | 개조식 체언 종결("범위 미정. 확인 요망.")을 쓰지 않습니다 |
+| 완결 문장 | 명사로 끊어 쓰는 문체("범위 미정. 확인 요망.")를 쓰지 않습니다 |
 | 경어 기조 | `~합니다`를 기본으로, 질문은 `~할까요?`로 맺습니다 |
 | 설명 선행 | 질문 앞에 "왜 지금 이것을 묻는지" 한 문장을 붙입니다 |
 | 안내형 | `~하세요` 대신 `~하시면 됩니다`를 씁니다 |
 | 감정 절제 | 과장·감탄·칭찬을 쓰지 않습니다 |
 | 분량 상한 | 배경 1문장 + 질문 1문장 |
 
-단, **결정 기록부·카운터·표 같은 구조 블록은 개조식을 유지**합니다. 기록부는 기계가 읽고 `grep`으로 찾는 대상이라, 문장으로 풀어 쓰면 재개와 집계가 깨집니다.
+단, **결정 기록부·카운터·표 같은 구조 블록은 짧게 끊어 씁니다.** 기록부는 기계가 읽고 `grep`으로 찾는 대상이라, 문장으로 풀어 쓰면 재개와 집계가 깨집니다.
 
 ### 8. 영문 용어는 원문 그대로, 괄호에 역어와 해설을 붙인다
 
@@ -129,7 +141,7 @@ cohort(코호트: 같은 시기에 유입된 사용자 묶음)
 
 역어가 없거나 아직 정착되지 않은 용어는 뜻풀이만 씁니다.
 
-음차 표기는 **정착 여부**로 판정하고(데이터·리포트는 유지, 커버리지 → 적용 범위(coverage)), 번역어는 **다의어 오역**을 점검합니다(`significant` → 통계 맥락에서는 "중요한"이 아니라 **유의미한**).
+소리 나는 대로 옮긴 표기는 **이미 자리 잡았는지**로 판정하고(데이터·리포트는 유지, 커버리지 → 적용 범위(coverage)), 번역어는 **뜻이 여러 개인 단어를 잘못 옮기지 않았는지** 점검합니다(`significant` → 통계 맥락에서는 "중요한"이 아니라 **유의미한**).
 
 표기 우선순위는 **참조 문서의 기존 표기 > 분야 표준 역어 > 임의 번역**입니다. 프로젝트 내부 표기를 임의로 바꾸면 기존 문서와 새 기록 사이에 어휘가 어긋납니다.
 
@@ -137,13 +149,13 @@ cohort(코호트: 같은 시기에 유입된 사용자 묶음)
 
 이해하지 못한 채 승인된 결정은 기록부를 오염시키는 데 그치지 않고, 규범 문서에까지 실려 이후 작업을 잘못 묶습니다. 용어 해설은 친절이 아니라 **기록의 정확성을 지키는 장치**입니다.
 
-세 부류를 해설합니다 — ① 도메인 전문용어 ② 분야 관용어·축약 ③ **프로젝트 고유 조어**(출처 표기 필수). 참조 범위에서 정의를 못 찾은 조어는 `정의되지 않음`으로 표기하고 **정의 자체를 MINOR 토픽 후보로 올립니다.**
+세 부류를 해설합니다 — ① 도메인 전문용어 ② 분야 관용어·축약 ③ **그 프로젝트에서만 쓰는 말**(출처 표기 필수). 참조 범위에서 정의를 못 찾은 말은 `정의되지 않음`으로 표기하고 **정의 자체를 MINOR 토픽 후보로 올립니다.**
 
 분량은 통제합니다 — 이번 턴에 실제 등장한 용어만, 세션 내 1회, 턴당 최대 4개, 항목당 1줄, 없으면 블록째 생략.
 
 ### 10. 보기의 마지막은 언제나 "기타(직접 입력)"
 
-닫힌 보기만 주면 결정의 공동 소유가 승인 요청으로 축소되고, 실제 의중과 다른 보기를 억지로 고르면 **실재하지 않는 결정이 RESOLVED로 기록**됩니다.
+닫힌 보기만 주면 함께 정하는 일이 결재만 하는 일로 바뀌고, 실제 의중과 다른 보기를 억지로 고르면 **실재하지 않는 결정이 RESOLVED로 기록**됩니다.
 
 ```
 1번째    권장안 (근거 한 줄)
@@ -151,9 +163,9 @@ cohort(코호트: 같은 시기에 유입된 사용자 묶음)
 마지막   기타 — 직접 입력
 ```
 
-옵션 개수는 **실질 선택지 2~4개 + 기타 1개**이며, 기타는 상한에 포함하지 않습니다. 일부 질문 UI가 자유 입력을 자동 제공하더라도 보기 자체에 명시해, 3벤더 어디서든 동작이 같아지게 합니다.
+옵션 개수는 **실질 선택지 2~4개 + 기타 1개**이며, 기타는 상한에 포함하지 않습니다. 일부 질문 UI가 자유 입력을 자동 제공하더라도 보기 자체에 명시해, 세 도구 어디서든 동작이 같아지게 합니다.
 
-기타 응답은 **사용자 표현 그대로** 기록부에 옮깁니다. 응답이 토픽 전제를 뒤집으면 `DROPPED`로 표시하되 **분모는 줄이지 않습니다**(줄이면 진척률이 왜곡됩니다).
+기타 응답은 **사용자 표현 그대로** 기록부에 옮깁니다. 응답이 토픽 전제를 뒤집으면 `DROPPED`로 표시하되 **전체 개수는 줄이지 않습니다**(줄이면 진척률이 왜곡됩니다).
 
 ### 11. 언제든 멈추고 재개할 수 있다
 
@@ -183,7 +195,7 @@ cohort(코호트: 같은 시기에 유입된 사용자 묶음)
 ### 사전 요구사항
 
 - Cursor, Claude Code, 또는 Codex
-- **참조로 삼을 자료**(R1~R5 중 최소한 R1·R3를 채우는 것)와 **관심 방향**
+- **참조로 삼을 자료**(R1~R5 중 최소한 R1·R2를 채우는 것)와 **관심 방향**
 
 ### 스킬 설치
 
@@ -256,6 +268,13 @@ curl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.age
 - "과업지시서 기준으로 산출물 정의랑 검수 기준 확정하자"
 - "지난번 하다 멈췄는데 남은 토픽부터 이어서 하자"
 
+**문답 횟수를 미리 정해두고 싶다면** 착수할 때 함께 말해 주시면 됩니다. 지정한 문항 수가 그대로 이번 세션의 상한이 되고, 도달하면 `BUDGET_REACHED`로 종료합니다. 남은 토픽은 결정 기록부에 그대로 남아 다음에 이어서 할 수 있습니다.
+
+- "기획서 기준으로, **오늘은 질문 5개까지만** 하고 나머지는 다음에 이어서 하자"
+- "제일 중요한 것부터 **10문항 안에서** 정리해줘"
+
+이렇게 쓰면 "얼마나 걸릴지 모르겠다"는 부담 없이 시작할 수 있습니다. 토픽 목록은 처음에 전부 보여드리므로, 상한 안에서 무엇이 먼저 다뤄지고 무엇이 남는지도 착수 시점에 알 수 있습니다.
+
 ---
 
 ## OUTPUT: 무엇이 남는가
@@ -273,11 +292,11 @@ curl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.age
 | 단계 | 내용 |
 |------|------|
 | Step 0 — Intake & Scope Lock | 참조 범위(A)·관심 방향(B)·완료 조건(C)·OUTPUT 대상(D) 확인. A·B 없으면 먼저 질문 |
-| **Step 0.5 — Material Check** | 범위 안만 읽어 R1~R5 충족 판정. 기준선(R1·R3) 결손 시 게이트 발동 → **A/B 2지선다**. 판단근거(R2·R4) 결손은 첫 CORE 토픽으로 흡수 |
+| **Step 0.5 — Material Check** | 범위 안만 읽어 R1~R5 충족 판정. 기준선(R1·R2)이 비면 게이트 발동 → **A/B 2지선다**. 판단 근거(R3·R4)가 비면 첫 CORE 토픽으로 흡수 |
 | Step 1 — Topic Extraction | 범위 안만 읽어 미해소 토픽 전부 추출 → CORE/MINOR·의존 순서로 기록부 제시 (토픽 0개면 종료) |
 | Step 2 — Grip the Topic | 첫 UNRESOLVED 토픽 1개: 선택지 + 권장안 + **`[용어]` 블록** + **기타 옵션** + 단일 질문 |
 | Step 3 — Resolve & Persist | 결정 확정 시 다음 토픽 전에 근거·규범 문서 수정 + 기록부 기록 + `[반영 완료]` |
-| Step 4 — Advance or Stop | 다음 토픽 또는 종료 (ALL_RESOLVED / USER_PAUSED / **MATERIAL_PENDING** / BUDGET) |
+| Step 4 — Advance or Stop | 다음 토픽 또는 종료 (ALL_RESOLVED / USER_PAUSED / **MATERIAL_PENDING** / BUDGET_REACHED) |
 | Step 5 — Resume | 재호출 시 기록부를 읽어 재료 점검 또는 첫 UNRESOLVED부터 재개 |
 | Step 6 — Closeout | 카운터·STOP 사유 + 이번 세션 변경 목록 요약 |
 
@@ -289,10 +308,11 @@ curl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.age
 A. 참조 범위        — 근거로 삼을 자료 (R1~R5 역할로 판단, 형식·도메인 무관)
 B. 핵심 관심 방향   — 무엇의 모호함을 정리하는가
 C. 작업 범위·완료조건 — 어디까지 (기본: 관심 방향 미해소 토픽 전부 RESOLVED)
+                       문항 수·턴 수를 지정하면 그것이 이번 세션의 상한이 됩니다
 D. 작업 결과 OUTPUT — 어디에 반영 (기본: 근거 문서 + 규범 문서)
 ```
 
-A·B는 사용자 의도이므로 대체할 수 없습니다. 없으면 먼저 묻습니다. 재료(R1~R5)는 내용이므로 문답으로 채울 수 있어, 기준선(R1·R3) 결손만 게이트로 처리하고 R2·R4 결손은 첫 CORE 토픽으로 흡수합니다.
+A·B는 사용자 의도이므로 대체할 수 없습니다. 없으면 먼저 묻습니다. 재료(R1~R5)는 내용이므로 문답으로 채울 수 있어, 기준선(R1·R2)이 빈 경우만 게이트로 처리하고 R3·R4가 비면 첫 CORE 토픽으로 흡수합니다.
 
 ---
 
@@ -368,9 +388,9 @@ contract:
   refuse_until_present=[A, B]
   must_not_scan_outside_scope=true
   pillars=[Boundedness (scoped reference + extraction baseline present + bounded exploration), Visibility (extract full topic list up front + show progress each turn), Persistence (apply each decision to rationale + normative docs immediately, before next topic)]
-  material_roles=[R1 purpose/success-criteria (baseline), R2 audience/stakeholders (judgment), R3 scope/deliverable (baseline), R4 constraints (judgment), R5 current-progress]
-  material_gate=trigger only on R1/R3 deficit; options are exactly [A: add reference material and re-invoke -> STOP MATERIAL_PENDING, B: build anchor in-session then proceed]; never offer "proceed anyway"
-  material_gate_recommend=[B when zero refs or both R1+R3 missing, else A]
+  material_roles=[R1 purpose/success-criteria (baseline), R2 scope/deliverable (baseline), R3 audience/stakeholders (judgment), R4 constraints (judgment), R5 current-progress]
+  material_gate=trigger only when R1 or R2 is empty; options are exactly [A: add reference material and re-invoke -> STOP MATERIAL_PENDING, B: build anchor in-session then proceed]; never offer "proceed anyway"
+  material_gate_recommend=[B when zero refs or both R1+R2 missing, else A]
   r2_r4_deficit=absorb as first CORE topic, do not trigger gate
   step1_extract_before_questions=true
   one_topic_at_a_time=true
@@ -383,11 +403,12 @@ contract:
   language_tone_exception=structure blocks (register rows, counters, tables) stay terse for grep/resume
   term_notation_format=English Term(Korean equivalent: short gloss); gloss only when no established Korean equivalent
   term_notation=[keep English technical terms + short parenthetical gloss; transliteration only if established, else Korean + original in parens; check polysemous mistranslations; priority = existing project notation > field standard > agent's own translation]
-  output_layers=[gripping-history = the Grip Register file (one), active project docs = rationale docs + normative docs]
+  output_layers=[gripping record = the Grip Register file (one), active project docs = rationale docs + normative docs]
   decision_class=[CORE = irreversible or constrains other decisions -> rationale+normative docs required, MINOR -> register + one-line doc]
   register_file=docs/grip/GRIP_REGISTER.md  # counter "RESOLVED: n / DROPPED: d / TOTAL: m", resumable
   register_stub_on_material_pending=true
-  stop_reasons=[ALL_RESOLVED, USER_PAUSED, MATERIAL_PENDING, BUDGET]
+  stop_reasons=[ALL_RESOLVED, USER_PAUSED, MATERIAL_PENDING, BUDGET_REACHED]
+  budget=set in Intake C when the user names a question/turn cap; remaining topics stay in the register for resume
   output_separates_areas_with=horizontal rules (---) per turn
 ```
 

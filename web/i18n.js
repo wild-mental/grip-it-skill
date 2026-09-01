@@ -122,7 +122,7 @@ window.COPY = {
     "s7.r5svc": "릴리즈 노트",
     "s7.r5res": "선행연구·연구노트",
     "s7.r5ofc": "회의록·결재 이력",
-    "s7.r5sw": "이슈 트래커·ADR",
+    "s7.r5sw": "이슈 트래커 · ADR(설계 결정 기록)",
     "s7.close": "문서 이름이 아니라 역할로 판단하므로, PRD/SRS가 없어도 됩니다.",
     "s7.bridge": "그래서 세션이 끝나면 무엇이 남을까요?",
 
@@ -266,7 +266,7 @@ window.COPY = {
     "s7.r5svc": "Release notes",
     "s7.r5res": "Prior work · lab notes",
     "s7.r5ofc": "Minutes · approval history",
-    "s7.r5sw": "Issue tracker · ADRs",
+    "s7.r5sw": "Issue tracker · ADRs (architecture decision records)",
     "s7.close": "Because the judgment is on role rather than document name, a PRD or SRS is not required.",
     "s7.bridge": "So what is left once the session ends?",
 

@@ -64,3 +64,10 @@ MINOR: 10
   ```
 
   나머지 벤더 토큰은 손대지 않았고, 별도로 `web/`의 모든 `<script src>`가 로컬 파일 3개뿐임을 함께 확인한다.
+
+- **N-1 범위 밖 항목 1건은 신규 추가** — `git diff --name-only main...HEAD` 의 범위 밖 항목은 `usage-example/05-GOAL-PROMPT-WEBPAGE-IMPLEMENTATION.md` 하나이며, 이는 직전 턴에 사용자 요청으로 작성한 `/goal` 프롬프트 문서 자체가 이 브랜치에서 처음 커밋된 것이다(상태 `A`, 신규 추가). 기존 파일 수정(`M`) 중 범위 밖은 0건이고, README·01~04번 기획 문서·스킬 디렉터리는 무변경이다.
+
+---
+
+STOP REASON: ALL_VERIFIED
+

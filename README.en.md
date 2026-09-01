@@ -32,7 +32,9 @@ What this skill protects is not speed. It is **ownership of the work**.
 
 ### 1. What gets handled is the "problem," not "you"
 
-It drops the interrogating tone and treats the problem as the subject: "this point of this **problem** has not been decided yet." Every question comes with a **recommended option + rationale**, so you only need to **confirm or correct** rather than generate an answer from scratch.
+Many existing reverse-interview techniques lean on relentless, grilling questioning that simply wears the user down. Pressing someone for answers may extract information, but it also leaves them too tired to answer carefully — or ready to abandon the session altogether.
+
+Grip It drops that approach and moves the subject of the questioning from the person to the **problem**: "this point of this **problem** has not been decided yet." Every question comes with a **recommended option + rationale**, so you only need to **confirm or correct** rather than generate an answer from scratch.
 
 ### 2. It checks the material first — a gate against invented topics
 

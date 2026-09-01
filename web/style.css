@@ -152,9 +152,10 @@ code, pre { font-family: var(--font-mono); }
 .scene {
   display: flex; gap: 0.9rem; align-items: baseline;
   padding: 0.85rem 0; border-bottom: 1px dashed var(--sun-200);
-  opacity: 0; transition: opacity 620ms ease;
 }
-.scene.is-in { opacity: 1; }
+/* JS가 붙었을 때만 숨겼다가 순차로 드러낸다 — JS가 실패해도 네 장면은 그대로 읽힌다 */
+.scenes.is-armed .scene { opacity: 0; transition: opacity 620ms ease; }
+.scenes.is-armed .scene.is-in { opacity: 1; }
 .scene-n { color: var(--blue-500); font-family: var(--font-mono); font-size: 0.85rem; }
 .scene p { margin: 0; }
 

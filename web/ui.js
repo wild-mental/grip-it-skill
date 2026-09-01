@@ -101,10 +101,10 @@
   function revealScenes() {
     var items = document.querySelectorAll("[data-reveal]");
     if (!items.length) return;
-    if (!("IntersectionObserver" in window)) {
-      for (var i = 0; i < items.length; i++) items[i].classList.add("is-in");
-      return;
-    }
+    if (!("IntersectionObserver" in window)) return;  /* 숨기지 않고 그대로 둔다 */
+
+    var list = document.querySelector(".scenes");
+    if (list) list.classList.add("is-armed");  /* 여기서부터 CSS가 네 장면을 숨긴다 */
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;

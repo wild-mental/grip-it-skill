@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 280" width="880" height="280" role="img" aria-label="Two layers">
+  <style>
+    .ln { fill: none; stroke: #0f2440; stroke-width: 2; }
+    .fill { fill: #dceafc; }
+    .t { font-family: "Pretendard","Noto Sans KR",system-ui,sans-serif; fill: #0f2440; }
+    .h { font-size: 17px; font-weight: 700; }
+    .s { font-size: 13px; fill: #40566f; }
+    .m { font-family: "D2Coding","SFMono-Regular",Menlo,monospace; font-size: 12px; fill: #1668d8; }
+    .k { font-size: 12px; fill: #1668d8; font-weight: 700; letter-spacing: .06em; }
+  </style>
+
+  <!-- 기록계층 -->
+  <rect class="ln" x="40" y="34" width="360" height="96" rx="12"/>
+  <text class="t k" x="62" y="60">기록계층 · GRIPPING RECORD</text>
+  <text class="t h" x="62" y="88">결정 기록부 한 파일</text>
+  <text class="t m" x="62" y="112">docs/grip/GRIP_REGISTER.md</text>
+  <text class="t s" x="62" y="152">정해 가는 과정 — 무엇이 남았고 무엇을 왜 정했는지</text>
+  <text class="t s" x="62" y="172">The deciding as it happens</text>
+
+  <!-- 연결선 -->
+  <path class="ln" d="M400 82 h50"/>
+  <path class="ln" d="M438 72 l14 10 l-14 10"/>
+
+  <!-- 확정계층 -->
+  <rect class="fill" x="470" y="20" width="370" height="176" rx="12"/>
+  <rect class="ln" x="470" y="20" width="370" height="176" rx="12"/>
+  <text class="t k" x="492" y="46">확정계층 · ACTIVE PROJECT DOCS</text>
+
+  <rect class="ln" x="492" y="60" width="326" height="56" rx="9"/>
+  <text class="t h" x="510" y="84">근거 문서 · Rationale docs</text>
+  <text class="t s" x="510" y="105">왜 그렇게 정했는지 남는 곳</text>
+
+  <rect class="ln" x="492" y="126" width="326" height="56" rx="9"/>
+  <text class="t h" x="510" y="150">규범 문서 · Normative docs</text>
+  <text class="t s" x="510" y="171">이후 작업이 따르게 되는 곳</text>
+
+  <text class="t s" x="40" y="238">근거 문서만 채우고 규범 문서를 비우면, 정해 놓고도 지켜지지 않습니다.</text>
+  <text class="t s" x="40" y="258">Fill only the rationale docs and what you settled will not be followed.</text>
+</svg>

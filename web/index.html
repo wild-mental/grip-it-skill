@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GRIP IT — 실행은 맡기고, 결정은 쥔다</title>
+<meta name="description" data-i18n-attr="content" data-i18n="meta.desc" content="AI 에이전트에게 실행은 맡기되 결정은 쥐는 방법. GRIP IT은 착수 전 미해소 결정을 전부 꺼내 하나씩 정하고, 그 결정을 문서에 고정합니다.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#s0">GRIP IT</a>
+    <nav class="topbar-nav">
+      <div class="langswitch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn is-on" data-lang-btn="ko">KO</button>
+        <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      </div>
+      <a class="repo-link" href="https://github.com/wild-mental/grip-it-skill" data-i18n="nav.repo">저장소</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ S0 후킹 ============ -->
+  <section id="s0" class="hero">
+    <div class="hero-visual" aria-hidden="true">
+      <img id="hand-frame" src="assets/hand/hand-01.jpg" alt="" width="1536" height="1024" decoding="async">
+      <div id="hand-flash" class="hand-flash"></div>
+    </div>
+    <div class="hero-copy narrow">
+      <h1 data-i18n="s0.title">실행은 맡기고, 결정은 쥔다</h1>
+      <p class="lead" data-i18n="s0.sub">AI 에이전트에게 일을 맡길 때, 우리가 놓치고 싶지 않은 단 하나</p>
+      <p class="def" data-i18n="s0.def">GRIP IT은 착수 전에 아직 정해지지 않은 결정을 전부 꺼내 하나씩 함께 정하고, 그 결정을 문서에 고정해 이후 AI 작업이 따르게 만드는 <code>grip-it</code> 스킬입니다.</p>
+
+      <div class="install-preview">
+        <span class="install-label" data-i18n="s0.installLabel">설치는 한 파일입니다</span>
+        <pre class="code"><code>mkdir -p ~/.claude/skills/grip-it
+curl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.claude/skills/grip-it/SKILL.md \
+  -o ~/.claude/skills/grip-it/SKILL.md</code></pre>
+        <div class="hero-actions">
+          <button type="button" class="copy-btn" data-copy-target="preview" data-i18n="ui.copy">설치 명령 복사</button>
+          <a class="ghost-btn" href="https://github.com/wild-mental/grip-it-skill" data-i18n="s0.repoCta">GitHub에서 보기</a>
+        </div>
+      </div>
+
+      <p class="crack" data-i18n="s0.crack">그런데 실제로 해보면, 결정까지 함께 넘어가 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- ============ S1 공감 ============ -->
+  <section id="s1" class="section">
+    <div class="narrow">
+      <h2 data-i18n="s1.title">그립이 풀리는 네 장면</h2>
+      <ol class="scenes">
+        <li class="scene" data-reveal><span class="scene-n">01</span><p data-i18n="s1.scene1">근거가 부족해도 AI가 그럴듯한 항목을 지어냅니다.</p></li>
+        <li class="scene" data-reveal><span class="scene-n">02</span><p data-i18n="s1.scene2">뜻을 모르는 용어가 섞인 제안을 그대로 승인합니다.</p></li>
+        <li class="scene" data-reveal><span class="scene-n">03</span><p data-i18n="s1.scene3">AI가 내놓은 보기 안에서만 고르게 됩니다.</p></li>
+        <li class="scene" data-reveal><span class="scene-n">04</span><p data-i18n="s1.scene4">정한 내용이 대화에 흩어져, 다음 세션의 AI가 또 제멋대로 정합니다.</p></li>
+      </ol>
+      <p class="closing" data-i18n="s1.close">결정은 분명 내 것이었는데, 결과물은 내 것이 아니게 됩니다.</p>
+      <p class="bridge" data-i18n="s1.bridge">이 네 장면에는 공통점이 하나 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- ============ S2 명명 ============ -->
+  <section id="s2" class="section">
+    <div class="narrow">
+      <h2 data-i18n="s2.title">오너십은 실행이 아니라 결정에서 샙니다</h2>
+      <p class="lead" data-i18n="s2.lead">AI에게 일을 맡길 때 오너십이 새는 곳은 실행이 아니라 결정입니다. 실행을 넘긴 자리에서 결정까지 함께 넘어가는 것이 문제의 실체입니다.</p>
+    </div>
+    <div class="wide">
+      <img class="diagram" src="assets/diagrams/d1.svg" alt="" width="880" height="300" data-i18n-attr="alt" data-i18n="s2.d1alt">
+    </div>
+    <div class="narrow">
+      <dl class="glossary">
+        <div class="gl-row"><dt data-i18n="s2.g1t">핸즈오프(hands-off: 실행에 손을 떼는 것)</dt><dd data-i18n="s2.g1d">이건 우리가 원하는 것입니다.</dd></div>
+        <div class="gl-row"><dt data-i18n="s2.g2t">오너십(ownership: 작업 소유권)</dt><dd data-i18n="s2.g2d">그런데 실행에서 손을 떼면 결정까지 함께 놓치기 쉽습니다. 놓치지 않는 것이 오너십입니다.</dd></div>
+        <div class="gl-row"><dt data-i18n="s2.g3t">그립(grip: 쥔 상태)</dt><dd data-i18n="s2.g3d">실행은 놓되 이해·방향·결정은 단단히 쥐고 있는 상태입니다.</dd></div>
+        <div class="gl-row"><dt data-i18n="s2.g4t">AI-Native</dt><dd data-i18n="s2.g4d">이 긴장을 사람이 참아서가 아니라 에이전트 절차 자체로 푸는 방식입니다.</dd></div>
+      </dl>
+      <p class="bridge" data-i18n="s2.bridge">그럼 AI가 더 많이 물어보게 하면 되지 않을까요?</p>
+    </div>
+  </section>
+
+  <!-- ============ S3 반전 ============ -->
+  <section id="s3" class="section">
+    <div class="narrow">
+      <h2 data-i18n="s3.title">더 캐묻는 방식은 이미 실패했습니다</h2>
+      <p data-i18n="s3.lead">답을 캐내려 몰아붙이면 정보는 얻어도, 사용자가 지쳐 대충 답하거나 중간에 그만둡니다.</p>
+      <p class="callout" data-i18n="s3.point">피로는 불쾌감이 아닙니다. 답변 품질이 떨어지고 세션이 중간에 끊기는, 기능적인 손실입니다.</p>
+      <p class="bridge" data-i18n="s3.bridge">문제는 질문의 양이 아니라, 무엇을 추궁하느냐에 있었습니다.</p>
+    </div>
+  </section>
+
+  <!-- ============ S4 전환 ============ -->
+  <section id="s4" class="section">
+    <div class="narrow">
+      <h2 data-i18n="s4.title">사람이 아니라 문제를 붙잡습니다</h2>
+      <div class="contrast">
+        <div class="contrast-col is-old">
+          <span class="tag" data-i18n="s4.oldTag">사람을 추궁할 때</span>
+          <p data-i18n="s4.old">왜 아직 안 정하셨나요?</p>
+        </div>
+        <div class="contrast-col is-new">
+          <span class="tag" data-i18n="s4.newTag">문제를 붙잡을 때</span>
+          <p data-i18n="s4.new">이 문제의 이 지점이 아직 정해지지 않았습니다.</p>
+        </div>
+      </div>
+      <p data-i18n="s4.note">모든 질문에는 권장안과 근거가 함께 붙습니다. 사용자는 답을 새로 만들지 않고 확인하거나 교정하기만 하면 됩니다.</p>
+      <p class="bridge" data-i18n="s4.bridge">관점을 바꾸면 절차도 바뀝니다. 여섯 가지가 달라집니다.</p>
+    </div>
+  </section>
+
+  <!-- ============ S5 원리 ============ -->
+  <section id="s5" class="section">
+    <div class="narrow">
+      <h2 data-i18n="s5.title">그립을 만드는 여섯 장치</h2>
+      <p class="lead" data-i18n="s5.lead">기능을 나열하지 않습니다. 앞의 네 장면에서 오너십이 새던 자리마다 장치가 하나씩 대응합니다.</p>
+    </div>
+    <div class="wide">
+      <div class="table-scroll">
+        <table class="tbl">
+          <thead><tr><th data-i18n="s5.h1">오너십이 새는 지점</th><th data-i18n="s5.h2">GRIP IT의 장치</th></tr></thead>
+          <tbody>
+            <tr><td data-i18n="s5.r1a">근거가 부족해도 그럴듯한 항목을 지어냅니다</td><td data-i18n="s5.r1b"><strong>재료 점검 게이트</strong> — 기준선이 없으면 토픽을 뽑지 않습니다</td></tr>
+            <tr><td data-i18n="s5.r2a">전체 판을 모른 채 질문에 끌려갑니다</td><td data-i18n="s5.r2b"><strong>토픽 전체를 미리 보여주기</strong> — 몇 번 문답할지 처음부터 압니다</td></tr>
+            <tr><td data-i18n="s5.r3a">뜻을 모르는 제안을 그대로 승인합니다</td><td data-i18n="s5.r3b"><strong>용어 해설 + 설명적 대화체</strong> — 이해한 것만 결정합니다</td></tr>
+            <tr><td data-i18n="s5.r4a">AI가 제시한 보기 안에서만 고릅니다</td><td data-i18n="s5.r4b"><strong>기타(직접 입력) 상시 옵션</strong> — 내 방식으로 답할 수 있습니다</td></tr>
+            <tr><td data-i18n="s5.r5a">정한 내용이 대화에 흩어집니다</td><td data-i18n="s5.r5b"><strong>결정 기록부</strong> — 무엇을 왜 정했는지 남습니다</td></tr>
+            <tr><td data-i18n="s5.r6a">다음 세션의 AI가 다시 제멋대로 정합니다</td><td data-i18n="s5.r6b"><strong>규범 문서에 고정</strong> — 한 번 정한 것은 다시 협상되지 않습니다</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="narrow">
+      <p class="closing" data-i18n="s5.close">에이전트는 재료를 점검하고, 선택지와 근거를 차려 놓고, 용어를 풀어 설명합니다. 결정은 사용자가 합니다.</p>
+      <p class="bridge" data-i18n="s5.bridge">실제로는 이렇게 흘러갑니다.</p>
+    </div>
+  </section>
+
+  <!-- ============ S6 증거 ============ -->
+  <section id="s6" class="section">
+    <div class="narrow">
+      <h2 data-i18n="s6.title">한 세션을 처음부터 끝까지</h2>
+      <p class="lead" data-i18n="s6.lead">연구 설계를 맡긴 세션입니다. 네 컷이 차례로 이어지며, 이 영역에서는 아무것도 움직이지 않습니다.</p>
+    </div>
+    <div class="wide">
+      <img class="diagram" src="assets/diagrams/d3.svg" alt="" width="880" height="180" data-i18n-attr="alt" data-i18n="s6.d3alt">
+    </div>
+    <div class="wide demo">
+      <p class="demo-note" data-i18n="s6.note">아래 네 컷은 스킬의 실제 출력 형식을 그대로 인용한 것입니다.</p>
+
+      <div class="cut">
+        <h3><span class="cut-n">1</span> <span data-i18n="s6.cut1t">재료 점검 — 기준선이 비면 게이트가 열립니다</span></h3>
+        <p class="cut-lead" data-i18n="s6.cut1d">판단에 필요한 재료를 먼저 봅니다. R1(목적)과 R2(범위)가 비어 있으면 토픽을 뽑지 않고, 두 갈래만 제시합니다.</p>
+        <div class="table-scroll"><pre class="code"><code>**[재료 점검]**
+
+| 역할 | 상태 | 근거 |
+|------|------|------|
+| R1 목적·성공기준 | 충족 | 연구계획서.md §1 연구질문·가설 |
+| R2 범위·산출물 | 부분 | 측정 구성이 아직 정해지지 않음 |
+| R3 대상·이해관계자 | 부분 | 모집단 언급만 있고 표본 정의 없음 → 첫 CORE 토픽으로 흡수 |
+
+**[질문]** (권장안 A를 첫 옵션, 기타를 마지막 옵션)
+- A) 측정 구성 자료를 보강한 뒤 다시 호출 — 가장 정확하며, 세션을 한 번 끊습니다  (권장)
+- B) 지금 대화로 범위를 함께 정해 앵커 문서로 남기고 이어서 시작 — 끊김이 없고, 문답이 3~4회 늘어납니다
+- 기타) 직접 입력 — 위 선택지로 표현되지 않는 방향이 있으면 그대로 적어 주세요</code></pre></div>
+      </div>
+
+      <p class="cut-bridge" data-i18n="s6.b1">B를 고르면 범위를 먼저 정하고, 그다음 앞으로 정할 것을 전부 펼쳐 보입니다.</p>
+
+      <div class="cut">
+        <h3><span class="cut-n">2</span> <span data-i18n="s6.cut2t">토픽 원장 — 앞으로 몇 번인지가 여기서 보입니다</span></h3>
+        <p class="cut-lead" data-i18n="s6.cut2d">미해소 토픽을 전부 추출해 개수·분류(CORE/MINOR)·의존 순서와 함께 제시합니다. 카운터는 grep으로 찾을 수 있는 한 줄입니다.</p>
+        <div class="table-scroll"><pre class="code"><code>RESOLVED: 0 / DROPPED: 0 / TOTAL: 4
+- [ ] T1 | CORE  | 표본 정의와 모집 방식              | depends:-  | status:UNRESOLVED
+- [ ] T2 | CORE  | 주요 변수 측정 도구 선택           | depends:T1 | status:UNRESOLVED
+- [ ] T3 | CORE  | 주 분석 방법과 유의수준            | depends:T2 | status:UNRESOLVED
+- [ ] T4 | MINOR | 코딩북 라벨 명명 규칙              | depends:T2 | status:UNRESOLVED</code></pre></div>
+      </div>
+
+      <p class="cut-bridge" data-i18n="s6.b2">그다음은 의존 순서대로 한 토픽씩입니다. 한 번에 하나만 묻습니다.</p>
+
+      <div class="cut">
+        <h3><span class="cut-n">3</span> <span data-i18n="s6.cut3t">한 토픽 — 권장안과 근거, 그리고 마지막의 기타</span></h3>
+        <p class="cut-lead" data-i18n="s6.cut3d">선택지마다 결과가 붙고, 권장안에는 근거가 붙고, 어려운 말은 풀어 씁니다. 마지막 옵션은 언제나 직접 입력입니다.</p>
+        <div class="table-scroll"><pre class="code"><code>**[진척]** RESOLVED 2 / DROPPED 0 / TOTAL 4 · 현재 토픽: T3 주 분석 방법과 유의수준
+
+**[선택지]**
+- A) 사전등록한 주분석 1개 + 탐색적 분석 분리 — 해석이 명확하고, 탐색 결과의 지위가 낮아집니다
+- B) 다중비교 보정 포함 다중 주분석 — 가설을 넓게 보되, 검정력이 떨어집니다
+- 기타) 직접 입력 — 위 선택지로 표현되지 않는 방향이 있으면 그대로 적어 주세요
+
+**[권장]** A) — 참조 자료의 제약(R4)에 연구윤리 심의 일정이 있고, 사전등록 초안을 규범 문서로 쓰기로 정해져 있어 주분석을 하나로 고정하는 편이 안전합니다.
+
+**[용어]**
+- preregistration(사전등록: 분석 계획을 데이터 수집 전에 공개 등록하는 절차)
+- 유의수준 — 귀무가설을 기각하는 기준이 되는 확률입니다</code></pre></div>
+      </div>
+
+      <p class="cut-bridge" data-i18n="s6.b3">정해지면 다음 질문으로 넘어가기 전에 문서부터 고칩니다.</p>
+
+      <div class="cut">
+        <h3><span class="cut-n">4</span> <span data-i18n="s6.cut4t">반영 완료 — 근거 문서 · 규범 문서 · 기록부 세 줄</span></h3>
+        <p class="cut-lead" data-i18n="s6.cut4d">결정을 대화 속에만 두지 않습니다. 해소되는 즉시 세 곳에 남고, 그다음 토픽으로 넘어갑니다.</p>
+        <div class="table-scroll"><pre class="code"><code>**[반영 완료]** T3 → decision: 사전등록한 주분석 1개 + 탐색적 분석 분리
+- 근거 문서: 연구계획서.md §4 분석 절 갱신
+- 규범 문서: 사전등록 초안에 주분석·유의수준 고정
+- 기록부: GRIP_REGISTER.md (RESOLVED 3 / DROPPED 0 / TOTAL 4)
+
+---
+
+**[진척]** RESOLVED 3 / DROPPED 0 / TOTAL 4 · 현재 토픽: T4 코딩북 라벨 명명 규칙</code></pre></div>
+      </div>
+    </div>
+    <div class="narrow">
+      <p class="bridge" data-i18n="s6.bridge">이 예시는 연구였습니다. 사업기획이라면, 서비스기획이라면요?</p>
+    </div>
+  </section>
+
+  <!-- ============ S7 범용 ============ -->
+  <section id="s7" class="section">
+    <div class="narrow">
+      <h2 data-i18n="s7.title">다섯 도메인에서 같은 절차</h2>
+      <p class="lead" data-i18n="s7.lead">재료를 문서 이름이 아니라 역할(R1~R5)로 판단합니다. 그래서 PRD나 SRS가 없어도 됩니다.</p>
+    </div>
+    <div class="wide">
+      <div class="domain-tabs" role="tablist" aria-label="Domain">
+        <button type="button" class="tab is-on" data-domain="biz" data-i18n="s7.dBiz">사업기획</button>
+        <button type="button" class="tab" data-domain="svc" data-i18n="s7.dSvc">서비스기획</button>
+        <button type="button" class="tab" data-domain="res" data-i18n="s7.dRes">연구·리서치</button>
+        <button type="button" class="tab" data-domain="ofc" data-i18n="s7.dOfc">일반 사무</button>
+        <button type="button" class="tab" data-domain="sw" data-i18n="s7.dSw">소프트웨어</button>
+      </div>
+      <div class="table-scroll">
+        <table class="tbl domain-table">
+          <thead>
+            <tr>
+              <th data-i18n="s7.hRole">재료 역할</th>
+              <th data-col="biz" data-i18n="s7.dBiz">사업기획</th>
+              <th data-col="svc" data-i18n="s7.dSvc">서비스기획</th>
+              <th data-col="res" data-i18n="s7.dRes">연구·리서치</th>
+              <th data-col="ofc" data-i18n="s7.dOfc">일반 사무</th>
+              <th data-col="sw" data-i18n="s7.dSw">소프트웨어</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" data-i18n="s7.r1">R1 목적·성공기준</th>
+              <td data-col="biz" data-i18n="s7.r1biz">사업목표·KPI</td>
+              <td data-col="svc" data-i18n="s7.r1svc">서비스 컨셉·목표 지표</td>
+              <td data-col="res" data-i18n="s7.r1res">연구질문·가설</td>
+              <td data-col="ofc" data-i18n="s7.r1ofc">과업지시서 목적</td>
+              <td data-col="sw" data-i18n="s7.r1sw">제품 목표·성공지표</td>
+            </tr>
+            <tr>
+              <th scope="row" data-i18n="s7.r2">R2 범위·산출물</th>
+              <td data-col="biz" data-i18n="s7.r2biz">사업 범위·BM 캔버스</td>
+              <td data-col="svc" data-i18n="s7.r2svc">서비스 범위·기능 목록</td>
+              <td data-col="res" data-i18n="s7.r2res">연구 범위·측정 구성</td>
+              <td data-col="ofc" data-i18n="s7.r2ofc">과업 범위(RFP/SOW)</td>
+              <td data-col="sw" data-i18n="s7.r2sw">기능 범위·PRD·SRS</td>
+            </tr>
+            <tr>
+              <th scope="row" data-i18n="s7.r3">R3 대상·이해관계자</th>
+              <td data-col="biz" data-i18n="s7.r3biz">타깃 고객·경쟁 분석</td>
+              <td data-col="svc" data-i18n="s7.r3svc">고객 세그먼트·JTBD</td>
+              <td data-col="res" data-i18n="s7.r3res">모집단·표본 정의</td>
+              <td data-col="ofc" data-i18n="s7.r3ofc">수신처·결재선</td>
+              <td data-col="sw" data-i18n="s7.r3sw">사용자·이해관계자</td>
+            </tr>
+            <tr>
+              <th scope="row" data-i18n="s7.r4">R4 제약</th>
+              <td data-col="biz" data-i18n="s7.r4biz">예산·법규</td>
+              <td data-col="svc" data-i18n="s7.r4svc">운영 역량·정책</td>
+              <td data-col="res" data-i18n="s7.r4res">연구윤리·데이터 접근권</td>
+              <td data-col="ofc" data-i18n="s7.r4ofc">예산·내부 규정</td>
+              <td data-col="sw" data-i18n="s7.r4sw">기술 제약·보안 요건</td>
+            </tr>
+            <tr>
+              <th scope="row" data-i18n="s7.r5">R5 진척</th>
+              <td data-col="biz" data-i18n="s7.r5biz">경과보고·의사결정 로그</td>
+              <td data-col="svc" data-i18n="s7.r5svc">릴리즈 노트</td>
+              <td data-col="res" data-i18n="s7.r5res">선행연구·연구노트</td>
+              <td data-col="ofc" data-i18n="s7.r5ofc">회의록·결재 이력</td>
+              <td data-col="sw" data-i18n="s7.r5sw">이슈 트래커·ADR</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="narrow">
+      <p class="closing" data-i18n="s7.close">문서 이름이 아니라 역할로 판단하므로, PRD/SRS가 없어도 됩니다.</p>
+      <p class="bridge" data-i18n="s7.bridge">그래서 세션이 끝나면 무엇이 남을까요?</p>
+    </div>
+  </section>
+
+  <!-- ============ S8 자산 ============ -->
+  <section id="s8" class="section">
+    <div class="narrow">
+      <h2 data-i18n="s8.title">남는 것은 대화가 아니라 파일입니다</h2>
+      <p class="lead" data-i18n="s8.lead">세션이 끝나면 두 계층이 남습니다. 정해 가는 과정은 한 파일에, 정해진 결과는 실제 프로젝트 문서에 남습니다.</p>
+    </div>
+    <div class="wide">
+      <img class="diagram" src="assets/diagrams/d2.svg" alt="" width="880" height="280" data-i18n-attr="alt" data-i18n="s8.d2alt">
+    </div>
+    <div class="narrow">
+      <p class="callout" data-i18n="s8.prereg">연구의 사전등록(preregistration: 분석 계획을 데이터 수집 전에 공개 등록하는 절차)이 규범 문서가 무엇인지 가장 잘 보여 줍니다. 등록해 두면 이후 행동이 그것에 묶이고, 벗어나려면 명시적인 사유를 대야 합니다.</p>
+      <p class="closing" data-i18n="s8.close">근거 문서만 채우고 규범 문서를 비우면, 정해 놓고도 지켜지지 않습니다.</p>
+      <p class="bridge" data-i18n="s8.bridge">설치는 한 파일입니다.</p>
+    </div>
+  </section>
+
+  <!-- ============ S9 행동 ============ -->
+  <section id="s9" class="section">
+    <div class="narrow">
+      <h2 data-i18n="s9.title">설치</h2>
+      <p class="lead" data-i18n="s9.lead">저장소를 clone하지 않습니다. <code>SKILL.md</code> 한 파일만 받으면 됩니다.</p>
+
+      <div class="install">
+        <div class="install-tabs" role="tablist" aria-label="Tool">
+          <button type="button" class="tab is-on" data-tool="claude">Claude Code</button>
+          <button type="button" class="tab" data-tool="cursor">Cursor</button>
+          <button type="button" class="tab" data-tool="codex">Codex</button>
+        </div>
+        <div class="install-scopes" role="tablist" aria-label="Scope">
+          <button type="button" class="chip is-on" data-scope="user" data-i18n="s9.scopeUser">개인 (모든 프로젝트)</button>
+          <button type="button" class="chip" data-scope="project" data-i18n="s9.scopeProject">프로젝트 (이 repo만)</button>
+        </div>
+        <pre class="code"><code id="install-cmd">mkdir -p ~/.claude/skills/grip-it
+curl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.claude/skills/grip-it/SKILL.md \
+  -o ~/.claude/skills/grip-it/SKILL.md</code></pre>
+        <button type="button" class="copy-btn" data-copy-target="install" data-i18n="ui.copy">설치 명령 복사</button>
+        <p class="hint" data-i18n="s9.scopeHint">개인 범위는 작업 저장소에 파일을 추가하지 않습니다. 팀과 공유하려면 프로젝트 범위를 고르세요.</p>
+      </div>
+
+      <h3 data-i18n="s9.useTitle">첫 사용</h3>
+      <ul class="uses">
+        <li data-i18n="s9.use1"><code>/grip-it</code> — 참조할 자료와 관심 방향을 알려 주면 미해소 토픽을 전부 꺼내 보여 줍니다.</li>
+        <li data-i18n="s9.use2">“기획서 기준으로, 데이터 설계에서 아직 안 정해진 것들 같이 정하자.”</li>
+        <li data-i18n="s9.use3">“오늘은 질문 5개까지만.” — 문항 수를 정해 두면 그 수에 도달할 때 <code>BUDGET_REACHED</code>로 끝나고, 남은 토픽은 기록부에 남습니다.</li>
+      </ul>
+
+      <p class="finale" data-i18n="s9.finale">실행은 맡기고, 결정은 쥐십시오.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="narrow">
+    <p><a href="https://github.com/wild-mental/grip-it-skill">github.com/wild-mental/grip-it-skill</a></p>
+    <p class="fine" data-i18n="footer.pin">이 페이지가 인용한 규칙·어휘·예시는 grip-it @ b1df6e1 기준입니다.</p>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="ui.js"></script>
+<script src="hero.js"></script>
+</body>
+</html>

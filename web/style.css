@@ -1,0 +1,252 @@
+/* GRIP IT — 랜딩 페이지
+   밝은 테마 전용 (다크 모드 없음 · 04번 T7)
+   난색(햇볕)은 분위기, 한색(딥 네이비·밝은 블루)은 정보를 맡는다. */
+
+:root {
+  /* 바탕 — 햇볕처럼 따뜻하고 밝은 톤 */
+  --sun-050: #fffaf2;
+  --sun-100: #fdf4e7;
+  --sun-200: #f7e9d5;
+  --glow:    #ffd9a0;
+
+  /* 정보 — 한색 */
+  --navy-900: #0f2440;
+  --navy-700: #1c3a5e;
+  --navy-500: #40566f;
+  --blue-600: #1668d8;
+  --blue-500: #2f86f0;
+  --blue-100: #dceafc;
+
+  /* 데모 상태 3색 — 데모 블록 안에서만 쓴다 */
+  --st-resolved:   #1f7a4d;
+  --st-unresolved: #a86b16;
+  --st-dropped:    #7b7f88;
+
+  --w-narrow: 46rem;
+  --w-wide: 72rem;
+
+  --font-sans: "Pretendard", "Pretendard Variable", "Noto Sans KR", -apple-system,
+               BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-mono: "D2Coding", "Nanum Gothic Coding", "SFMono-Regular", Menlo, Consolas,
+               "Apple SD Gothic NeoMono", monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--sun-050);
+  color: var(--navy-900);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  word-break: keep-all;
+}
+
+a { color: var(--blue-600); }
+
+code, pre { font-family: var(--font-mono); }
+
+/* ---------- 폭 ---------- */
+.narrow { max-width: var(--w-narrow); margin: 0 auto; padding: 0 1.25rem; }
+.wide   { max-width: var(--w-wide);   margin: 0 auto; padding: 0 1.25rem; }
+
+/* ---------- 상단 바 ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(255, 250, 242, 0.92);
+  border-bottom: 1px solid var(--sun-200);
+  backdrop-filter: saturate(180%) blur(8px);
+}
+.topbar-inner {
+  max-width: var(--w-wide); margin: 0 auto; padding: 0.6rem 1.25rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+}
+.brand {
+  font-weight: 800; letter-spacing: 0.08em; text-decoration: none;
+  color: var(--navy-900); font-size: 1rem;
+}
+.topbar-nav { display: flex; align-items: center; gap: 0.9rem; }
+.langswitch { display: inline-flex; border: 1px solid var(--blue-100); border-radius: 999px; overflow: hidden; }
+.lang-btn {
+  border: 0; background: transparent; color: var(--navy-500);
+  font: inherit; font-size: 0.82rem; padding: 0.2rem 0.7rem; cursor: pointer;
+}
+.lang-btn.is-on { background: var(--blue-600); color: #fff; }
+.repo-link { font-size: 0.88rem; text-decoration: none; }
+.repo-link:hover { text-decoration: underline; }
+
+/* ---------- S0 히어로 (전체 폭) ---------- */
+.hero { position: relative; padding: 0 0 5rem; overflow: hidden; }
+.hero-visual {
+  position: relative;
+  width: 100%; height: 62vh; min-height: 340px; max-height: 680px;
+  background: linear-gradient(180deg, var(--sun-100), var(--sun-050));
+}
+.hero-visual img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 45%;
+  display: block;
+}
+.hand-flash {
+  position: absolute; inset: 0; pointer-events: none; opacity: 0;
+  background: radial-gradient(circle at 50% 55%, var(--glow) 0%, rgba(255, 217, 160, 0.35) 28%, rgba(255, 217, 160, 0) 62%);
+  mix-blend-mode: screen;
+}
+.hero-copy { margin-top: -2.5rem; position: relative; }
+.hero h1 {
+  font-size: clamp(2rem, 5.4vw, 3.2rem); line-height: 1.25; margin: 0 0 0.6rem;
+  letter-spacing: -0.02em;
+}
+.hero .lead { font-size: 1.06rem; color: var(--navy-700); margin: 0 0 1.2rem; }
+.hero .def { color: var(--navy-700); margin: 0 0 1.8rem; }
+
+.install-preview {
+  border: 1px solid var(--blue-100); border-radius: 12px;
+  background: #fff; padding: 1rem 1rem 0.85rem;
+}
+.install-label {
+  display: inline-block; font-size: 0.78rem; letter-spacing: 0.04em;
+  color: var(--blue-600); font-weight: 700; margin-bottom: 0.5rem;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 0.75rem; }
+.crack {
+  margin: 2.2rem 0 0; font-size: 1.05rem; color: var(--navy-700);
+  border-left: 3px solid var(--blue-500); padding-left: 0.9rem;
+}
+
+/* ---------- 버튼 ---------- */
+.copy-btn, .ghost-btn {
+  font: inherit; font-size: 0.9rem; border-radius: 8px; cursor: pointer;
+  padding: 0.45rem 0.9rem; text-decoration: none; display: inline-block;
+}
+.copy-btn { background: var(--blue-600); color: #fff; border: 1px solid var(--blue-600); }
+.copy-btn:hover { background: var(--blue-500); }
+.copy-btn.is-done { background: var(--st-resolved); border-color: var(--st-resolved); }
+.ghost-btn { background: #fff; color: var(--navy-700); border: 1px solid var(--sun-200); }
+.ghost-btn:hover { border-color: var(--blue-500); color: var(--blue-600); }
+
+/* ---------- 섹션 공통 ---------- */
+.section { padding: 4.5rem 0; border-top: 1px solid var(--sun-200); }
+.section h2 {
+  font-size: clamp(1.5rem, 3.4vw, 2.1rem); line-height: 1.35;
+  margin: 0 0 1rem; letter-spacing: -0.015em;
+}
+.section h3 { font-size: 1.12rem; margin: 2rem 0 0.6rem; }
+.section p { margin: 0 0 1rem; }
+.lead { color: var(--navy-700); }
+.closing { font-weight: 700; }
+.bridge {
+  margin-top: 2rem; color: var(--blue-600); font-size: 0.98rem;
+}
+.bridge::before { content: "↓ "; }
+.callout {
+  background: #fff; border: 1px solid var(--blue-100); border-radius: 10px;
+  padding: 0.9rem 1rem; color: var(--navy-700);
+}
+
+/* ---------- S1 네 장면 ---------- */
+.scenes { list-style: none; margin: 1.5rem 0; padding: 0; }
+.scene {
+  display: flex; gap: 0.9rem; align-items: baseline;
+  padding: 0.85rem 0; border-bottom: 1px dashed var(--sun-200);
+  opacity: 0; transition: opacity 620ms ease;
+}
+.scene.is-in { opacity: 1; }
+.scene-n { color: var(--blue-500); font-family: var(--font-mono); font-size: 0.85rem; }
+.scene p { margin: 0; }
+
+/* ---------- S2 용어 ---------- */
+.glossary { margin: 1.5rem 0 0; }
+.gl-row { padding: 0.7rem 0; border-top: 1px solid var(--sun-200); }
+.gl-row dt { font-weight: 700; }
+.gl-row dd { margin: 0.25rem 0 0; color: var(--navy-700); }
+
+/* ---------- S4 대비 ---------- */
+.contrast { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin: 1.5rem 0; }
+.contrast-col { border-radius: 10px; padding: 1rem; background: #fff; border: 1px solid var(--sun-200); }
+.contrast-col.is-new { border-color: var(--blue-500); }
+.contrast-col p { margin: 0.4rem 0 0; font-size: 1.02rem; }
+.tag { font-size: 0.76rem; letter-spacing: 0.04em; color: var(--navy-500); }
+.contrast-col.is-new .tag { color: var(--blue-600); font-weight: 700; }
+
+/* ---------- 표 ---------- */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.tbl { border-collapse: collapse; width: 100%; background: #fff; font-size: 0.95rem; }
+.tbl th, .tbl td {
+  border: 1px solid var(--sun-200); padding: 0.7rem 0.85rem;
+  text-align: left; vertical-align: top;
+}
+.tbl thead th { background: var(--blue-100); color: var(--navy-900); font-weight: 700; }
+.tbl tbody th { background: var(--sun-100); font-weight: 700; white-space: nowrap; }
+
+/* ---------- 다이어그램 ---------- */
+.diagram { display: block; width: 100%; height: auto; margin: 1.5rem auto; }
+
+/* ---------- S6 데모 ---------- */
+.demo { margin-top: 1.5rem; }
+.demo-note { font-size: 0.86rem; color: var(--navy-500); }
+.cut { margin: 1.2rem 0; }
+.cut h3 { display: flex; align-items: center; gap: 0.55rem; margin: 0 0 0.35rem; }
+.cut-n {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.55rem; height: 1.55rem; border-radius: 50%;
+  background: var(--blue-600); color: #fff; font-size: 0.85rem; font-family: var(--font-mono);
+}
+.cut-lead { color: var(--navy-700); font-size: 0.95rem; margin: 0 0 0.6rem; }
+.cut-bridge {
+  margin: 0.4rem 0 1.4rem; padding-left: 2.1rem;
+  color: var(--blue-600); font-size: 0.95rem;
+}
+.code {
+  background: #fff; border: 1px solid var(--sun-200); border-radius: 10px;
+  padding: 0.9rem 1rem; margin: 0; overflow-x: auto;
+  font-size: 0.84rem; line-height: 1.65; color: var(--navy-900);
+  white-space: pre;
+}
+.code code { white-space: pre; }
+
+/* ---------- S7 도메인 탭 ---------- */
+.domain-tabs, .install-tabs, .install-scopes {
+  display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 0.9rem;
+}
+.domain-tabs { display: none; }
+.tab, .chip {
+  font: inherit; font-size: 0.88rem; cursor: pointer;
+  border: 1px solid var(--sun-200); background: #fff; color: var(--navy-700);
+  padding: 0.35rem 0.8rem; border-radius: 999px;
+}
+.tab.is-on, .chip.is-on { background: var(--blue-600); border-color: var(--blue-600); color: #fff; }
+
+/* ---------- S9 설치 ---------- */
+.install {
+  border: 1px solid var(--blue-100); border-radius: 12px; background: #fff;
+  padding: 1rem; margin: 1.5rem 0;
+}
+.install .code { border-color: var(--blue-100); margin-bottom: 0.7rem; }
+.hint { font-size: 0.86rem; color: var(--navy-500); margin: 0.7rem 0 0; }
+.uses { padding-left: 1.1rem; color: var(--navy-700); }
+.uses li { margin: 0.4rem 0; }
+.finale {
+  margin: 2.5rem 0 0; font-size: clamp(1.25rem, 3vw, 1.7rem);
+  font-weight: 800; letter-spacing: -0.015em;
+}
+
+/* ---------- 푸터 ---------- */
+.footer { padding: 2.5rem 0 4rem; border-top: 1px solid var(--sun-200); }
+.footer p { margin: 0.2rem 0; font-size: 0.9rem; }
+.fine { color: var(--navy-500); font-size: 0.82rem; }
+
+/* ---------- 좁은 화면 ---------- */
+@media (max-width: 720px) {
+  body { font-size: 16px; }
+  .hero-visual { height: 46vh; min-height: 260px; }
+  .contrast { grid-template-columns: 1fr; }
+
+  /* 도메인 표는 도메인별 탭으로 접는다 (04번 T15) */
+  .domain-tabs { display: flex; }
+  .domain-table th[data-col]:not(.is-on),
+  .domain-table td[data-col]:not(.is-on) { display: none; }
+}

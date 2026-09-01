@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="880" height="300" role="img" aria-label="Grip state">
+  <style>
+    .ln { fill: none; stroke: #0f2440; stroke-width: 2; }
+    .dash { fill: none; stroke: #40566f; stroke-width: 2; stroke-dasharray: 7 6; }
+    .fill { fill: #dceafc; }
+    .t { font-family: "Pretendard","Noto Sans KR",system-ui,sans-serif; fill: #0f2440; }
+    .h { font-size: 19px; font-weight: 700; }
+    .s { font-size: 13px; fill: #40566f; }
+    .k { font-size: 13px; fill: #1668d8; font-weight: 700; letter-spacing: .06em; }
+  </style>
+
+  <!-- 실행 — 놓는다 -->
+  <rect class="dash" x="40" y="70" width="330" height="160" rx="14"/>
+  <text class="t k" x="66" y="104">HANDS-OFF</text>
+  <text class="t h" x="66" y="140">실행 · Doing</text>
+  <text class="t s" x="66" y="170">손을 뗀다 — 에이전트가 수행합니다</text>
+  <text class="t s" x="66" y="192">Released to the agent</text>
+  <path class="dash" d="M66 210 h280"/>
+
+  <!-- 화살표 -->
+  <path class="ln" d="M392 150 h96"/>
+  <path class="ln" d="M476 140 l14 10 l-14 10"/>
+
+  <!-- 결정 — 쥔다 -->
+  <rect class="fill" x="510" y="70" width="330" height="160" rx="14"/>
+  <rect class="ln" x="510" y="70" width="330" height="160" rx="14"/>
+  <text class="t k" x="536" y="104">GRIP</text>
+  <text class="t h" x="536" y="140">이해 · 방향 · 결정</text>
+  <text class="t h" x="536" y="166">Understanding · Direction · Decisions</text>
+  <text class="t s" x="536" y="196">단단히 쥔다 — 사용자가 결정합니다</text>
+  <text class="t s" x="536" y="216">Held by you</text>
+
+  <text class="t s" x="40" y="272">오너십이 새는 곳은 왼쪽이 아니라 오른쪽입니다. · Ownership leaks on the right, not the left.</text>
+</svg>

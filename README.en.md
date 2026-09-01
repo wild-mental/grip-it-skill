@@ -7,11 +7,11 @@
 
 Across every kind of AI agent work, we want a firmer understanding, more explicit decisions, and — through those — a firmer claim that the work is genuinely ours. Put differently: when we hand a task to an AI agent, we want to be hands-off about carrying it out, while keeping a much surer hold on understanding it, setting its direction, and making its decisions. A firm grip.
 
-**Grip It is a Skill built to serve exactly that need, in the most AI-native way available. Before the real work begins, it detects the project's still-unsettled details and interviews you about them, putting scattered decisions back into your hands one at a time. It is not limited to software — the same procedure applies to general office work, business planning, service planning, and research. Decision-type questions are presented through a selectable UI, asked in a kind and explanatory conversational register, and reflected into your documents and binding surfaces the moment they are resolved. It supports Cursor, Claude Code, and Codex alike.**
+**Grip It is a Skill built to serve exactly that need, in the most AI-native way available. Before the real work begins, it detects the project's still-unsettled details and interviews you about them, putting scattered decisions back into your hands one at a time. It is not limited to software — the same procedure applies to general office work, business planning, service planning, and research. Decision-type questions are presented through a selectable UI, asked in a kind and explanatory conversational register, and reflected into your real project documents the moment they are resolved. It supports Cursor, Claude Code, and Codex alike.**
 
 Where the grip slips is fairly predictable. The AI invents plausible-looking items even when the material is too thin; you approve proposals containing terms you do not actually know; you end up choosing only from the options the AI put in front of you; and what you decided scatters through a chat log, so the next session's AI decides it all over again on its own. The decisions were yours, and yet the result is not.
 
-`grip-it` closes those gaps one by one. The agent **checks the material first**, **lays out everything still to be decided**, attaches a **recommendation and rationale** to every set of options, and **glosses the difficult terms**. **You make the decisions.** And those decisions are fixed into your documents and binding surfaces, where they **constrain later AI work**.
+`grip-it` closes those gaps one by one. The agent **checks the material first**, **lays out everything still to be decided**, attaches a **recommendation and rationale** to every set of options, and **glosses the difficult terms**. **You make the decisions.** And those decisions are fixed into your project documents, where they become **the standard later AI work has to follow**.
 
 What this skill protects is not speed. It is **ownership of the work**.
 
@@ -23,8 +23,8 @@ What this skill protects is not speed. It is **ownership of the work**.
 | You are pulled through questions without seeing the whole board | **Full topic list up front** — you know the number of rounds from the start |
 | You approve proposals you do not fully understand | **`[terms]` glosses + explanatory register** — you decide only what you understood |
 | You choose only from what the AI offered | **An always-present "Other" free-text option** — you can answer in your own way |
-| What you decided scatters through the chat | **Grip Ledger + record surface** — what was decided, and why, remains |
-| The next session's AI decides it all again | **Binding surface** — what was settled once is not renegotiated |
+| What you decided scatters through the chat | **Grip Register + rationale docs** — what was decided, and why, remains |
+| The next session's AI decides it all again | **Fixed in the normative docs** — what was settled once is not renegotiated |
 
 ---
 
@@ -38,7 +38,7 @@ Grip It drops that approach and moves the subject of the questioning from the pe
 
 ### 2. It checks the material first — a gate against invented topics
 
-Before asking anything, it verifies that your reference material provides the **baseline** needed to extract topics. Topics pulled without that baseline are not extraction but **invention**, and once invented items enter the ledger, the whole ledger becomes untrustworthy.
+Before asking anything, it verifies that your reference material provides the **baseline** needed to extract topics. Topics pulled without that baseline are not extraction but **invention**, and once invented items slip in, the whole record becomes untrustworthy.
 
 | | Material role | Grade |
 |---|---|---|
@@ -82,16 +82,23 @@ CORE  = costly to reverse, or constrains other decisions
 MINOR = easy to reverse, and constrains nothing else
 ```
 
-### 6. It does not merely record — it fixes decisions on a binding surface
+### 6. It does not stop at writing things down — it makes later work follow them
 
-A decision written down somewhere becomes a subject of debate again at the next meeting. `grip-it` splits its output into two surfaces.
+A decision written down somewhere becomes a subject of debate again at the next meeting. So what `grip-it` leaves behind is split across two layers.
 
-| Surface | Function | Examples |
+| Layer | What it holds | Example |
 |---|---|---|
-| **Record surface** | Where the decision and its rationale live | Planning docs · business plans · research protocols · minutes |
-| **Binding surface** | Where later work automatically reads and complies | Team rules · approval criteria · operating policy · **preregistration** · `CLAUDE.md`, rules, hooks |
+| **Gripping history** | The deciding as it happens: what is still open, what was decided and why, and where it was applied | One file, the Grip Register at `docs/grip/GRIP_REGISTER.md` |
+| **Active project docs** | The settled result: your real project documents, where confirmed decisions go to live | The two kinds below |
 
-Preregistration in research is the exact analogue of an agent harness: once fixed, it constrains later behavior, and deviating requires an explicit stated reason.
+Active project docs divide again by what they do.
+
+| | What it does | Examples |
+|---|---|---|
+| **Rationale docs** | Hold the decision and its reasoning, so "why did we settle on this?" stays answerable later | Planning docs · business plans · research protocols · minutes |
+| **Normative docs** | Are read and complied with automatically by later work, so the same decision is not renegotiated | Team rules · approval criteria · operating policy · **preregistration** · `CLAUDE.md`, rules, hooks |
+
+Preregistration in research shows clearly what a normative doc is: register the analysis plan before collecting data, and later behavior is bound by it — departing from it requires an explicit stated reason. Fill only the rationale docs and leave the normative ones empty, and decisions get made but not kept.
 
 ### 7. It asks in a kind, explanatory conversational register
 
@@ -106,16 +113,21 @@ The promise that "you only confirm or correct" holds only if the question is und
 | Restrained affect | No exaggeration, exclamation, or praise |
 | Length cap | One context sentence + one question sentence |
 
-Structure blocks — the Grip Ledger, counters, tables — **stay terse**. The ledger is a `grep` target, and turning it into prose breaks resume and counting.
+Structure blocks — the Grip Register, counters, tables — **stay terse**. The register is read by machines and found with `grep`, so writing it out in prose breaks resume and counting.
 
-### 8. English technical terms stay in English, with a short gloss in parentheses
+### 8. English technical terms stay in English, with the local equivalent and a gloss
 
-Removing the original term makes it impossible to search or cross-check against source material, and translated terms vary by field, which adds confusion rather than removing it.
+Removing the original term makes it impossible to search or cross-check against source material; keeping only a translation adds confusion, since the standard rendering varies by field. So all three sit on one line — **the original term, the Korean equivalent, and a short gloss**. The equivalent matters: without it the reader has no word to use when discussing the concept with their team.
 
 ```
-preregistration (registering the analysis plan publicly before data collection)
-idempotency (the property that repeating a request yields the same result as sending it once)
+Notation: English Term(Korean equivalent: short gloss)
+
+idempotency(멱등성: the property that repeating a request yields the same result as sending it once)
+preregistration(사전등록: registering the analysis plan publicly before data collection)
+cohort(코호트: a group of users who arrived in the same period)
 ```
+
+When there is no established local equivalent, the gloss alone is used.
 
 Transliterations are judged by **whether they are established** in the field, and translated terms are checked for **polysemous mistranslation** (for example, `significant` in a statistical context).
 
@@ -123,7 +135,7 @@ Notation priority is **existing project notation > field-standard term > the age
 
 ### 9. Terms are glossed directly beneath the question
 
-A decision approved without being understood contaminates the ledger and propagates to the binding surface. The gloss is not a courtesy — it is a **safeguard for ledger accuracy**.
+A decision approved without being understood does not merely contaminate the register; it carries through into the normative docs and binds later work to the wrong thing. The gloss is not a courtesy — it is a **safeguard for the accuracy of the record**.
 
 Three classes are glossed: ① domain terms ② field idioms and abbreviations ③ **project-specific coinages** (source citation required). A coinage with no definition found in scope is marked `not defined in this project`, and **defining it is raised as a MINOR topic candidate.**
 
@@ -141,11 +153,11 @@ last     Other — free text
 
 The count is **2–4 real choices plus Other**, and Other does not count against that cap. Even where a question UI supplies a free-text field automatically, it is stated in the options themselves so behavior is identical across all three vendors.
 
-A free-text answer is recorded in the ledger **in the user's own wording**. If it overturns the topic's premise, the topic is marked `DROPPED` while **the denominator is preserved** (shrinking it would distort the progress rate).
+A free-text answer is carried into the register **in the user's own wording**. If it overturns the topic's premise, the topic is marked `DROPPED` while **the denominator is preserved** (shrinking it would distort the progress rate).
 
 ### 11. You can stop and resume at any time
 
-Progress lives in the Grip Ledger, so ending a session mid-way resumes from the first `UNRESOLVED` topic next time. The material-pending state (`MATERIAL_PENDING`) is also preserved as a stub, leaving a checklist of exactly what to bring.
+Progress lives in the Grip Register, so ending a session mid-way resumes from the first `UNRESOLVED` topic next time. The state of waiting on more material (`MATERIAL_PENDING`) is preserved too, leaving a checklist of exactly what to bring.
 
 ---
 
@@ -154,7 +166,7 @@ Progress lives in the Grip Ledger, so ending a session mid-way resumes from the 
 ```
 Boundedness   — Are the reference scope and direction stated, is the extraction baseline present, and is exploration confined to that scope?
 Visibility    — Is the full unresolved-topic list extracted up front, and is progress (resolved / dropped / remaining) visible each turn?
-Persistence   — Is each topic reflected into the record surface + binding surface and logged in the Grip Ledger the moment it is resolved?
+Persistence   — Is each topic reflected into the rationale and normative docs and logged in the Grip Register the moment it is resolved?
 ```
 
 The skill does not advance unless all three hold at once.
@@ -245,9 +257,9 @@ Tell the agent which material to reference and what you want clarified, then ask
 
 | Output | Content |
 |--------|------|
-| **Grip Ledger** | The single progress ledger of decision topics (`docs/grip/GRIP_LEDGER.md`), with a greppable `RESOLVED / DROPPED / TOTAL` counter at the top and each topic's decision and application recorded — the basis for resuming |
-| **Record surface** | Planning docs, business plans, research protocols, minutes, updated per the decision |
-| **Binding surface** | Team rules, approval criteria, operating policy, preregistration, agent harness — wherever CORE decisions must constrain later work |
+| **Grip Register** (gripping history) | The one file where the deciding is tracked (`docs/grip/GRIP_REGISTER.md`), with a greppable `RESOLVED / DROPPED / TOTAL` counter at the top and each topic's decision and application recorded — the basis for resuming |
+| **Rationale docs** (active project docs) | Planning docs, business plans, research protocols, minutes, updated per the decision |
+| **Normative docs** (active project docs) | Team rules, approval criteria, operating policy, preregistration, agent harness — wherever CORE decisions must bind later work |
 
 ---
 
@@ -257,11 +269,11 @@ Tell the agent which material to reference and what you want clarified, then ask
 |------|------|
 | Step 0 — Intake & Scope Lock | Confirm reference scope (A), direction (B), completion condition (C), output target (D). Ask first if A or B is missing |
 | **Step 0.5 — Material Check** | Read only within scope to judge R1–R5. A missing baseline (R1/R3) opens the gate → **two options, A or B**. A missing judgment basis (R2/R4) is absorbed as the first CORE topic |
-| Step 1 — Topic Extraction | Read only within scope, extract every unresolved topic, present the ledger by CORE/MINOR and dependency order (end if zero) |
+| Step 1 — Topic Extraction | Read only within scope, extract every unresolved topic, present the register by CORE/MINOR and dependency order (end if zero) |
 | Step 2 — Grip the Topic | One first-UNRESOLVED topic: options + recommendation + **`[terms]` block** + **Other option** + a single question |
-| Step 3 — Resolve & Persist | On confirmation, update record and binding surfaces and the ledger before moving on |
+| Step 3 — Resolve & Persist | On confirmation, update the rationale and normative docs and the register before moving on |
 | Step 4 — Advance or Stop | Next topic, or stop (ALL_RESOLVED / USER_PAUSED / **MATERIAL_PENDING** / BUDGET) |
-| Step 5 — Resume | On re-invocation, read the ledger and resume from material check or the first UNRESOLVED topic |
+| Step 5 — Resume | On re-invocation, read the register and resume from material check or the first UNRESOLVED topic |
 | Step 6 — Closeout | Show the counter and stop reason, and summarize this session's changes |
 
 ---
@@ -274,7 +286,7 @@ B. Direction of interest — which ambiguity you want cleared
                            (e.g. business scope & pricing / membership & refund policy /
                             measurement & analysis design / deliverables & acceptance criteria)
 C. Completion condition  — how far to go (default: every unresolved topic in that direction RESOLVED)
-D. OUTPUT target         — where decisions land (default: record surface + binding surface)
+D. OUTPUT target         — where decisions land (default: rationale docs + normative docs)
 ```
 
 A and B are your intent and cannot be substituted; if either is missing, the skill asks before starting. The material itself (R1-R5) is content and can be filled through conversation, so only a missing baseline (R1/R3) opens the gate, while a missing R2 or R4 is absorbed as the first CORE topic.
@@ -349,10 +361,10 @@ contract:
   domain=general knowledge work (office, business planning, service planning, research, software)
   purpose=secure the user's ownership of decisions in AI-assisted work
   intake_required=[reference_scope (A), direction_of_interest (B)]
-  intake_default=[completion=all in-scope unresolved topics RESOLVED (C), output=record surface + binding surface (D)]
+  intake_default=[completion=all in-scope unresolved topics RESOLVED (C), output=active project docs — rationale docs + normative docs (D)]
   refuse_until_present=[A, B]
   must_not_scan_outside_scope=true
-  pillars=[Boundedness (scoped reference + extraction baseline present + bounded exploration), Visibility (extract full topic list up front + show progress each turn), Persistence (apply each decision to record + binding surface immediately, before next topic)]
+  pillars=[Boundedness (scoped reference + extraction baseline present + bounded exploration), Visibility (extract full topic list up front + show progress each turn), Persistence (apply each decision to rationale + normative docs immediately, before next topic)]
   material_roles=[R1 purpose/success-criteria (baseline), R2 audience/stakeholders (judgment), R3 scope/deliverable (baseline), R4 constraints (judgment), R5 current-progress]
   material_gate=trigger only on R1/R3 deficit; options are exactly [A: add reference material and re-invoke -> STOP MATERIAL_PENDING, B: build anchor in-session then proceed]; never offer "proceed anyway"
   material_gate_recommend=[B when zero refs or both R1+R3 missing, else A]
@@ -365,11 +377,13 @@ contract:
   other_response=[record user's own wording verbatim in decision:, re-confirm at most once, DROPPED if premise overturned (keep TOTAL), update depends: if it affects other topics]
   term_gloss_block=[classes: domain-term, field-idiom, project-coinage(cite source); max 4 per turn; 1 line each; once per session; omit block if none]
   language_tone=[polite explanatory conversational register, complete sentences, 1 info per sentence, explain-before-ask, guiding not imperative, no emoji/slang, cap = 1 context sentence + 1 question sentence]
-  language_tone_exception=structure blocks (ledger rows, counters, tables) stay terse for grep/resume
+  language_tone_exception=structure blocks (register rows, counters, tables) stay terse for grep/resume
+  term_notation_format=English Term(Korean equivalent: short gloss); gloss only when no established Korean equivalent
   term_notation=[keep English technical terms + short parenthetical gloss; transliteration only if established, else local term + original in parens; check polysemous mistranslations; priority = existing project notation > field standard > agent's own translation]
-  decision_class=[CORE = irreversible or constrains other decisions -> record+binding required, MINOR -> ledger + one-line doc]
-  ledger_file=docs/grip/GRIP_LEDGER.md  # counter "RESOLVED: n / DROPPED: d / TOTAL: m", resumable
-  ledger_stub_on_material_pending=true
+  output_layers=[gripping-history = the Grip Register file (one), active project docs = rationale docs + normative docs]
+  decision_class=[CORE = irreversible or constrains other decisions -> rationale+normative docs required, MINOR -> register + one-line doc]
+  register_file=docs/grip/GRIP_REGISTER.md  # counter "RESOLVED: n / DROPPED: d / TOTAL: m", resumable
+  register_stub_on_material_pending=true
   stop_reasons=[ALL_RESOLVED, USER_PAUSED, MATERIAL_PENDING, BUDGET]
   output_separates_areas_with=horizontal rules (---) per turn
 ```

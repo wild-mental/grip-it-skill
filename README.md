@@ -7,11 +7,11 @@
 
 모든 종류의 AI 에이전트 작업에 대해 우리는 더 확실한 이해를 원하고, 더 명시적인 의사결정을 원하고, 이를 통해 궁극적으로 더 확실한 작업 소유권을 확보하기를 원하곤 합니다. 다시 말해 우리는 AI 에이전트에게 과업을 지시할 때, 업무의 실행에 대해서는 Hands off 를 추구하지만, 작업에 대한 이해와 방향 설정, 의사결정에 대해서는 더 확실한 장악력, 즉 단단한 그립을 확보하고자 합니다.
 
-**Grip It 은 이러한 사용자의 니즈를 가장 AI-Native하게 해결하기 위해서 만들어진 Skill입니다. 본격적인 작업을 시작하기 전에 프로젝트의 미흡한 세부 결정 사항들을 탐지하여 사용자를 인터뷰함으로써, 흩어져 있던 결정을 하나씩 사용자의 손에 쥐여 줍니다. 소프트웨어에 한정하지 않고 일반 사무·사업기획·서비스기획·연구 리서치까지 같은 절차로 적용합니다. 결정형 질문은 선택형 UI로 띄우고, 친절한 설명적 대화체로 묻고, 해소되는 즉시 문서와 구속면에 반영합니다. Cursor, Claude Code, Codex 모두 지원합니다.**
+**Grip It 은 이러한 사용자의 니즈를 가장 AI-Native하게 해결하기 위해서 만들어진 Skill입니다. 본격적인 작업을 시작하기 전에 프로젝트의 미흡한 세부 결정 사항들을 탐지하여 사용자를 인터뷰함으로써, 흩어져 있던 결정을 하나씩 사용자의 손에 쥐여 줍니다. 소프트웨어에 한정하지 않고 일반 사무·사업기획·서비스기획·연구 리서치까지 같은 절차로 적용합니다. 결정형 질문은 선택형 UI로 띄우고, 친절한 설명적 대화체로 묻고, 해소되는 즉시 실제 프로젝트 문서에 반영합니다. Cursor, Claude Code, Codex 모두 지원합니다.**
 
 그립이 풀리는 지점은 대체로 정해져 있습니다. 근거가 부족해도 AI가 그럴듯한 항목을 지어내고, 뜻을 모르는 용어가 섞인 제안을 그대로 승인하게 되고, AI가 내놓은 보기 안에서만 고르게 되고, 정한 내용이 대화에 흩어져 다음 세션의 AI가 또 제멋대로 정합니다. 결정은 분명 내 것이었는데, 결과물은 내 것이 아니게 됩니다.
 
-`grip-it`은 그 지점들을 하나씩 막습니다. 에이전트는 판단에 필요한 **재료를 먼저 점검**하고, 앞으로 정할 것을 **전부 펼쳐 보이고**, 선택지마다 **권장안과 근거**를 붙이고, 어려운 **용어를 풀어 설명**합니다. **결정은 사용자가 합니다.** 그리고 그 결정은 문서와 구속면에 고정되어 **이후 AI 작업을 구속**합니다.
+`grip-it`은 그 지점들을 하나씩 막습니다. 에이전트는 판단에 필요한 **재료를 먼저 점검**하고, 앞으로 정할 것을 **전부 펼쳐 보이고**, 선택지마다 **권장안과 근거**를 붙이고, 어려운 **용어를 풀어 설명**합니다. **결정은 사용자가 합니다.** 그리고 그 결정은 프로젝트 문서에 고정되어 **이후 AI 작업이 따라야 할 기준**이 됩니다.
 
 이 스킬이 지키려는 것은 속도가 아니라 **작업 오너십**입니다.
 
@@ -23,8 +23,8 @@
 | 전체 판을 모른 채 질문에 끌려간다 | **토픽 전체 선(先)가시화** — 몇 번 문답할지 처음부터 압니다 |
 | 뜻을 모르는 제안을 그대로 승인한다 | **`[용어]` 해설 + 설명적 대화체** — 이해한 것만 결정합니다 |
 | AI가 제시한 보기 안에서만 고른다 | **기타(직접 입력) 상시 옵션** — 내 방식으로 답할 수 있습니다 |
-| 정한 내용이 대화에 흩어진다 | **Grip Ledger + 기록면** — 무엇을 왜 정했는지 남습니다 |
-| 다음 세션의 AI가 다시 제멋대로 정한다 | **구속면 고정** — 한 번 정한 것은 다시 협상되지 않습니다 |
+| 정한 내용이 대화에 흩어진다 | **결정 기록부 + 근거 문서** — 무엇을 왜 정했는지 남습니다 |
+| 다음 세션의 AI가 다시 제멋대로 정한다 | **규범 문서에 고정** — 한 번 정한 것은 다시 협상되지 않습니다 |
 
 ---
 
@@ -38,7 +38,7 @@ Grip It 에서는 이런 방식을 버리고, 추궁의 대상을 사람이 아�
 
 ### 2. 착수 전 "재료"부터 점검한다 — 지어낸 토픽을 막는 게이트
 
-질문을 시작하기 전에, 참조 자료가 토픽을 뽑을 **기준선**을 갖췄는지 확인합니다. 기준선 없이 뽑은 토픽은 추출이 아니라 **발명**이고, 지어낸 항목이 원장에 들어가면 원장 전체를 믿을 수 없게 됩니다.
+질문을 시작하기 전에, 참조 자료가 토픽을 뽑을 **기준선**을 갖췄는지 확인합니다. 기준선 없이 뽑은 토픽은 추출이 아니라 **발명**이고, 지어낸 항목이 한 번 섞여 들어가면 기록 전체를 믿을 수 없게 됩니다.
 
 | | 재료 역할 | 등급 |
 |---|---|---|
@@ -82,16 +82,23 @@ CORE  = 되돌리기 비용이 크거나, 다른 결정을 구속하는 결정
 MINOR = 되돌리기 쉽고, 다른 결정을 구속하지 않는 결정
 ```
 
-### 6. 기록만 하지 않고 "구속면"에 고정한다
+### 6. 적어두는 데서 그치지 않고, 이후 작업이 따르게 만든다
 
-결정을 문서 어딘가에 적어두기만 하면 다음 회의에서 다시 논쟁거리가 됩니다. `grip-it`은 산출물을 두 면으로 나눕니다.
+결정을 문서 어딘가에 적어두기만 하면 다음 회의에서 다시 논쟁거리가 됩니다. 그래서 `grip-it`이 남기는 것은 두 계층으로 나뉩니다.
 
-| 면 | 기능 | 예 |
+| 계층 | 무엇이 남는가 | 예 |
 |---|---|---|
-| **기록면** | 결정의 내용과 근거가 남는 자리 | 기획서 · 사업계획서 · 연구계획서 · 회의록 |
-| **구속면** | 이후 작업이 자동으로 참조·준수하는 자리 | 팀 규칙 · 승인 기준 · 운영 정책 · **사전등록(preregistration)** · `CLAUDE.md`·rules·hooks |
+| **기록계층** (gripping-history) | 정해 가는 과정. 무엇이 아직 미결이고, 무엇을 왜 정했고, 어디에 반영했는가 | 결정 기록부 `docs/grip/GRIP_REGISTER.md` 한 파일 |
+| **확정계층** (active project docs) | 정해진 결과. 확정된 결정이 들어가 사는 실제 프로젝트 문서 | 아래 두 갈래 |
 
-연구의 사전등록은 에이전트 하네스의 정확한 유비입니다. 한 번 고정하면 이후 행동을 구속하고, 이탈하려면 명시적 사유가 필요합니다.
+확정계층은 다시 하는 일에 따라 둘로 나뉩니다.
+
+| | 하는 일 | 예 |
+|---|---|---|
+| **근거 문서** | 결정의 내용과 근거가 남아, 나중에 "왜 그렇게 정했는지" 조회할 수 있게 합니다 | 기획서 · 사업계획서 · 연구계획서 · 회의록 |
+| **규범 문서** | 이후 작업이 자동으로 참조하고 따르게 되어, 같은 결정을 다시 협상하지 않게 합니다 | 팀 규칙 · 승인 기준 · 운영 정책 · preregistration(사전등록) · `CLAUDE.md`·rules·hooks |
+
+연구에서 쓰는 **사전등록**이 규범 문서가 무엇인지 잘 보여 줍니다. 분석 계획을 데이터 수집 전에 등록해 두면 이후 행동이 그것에 묶이고, 벗어나려면 명시적인 사유를 대야 합니다. 근거 문서만 채우고 규범 문서를 비우면, 정해 놓고도 지켜지지 않습니다.
 
 ### 7. 친절한 설명적 대화체로 묻는다
 
@@ -106,16 +113,21 @@ MINOR = 되돌리기 쉽고, 다른 결정을 구속하지 않는 결정
 | 감정 절제 | 과장·감탄·칭찬을 쓰지 않습니다 |
 | 분량 상한 | 배경 1문장 + 질문 1문장 |
 
-단, **Grip Ledger·카운터·표 같은 구조 블록은 개조식을 유지**합니다. 원장은 `grep` 대상이라 문장화하면 재개·집계가 깨집니다.
+단, **결정 기록부·카운터·표 같은 구조 블록은 개조식을 유지**합니다. 기록부는 기계가 읽고 `grep`으로 찾는 대상이라, 문장으로 풀어 쓰면 재개와 집계가 깨집니다.
 
-### 8. 영문 용어는 원문 그대로, 괄호에 해설을 붙인다
+### 8. 영문 용어는 원문 그대로, 괄호에 역어와 해설을 붙인다
 
-원어를 지우면 사용자가 검색하거나 원문 자료와 대조할 수 없고, 번역어는 분야마다 표준이 달라 오히려 혼란을 만듭니다.
+원어를 지우면 사용자가 검색하거나 원문 자료와 대조할 수 없고, 번역어만 남기면 분야마다 표준이 달라 오히려 혼란을 만듭니다. 그래서 셋을 한 줄에 함께 둡니다 — **원어 · 한국어 역어 · 뜻풀이**. 역어가 함께 있어야 사용자가 팀에서 그 개념을 말할 때 쓸 말이 생깁니다.
 
 ```
-preregistration(분석 계획을 데이터 수집 전에 공개 등록하는 절차)
-idempotency(같은 요청을 여러 번 보내도 결과가 한 번과 같은 성질)
+표기 형식: English Term(한국어 역어: 뜻풀이)
+
+idempotency(멱등성: 같은 요청을 여러 번 보내도 결과가 한 번과 같은 성질)
+preregistration(사전등록: 분석 계획을 데이터 수집 전에 공개 등록하는 절차)
+cohort(코호트: 같은 시기에 유입된 사용자 묶음)
 ```
+
+역어가 없거나 아직 정착되지 않은 용어는 뜻풀이만 씁니다.
 
 음차 표기는 **정착 여부**로 판정하고(데이터·리포트는 유지, 커버리지 → 적용 범위(coverage)), 번역어는 **다의어 오역**을 점검합니다(`significant` → 통계 맥락에서는 "중요한"이 아니라 **유의미한**).
 
@@ -123,7 +135,7 @@ idempotency(같은 요청을 여러 번 보내도 결과가 한 번과 같은 �
 
 ### 9. 질문 하단에 용어를 해설한다
 
-이해하지 못한 채 승인된 결정은 원장을 오염시키고 구속면까지 반영됩니다. 용어 해설은 친절이 아니라 **원장 정확성의 방어 장치**입니다.
+이해하지 못한 채 승인된 결정은 기록부를 오염시키는 데 그치지 않고, 규범 문서에까지 실려 이후 작업을 잘못 묶습니다. 용어 해설은 친절이 아니라 **기록의 정확성을 지키는 장치**입니다.
 
 세 부류를 해설합니다 — ① 도메인 전문용어 ② 분야 관용어·축약 ③ **프로젝트 고유 조어**(출처 표기 필수). 참조 범위에서 정의를 못 찾은 조어는 `정의되지 않음`으로 표기하고 **정의 자체를 MINOR 토픽 후보로 올립니다.**
 
@@ -141,11 +153,11 @@ idempotency(같은 요청을 여러 번 보내도 결과가 한 번과 같은 �
 
 옵션 개수는 **실질 선택지 2~4개 + 기타 1개**이며, 기타는 상한에 포함하지 않습니다. 일부 질문 UI가 자유 입력을 자동 제공하더라도 보기 자체에 명시해, 3벤더 어디서든 동작이 같아지게 합니다.
 
-기타 응답은 **사용자 표현 그대로** 원장에 기록합니다. 응답이 토픽 전제를 뒤집으면 `DROPPED`로 표시하되 **분모는 줄이지 않습니다**(줄이면 진척률이 왜곡됩니다).
+기타 응답은 **사용자 표현 그대로** 기록부에 옮깁니다. 응답이 토픽 전제를 뒤집으면 `DROPPED`로 표시하되 **분모는 줄이지 않습니다**(줄이면 진척률이 왜곡됩니다).
 
 ### 11. 언제든 멈추고 재개할 수 있다
 
-진척이 Grip Ledger에 남으므로, 세션을 중간에 끝내도 다음에 첫 `UNRESOLVED` 토픽부터 이어갑니다. 재료 보강 대기 상태(`MATERIAL_PENDING`)도 스텁으로 보존되어, 무엇을 가져와야 하는지 목록이 남습니다.
+진척이 결정 기록부에 남으므로, 세션을 중간에 끝내도 다음에 첫 `UNRESOLVED` 토픽부터 이어갑니다. 재료 보강을 기다리는 상태(`MATERIAL_PENDING`)도 그대로 보존되어, 무엇을 가져와야 하는지 목록이 남습니다.
 
 ---
 
@@ -154,7 +166,7 @@ idempotency(같은 요청을 여러 번 보내도 결과가 한 번과 같은 �
 ```
 Boundedness   — 참조 범위·관심 방향이 명시되고, 재료가 추출 기준선을 갖췄으며, 탐색이 그 범위로 한정되는가?
 Visibility    — 착수 전 미해소 토픽 전체가 추출·제시되고, 매 턴 진척(해소/제외/잔여)이 보이는가?
-Persistence   — 각 토픽이 해소되는 즉시 기록면 + 구속면에 반영되고 Grip Ledger에 기록되는가?
+Persistence   — 각 토픽이 해소되는 즉시 근거 문서와 규범 문서에 반영되고 결정 기록부에 기록되는가?
 ```
 
 세 기둥을 동시에 만족하지 못하면 다음 단계로 진행하지 않습니다.
@@ -245,9 +257,9 @@ curl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.age
 
 | 산출물 | 내용 |
 |--------|------|
-| **Grip Ledger** | 결정 토픽의 단일 진척 원장 (`docs/grip/GRIP_LEDGER.md`). 상단에 grep 가능한 `RESOLVED / DROPPED / TOTAL` 카운터. 토픽별 결정·반영 결과 기록 → 재개의 근거 |
-| **기록면 반영** | 기획서·사업계획서·연구계획서·회의록 등 관련 문서를 결정대로 수정 |
-| **구속면 반영** | 팀 규칙·승인 기준·운영 정책·사전등록·에이전트 하네스 등, 이후 작업을 구속하는 지점에 CORE 결정을 수립·갱신 |
+| **결정 기록부** (기록계층) | 정해 가는 과정이 남는 단 하나의 파일 (`docs/grip/GRIP_REGISTER.md`). 상단에 grep으로 찾을 수 있는 `RESOLVED / DROPPED / TOTAL` 카운터가 있고, 토픽별 결정과 반영 위치가 기록되어 재개의 근거가 됩니다 |
+| **근거 문서 반영** (확정계층) | 기획서·사업계획서·연구계획서·회의록 등 관련 문서를 결정대로 수정합니다 |
+| **규범 문서 반영** (확정계층) | 팀 규칙·승인 기준·운영 정책·사전등록·에이전트 하네스 등 이후 작업이 따르게 되는 곳에 CORE 결정을 수립·갱신합니다 |
 
 ---
 
@@ -257,11 +269,11 @@ curl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.age
 |------|------|
 | Step 0 — Intake & Scope Lock | 참조 범위(A)·관심 방향(B)·완료 조건(C)·OUTPUT 대상(D) 확인. A·B 없으면 먼저 질문 |
 | **Step 0.5 — Material Check** | 범위 안만 읽어 R1~R5 충족 판정. 기준선(R1·R3) 결손 시 게이트 발동 → **A/B 2지선다**. 판단근거(R2·R4) 결손은 첫 CORE 토픽으로 흡수 |
-| Step 1 — Topic Extraction | 범위 안만 읽어 미해소 토픽 전부 추출 → CORE/MINOR·의존 순서로 원장 제시 (토픽 0개면 종료) |
+| Step 1 — Topic Extraction | 범위 안만 읽어 미해소 토픽 전부 추출 → CORE/MINOR·의존 순서로 기록부 제시 (토픽 0개면 종료) |
 | Step 2 — Grip the Topic | 첫 UNRESOLVED 토픽 1개: 선택지 + 권장안 + **`[용어]` 블록** + **기타 옵션** + 단일 질문 |
-| Step 3 — Resolve & Persist | 결정 확정 시 다음 토픽 전에 기록면·구속면 수정 + 원장 기록 + `[반영 완료]` |
+| Step 3 — Resolve & Persist | 결정 확정 시 다음 토픽 전에 근거·규범 문서 수정 + 기록부 기록 + `[반영 완료]` |
 | Step 4 — Advance or Stop | 다음 토픽 또는 종료 (ALL_RESOLVED / USER_PAUSED / **MATERIAL_PENDING** / BUDGET) |
-| Step 5 — Resume | 재호출 시 원장을 읽어 재료 점검 또는 첫 UNRESOLVED부터 재개 |
+| Step 5 — Resume | 재호출 시 기록부를 읽어 재료 점검 또는 첫 UNRESOLVED부터 재개 |
 | Step 6 — Closeout | 카운터·STOP 사유 + 이번 세션 변경 목록 요약 |
 
 ---
@@ -272,7 +284,7 @@ curl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.age
 A. 참조 범위        — 근거로 삼을 자료 (R1~R5 역할로 판단, 형식·도메인 무관)
 B. 핵심 관심 방향   — 무엇의 모호함을 정리하는가
 C. 작업 범위·완료조건 — 어디까지 (기본: 관심 방향 미해소 토픽 전부 RESOLVED)
-D. 작업 결과 OUTPUT — 어디에 반영 (기본: 기록면 + 구속면)
+D. 작업 결과 OUTPUT — 어디에 반영 (기본: 근거 문서 + 규범 문서)
 ```
 
 A·B는 사용자 의도이므로 대체할 수 없습니다. 없으면 먼저 묻습니다. 재료(R1~R5)는 내용이므로 문답으로 채울 수 있어, 기준선(R1·R3) 결손만 게이트로 처리하고 R2·R4 결손은 첫 CORE 토픽으로 흡수합니다.
@@ -347,10 +359,10 @@ contract:
   domain=general knowledge work (office, business planning, service planning, research, software)
   purpose=secure the user's ownership of decisions in AI-assisted work
   intake_required=[reference_scope (A), direction_of_interest (B)]
-  intake_default=[completion=all in-scope unresolved topics RESOLVED (C), output=record surface + binding surface (D)]
+  intake_default=[completion=all in-scope unresolved topics RESOLVED (C), output=active project docs — rationale docs + normative docs (D)]
   refuse_until_present=[A, B]
   must_not_scan_outside_scope=true
-  pillars=[Boundedness (scoped reference + extraction baseline present + bounded exploration), Visibility (extract full topic list up front + show progress each turn), Persistence (apply each decision to record + binding surface immediately, before next topic)]
+  pillars=[Boundedness (scoped reference + extraction baseline present + bounded exploration), Visibility (extract full topic list up front + show progress each turn), Persistence (apply each decision to rationale + normative docs immediately, before next topic)]
   material_roles=[R1 purpose/success-criteria (baseline), R2 audience/stakeholders (judgment), R3 scope/deliverable (baseline), R4 constraints (judgment), R5 current-progress]
   material_gate=trigger only on R1/R3 deficit; options are exactly [A: add reference material and re-invoke -> STOP MATERIAL_PENDING, B: build anchor in-session then proceed]; never offer "proceed anyway"
   material_gate_recommend=[B when zero refs or both R1+R3 missing, else A]
@@ -363,11 +375,13 @@ contract:
   other_response=[record user's own wording verbatim in decision:, re-confirm at most once, DROPPED if premise overturned (keep TOTAL), update depends: if it affects other topics]
   term_gloss_block=[classes: domain-term, field-idiom, project-coinage(cite source); max 4 per turn; 1 line each; once per session; omit block if none]
   language_tone=[polite explanatory conversational Korean, complete sentences, 1 info per sentence, explain-before-ask, guiding not imperative, no emoji/slang/banmal, cap = 1 context sentence + 1 question sentence]
-  language_tone_exception=structure blocks (ledger rows, counters, tables) stay terse for grep/resume
+  language_tone_exception=structure blocks (register rows, counters, tables) stay terse for grep/resume
+  term_notation_format=English Term(Korean equivalent: short gloss); gloss only when no established Korean equivalent
   term_notation=[keep English technical terms + short parenthetical gloss; transliteration only if established, else Korean + original in parens; check polysemous mistranslations; priority = existing project notation > field standard > agent's own translation]
-  decision_class=[CORE = irreversible or constrains other decisions -> record+binding required, MINOR -> ledger + one-line doc]
-  ledger_file=docs/grip/GRIP_LEDGER.md  # counter "RESOLVED: n / DROPPED: d / TOTAL: m", resumable
-  ledger_stub_on_material_pending=true
+  output_layers=[gripping-history = the Grip Register file (one), active project docs = rationale docs + normative docs]
+  decision_class=[CORE = irreversible or constrains other decisions -> rationale+normative docs required, MINOR -> register + one-line doc]
+  register_file=docs/grip/GRIP_REGISTER.md  # counter "RESOLVED: n / DROPPED: d / TOTAL: m", resumable
+  register_stub_on_material_pending=true
   stop_reasons=[ALL_RESOLVED, USER_PAUSED, MATERIAL_PENDING, BUDGET]
   output_separates_areas_with=horizontal rules (---) per turn
 ```

@@ -161,7 +161,9 @@ Progress lives in the Grip Register, so ending a session mid-way resumes from th
 
 ---
 
-## Three Pillars (mandatory gates)
+## Three Pillars
+
+Three requirements for checking whether the interview is actually resolving the problem.
 
 ```
 Boundedness   — Are the reference scope and direction stated, is the extraction baseline present, and is exploration confined to that scope?

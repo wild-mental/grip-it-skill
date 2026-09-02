@@ -306,3 +306,13 @@ main, .footer { position: relative; z-index: 1; }
 .way .copy-btn { align-self: flex-start; margin-top: 0.8rem; }
 .way .hint { margin: 0.7rem 0 0; }
 @media (max-width: 860px) { .install-ways { grid-template-columns: 1fr; } }
+
+
+/* 설치 명령 — URL이 길어 좁은 칸을 넘치므로 시각적으로만 접는다.
+   pre-wrap 은 개행 문자를 넣지 않으므로 복사한 명령은 원본 그대로 한 줄이다. */
+.way .code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.way .code code { white-space: pre-wrap; }

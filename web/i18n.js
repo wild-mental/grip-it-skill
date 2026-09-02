@@ -151,9 +151,9 @@ window.COPY = {
     "s9.use1": "<code>/grip-it</code> — 참고할 자료와 정리하고 싶은 방향을 알려 주시면, 아직 안 정해진 것들을 전부 꺼내 보여 드립니다.",
     "s9.use2": "“기획서 기준으로, 데이터 설계에서 아직 안 정해진 것들 같이 정하자.”",
     "s9.use3": "“오늘은 질문 5개까지만.” — 문항 수를 정해 두시면 그만큼만 묻고 끝냅니다. 남은 것은 기록부에 그대로 있어 다음에 이어서 하실 수 있습니다.",
-    "s9.finale": "실행은 맡기고, 결정은 쥐십시오.",
+    "s9.finale": "작업 실행은 Hands Off, 의사 결정은 Grip Tight 하십시오.",
 
-    "footer.pin": "이 페이지의 규칙과 용어, 예시는 grip-it @ b1df6e1을 기준으로 합니다."
+    "footer.copy": "© 2026 MakersWorld co., ltd. · MIT License"
   },
 
   en: {
@@ -163,7 +163,7 @@ window.COPY = {
 
     "s0.brand": "GRIP IT",
     "s0.title": "The craft of hands-off agent ownership, for AI-Native work",
-    "s0.catch": "작업 실행은 Hands Off, 의사 결정은 Grip Tight!",
+    "s0.catch": "Hands Off on the doing. Grip Tight on the deciding.",
     "s0.def": "GRIP IT is the <code>grip-it</code> skill: before the work starts it surfaces every decision that is still open, settles them with you one at a time, and pins each decision into your documents so later AI work has to follow it.",
     "s0.installCta": "How to install",
     "s0.dropTitle": "Paste this line to the agent you use.",
@@ -304,9 +304,9 @@ window.COPY = {
     "s9.use1": "<code>/grip-it</code> — tell it what to read and what you want cleared up, and it surfaces everything still unsettled.",
     "s9.use2": "\"Using the planning doc, let's settle what is still open in the data design.\"",
     "s9.use3": "\"Only five questions today.\" — name a number and it stops there. The rest stays in the register for next time.",
-    "s9.finale": "Hand off the doing. Keep the deciding.",
+    "s9.finale": "Hands Off on the doing. Grip Tight on the deciding.",
 
-    "footer.pin": "Every rule, term and example quoted on this page is pinned to grip-it @ b1df6e1."
+    "footer.copy": "© 2026 MakersWorld co., ltd. · MIT License"
   }
 };
 

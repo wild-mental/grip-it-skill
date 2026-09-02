@@ -70,8 +70,8 @@ code, pre { font-family: var(--font-mono); }
   backdrop-filter: saturate(180%) blur(8px);
 }
 .topbar-inner {
-  max-width: var(--w-wide); margin: 0 auto; padding: 0.52rem 1.25rem;
-  display: flex; align-items: center; gap: 0.6rem;
+  max-width: var(--w-wide); margin: 0 auto; padding: 0.52rem 1rem;
+  display: flex; align-items: center; gap: 0.4rem;
 }
 /* 상단 바 5.28rem — 로고 4.24rem 이 높이의 80%를 채운다.
    위아래 여백은 0.52rem 씩만 남긴다. */
@@ -83,7 +83,7 @@ code, pre { font-family: var(--font-mono); }
   .brand img { height: 2.8rem; }
 }
 /* 로고를 뺀 나머지 폭을 네비가 전부 차지하고, 그 안에서 링크가 균등하게 벌어진다 */
-.topbar-nav { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 0.6rem; }
+.topbar-nav { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 0.4rem; }
 .langswitch { display: inline-flex; border: 1px solid var(--blue-100); border-radius: 999px; overflow: hidden; }
 .lang-btn {
   border: 0; background: transparent; color: var(--navy-500);
@@ -422,13 +422,13 @@ main, .footer { position: relative; z-index: 1; }
   display: flex; align-items: center; justify-content: space-around;
 }
 .navlinks a {
-  font-size: 1.12rem; text-decoration: none; color: var(--navy-700);
-  white-space: nowrap; padding: 0.15rem 0.1rem;
+  font-size: 1.46rem; text-decoration: none; color: var(--navy-700);
+  white-space: nowrap; padding: 0.15rem 0;
   border-bottom: 2px solid transparent;
 }
 .navlinks a:hover { color: var(--blue-600); border-bottom-color: var(--blue-500); }
 /* 좁은 화면에서는 로고·언어·저장소만 남긴다 */
-@media (max-width: 1200px) { .navlinks { display: none; } }
+@media (max-width: 1260px) { .navlinks { display: none; } }
 
 /* ---------- 히어로 설치 요약 — 두 방식을 좌우로 ---------- */
 .drop-ways { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }

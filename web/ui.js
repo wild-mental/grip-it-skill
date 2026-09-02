@@ -5,7 +5,7 @@
 
   var COPY = window.COPY || {};
   var INSTALL = window.INSTALL || {};
-  var state = { lang: "ko", tool: "claude", scope: "user", domain: "biz" };
+  var state = { lang: "ko", tool: "claude", shell: "bash", scope: "user", domain: "biz" };
 
   /* ---------- 저장된 선택 ---------- */
   function remember(key, value) {
@@ -72,12 +72,17 @@
     var block = document.getElementById("install-cmd");
     if (!block) return;
     var byTool = INSTALL[state.tool] || {};
-    var cmd = byTool[state.scope];
+    var byShell = byTool[state.shell] || {};
+    var cmd = byShell[state.scope];
     if (typeof cmd === "string") block.textContent = cmd;
 
     var tabs = document.querySelectorAll(".install-tabs .tab");
     for (var i = 0; i < tabs.length; i++) {
       tabs[i].classList.toggle("is-on", tabs[i].getAttribute("data-tool") === state.tool);
+    }
+    var shells = document.querySelectorAll(".install-shells .chip");
+    for (var k = 0; k < shells.length; k++) {
+      shells[k].classList.toggle("is-on", shells[k].getAttribute("data-shell") === state.shell);
     }
     var chips = document.querySelectorAll(".install-scopes .chip");
     for (var j = 0; j < chips.length; j++) {
@@ -139,6 +144,7 @@
     if (t.hasAttribute("data-lang-btn")) { applyLang(t.getAttribute("data-lang-btn")); return; }
     if (t.hasAttribute("data-domain")) { applyDomain(t.getAttribute("data-domain")); return; }
     if (t.hasAttribute("data-tool")) { state.tool = t.getAttribute("data-tool"); applyInstall(); return; }
+    if (t.hasAttribute("data-shell")) { state.shell = t.getAttribute("data-shell"); applyInstall(); return; }
     if (t.hasAttribute("data-scope")) { state.scope = t.getAttribute("data-scope"); applyInstall(); return; }
 
     if (t.hasAttribute("data-toggle")) {

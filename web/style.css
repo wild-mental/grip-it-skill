@@ -393,21 +393,17 @@ main, .footer { position: relative; z-index: 1; }
 }
 
 
-/* ---------- [테스트] S6 대안 — 2×2 배치 ---------- */
-.is-test { background: rgba(255, 255, 255, 0.4); }
-.test-tag {
-  display: inline-block; margin: 0 0 0.8rem;
-  padding: 0.2rem 0.6rem; border-radius: 999px;
-  background: var(--sun-200); color: var(--navy-500);
-  font-size: 0.76rem; letter-spacing: 0.04em;
-}
+/* ---------- S6 데모 — 2×2 배치 ---------- */
 .cut-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem 1.4rem;
   margin-top: 1.4rem;
 }
 .cut-grid .cut { margin: 0; display: flex; flex-direction: column; }
 .cut-grid .cut-lead { font-size: 0.9rem; color: var(--navy-500); }
-.cut-grid .term-win { margin-top: auto; }
+/* 한 행의 카드는 높이가 같으므로, 터미널 창이 남는 높이를 전부 차지하게 한다 */
+.cut-grid .term-win { flex: 1 1 auto; display: flex; flex-direction: column; margin-top: 0.7rem; }
+.cut-grid .term-win .table-scroll { flex: 1 1 auto; display: flex; }
+.cut-grid .code.term { flex: 1 1 auto; width: 100%; }
 /* 좁은 칸이므로 긴 줄은 접는다 — 기록부 행은 짧게 축약해 접히지 않는다 */
 .cut-grid .code.term {
   font-size: 0.74rem; line-height: 1.6;
@@ -430,7 +426,18 @@ main, .footer { position: relative; z-index: 1; }
 }
 .navlinks a:hover { color: var(--blue-600); border-bottom-color: var(--blue-500); }
 /* 좁은 화면에서는 로고·언어·저장소만 남긴다 */
-@media (max-width: 1280px) { .navlinks { display: none; } }
+/* 폭이 줄면 글자와 간격을 단계적으로 좁히고, 그래도 모자라면 가로로 밀어 본다.
+   링크를 통째로 감추는 것은 로고만 남는 아주 좁은 화면에서만 한다. */
+@media (max-width: 1280px) { .navlinks { font-size: 1rem; gap: 1.5em; } }
+@media (max-width: 1080px) {
+  .navlinks {
+    font-size: 0.95rem; gap: 1.2em;
+    justify-content: flex-start;
+    overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none;
+  }
+  .navlinks::-webkit-scrollbar { display: none; }
+}
+@media (max-width: 620px) { .navlinks { display: none; } }
 
 /* ---------- 히어로 설치 요약 — 두 방식을 좌우로 ---------- */
 .drop-ways { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }

@@ -85,16 +85,13 @@ window.COPY = {
     "s6.d3alt": "재료 확인에서 시작해 정할 것을 꺼내고, 하나씩 정하고, 문서에 반영하고, 다음에 이어서 하는 흐름을 나타낸 그림",
     "s6.note": "아래 네 장면은 실제 화면에 나오는 그대로입니다.",
     "s6.cut1t": "① 재료 확인 — 근거가 없으면 시작하지 않습니다",
-    "s6.cut1d": "먼저 판단에 쓸 자료가 있는지 봅니다. 목적(R1)과 범위(R2)가 비어 있으면 무엇이 빠졌는지 판정할 수 없으므로, 억지로 뽑지 않고 두 갈래만 제시합니다.",
-    "s6.b1": "B를 고르면 범위를 먼저 함께 정하고, 그다음 앞으로 정할 것을 전부 펼쳐 보입니다.",
-    "s6.cut2t": "② 정할 것 전부 — 앞으로 몇 번인지가 여기서 보입니다",
-    "s6.cut2d": "아직 정하지 않은 항목을 전부 꺼내, 개수와 순서를 함께 보여 줍니다. 되돌리기 어려운 것은 CORE, 언제든 바꿀 수 있는 것은 MINOR로 나눕니다.",
-    "s6.b2": "그다음은 순서대로 하나씩입니다. 한 번에 하나만 묻습니다.",
-    "s6.cut3t": "③ 하나씩 — 권장안과 근거, 그리고 마지막의 ‘기타’",
-    "s6.cut3d": "선택지마다 무엇을 얻고 무엇을 잃는지 붙고, 권장안에는 왜 그것인지가 붙습니다. 어려운 말은 아래에 풀어 두고, 마지막 칸은 언제나 직접 입력입니다.",
-    "s6.b3": "정해지면 다음 질문으로 넘어가기 전에 문서부터 고칩니다.",
+    "s6.cut1d": "판단에 쓸 자료가 있는지 먼저 봅니다. 목적(R1)과 범위(R2)가 비면 뽑지 않고 두 갈래만 냅니다.",
+    "s6.cut2t": "② 정할 것 전부 — 앞으로 몇 번인지가 보입니다",
+    "s6.cut2d": "아직 정하지 않은 항목을 전부 꺼내 개수와 순서를 보여 줍니다. 되돌리기 어려우면 CORE 입니다.",
+    "s6.cut3t": "③ 하나씩 — 권장안과 근거, 마지막의 ‘기타’",
+    "s6.cut3d": "선택지마다 얻는 것과 잃는 것이 붙고, 권장안에는 왜 그것인지가 붙습니다.",
     "s6.cut4t": "④ 반영 — 문서 두 곳과 기록부에 남깁니다",
-    "s6.cut4d": "정한 것을 대화에만 두지 않습니다. 왜 그렇게 정했는지가 남는 문서와, 이후 작업이 따르게 되는 문서, 그리고 기록부까지 세 곳에 곧바로 반영합니다.",
+    "s6.cut4d": "정한 것을 대화에만 두지 않습니다. 해소되는 즉시 세 곳에 반영합니다.",
     "s6.bridge": "이 예시는 연구였습니다. 사업기획이라면, 서비스기획이라면 어떨까요?",
 
     "s7.title": "어느 분야든 같은 절차",
@@ -153,6 +150,8 @@ window.COPY = {
     "s9.wayAgentHint": "Claude Code · Cursor · Codex 어디서든 같은 문장으로 됩니다. 도구에 맞는 경로는 에이전트가 골라 줍니다.",
     "s9.wayManualTitle": "직접 설치하기",
     "s9.wayManualDesc": "터미널에서 파일 하나를 받는 방식입니다. 도구와 범위를 고르시면 명령이 바뀝니다.",
+    "s9.shellBash": "bash · zsh (macOS · Linux)",
+    "s9.shellPs": "PowerShell (Windows)",
     "s9.scopeUser": "개인 — 내가 여는 모든 프로젝트",
     "s9.scopeProject": "프로젝트 — 지금 이 저장소에서만",
     "s9.scopeHint": "개인 범위로 받으면 작업 중인 저장소에 파일이 추가되지 않습니다. 팀과 함께 쓰시려면 프로젝트 범위를 고르시면 됩니다.",
@@ -246,17 +245,14 @@ window.COPY = {
     "s6.lead": "A real session on research design. Four scenes follow one another.",
     "s6.d3alt": "Diagram of the session flow: material check, topic ledger, one topic at a time, persistence, resume",
     "s6.note": "The four cuts below quote the skill's actual output format as-is (Korean, exactly as the session prints it).",
-    "s6.cut1t": "① Check the material — with no basis, it does not start",
-    "s6.cut1d": "It first looks at whether there is anything to judge on. With no purpose (R1) or scope (R2), there is no way to tell what is missing, so it offers two paths rather than inventing topics.",
-    "s6.b1": "Choose B and the scope is settled first; then everything still open is laid out at once.",
-    "s6.cut2t": "② Everything to decide — this is where you see how many rounds",
-    "s6.cut2d": "It surfaces every unsettled item with the count and the order. What is costly to reverse is CORE; what you can change any time is MINOR.",
-    "s6.b2": "From there it is one topic at a time, in dependency order. Only ever one question at once.",
-    "s6.cut3t": "③ One at a time — a recommendation, its reason, and \"other\" at the end",
-    "s6.cut3d": "Each option comes with what it gains and costs, the recommendation comes with why, hard words are unpacked below, and the last box is always free text.",
-    "s6.b3": "Once it is settled, the documents are updated before the next question is asked.",
+    "s6.cut1t": "① Check the material — no basis, no start",
+    "s6.cut1d": "It first looks at what there is to judge on. With no purpose (R1) or scope (R2) it offers two paths instead of inventing topics.",
+    "s6.cut2t": "② Everything to decide — the number of rounds shows here",
+    "s6.cut2d": "Every unsettled item is surfaced with its count and order. Costly to reverse means CORE.",
+    "s6.cut3t": "③ One at a time — a recommendation, its reason, and \"other\"",
+    "s6.cut3d": "Each option carries what it gains and costs; the recommendation carries why.",
     "s6.cut4t": "④ Applied — two documents and the register",
-    "s6.cut4d": "Nothing is left in the chat alone. The moment something is settled it goes into the document that holds the reasoning, the document later work follows, and the register.",
+    "s6.cut4d": "Nothing stays in the chat alone. The moment it is settled it lands in three places.",
     "s6.bridge": "That example was research. What about business planning, or service design?",
 
     "s7.title": "The same procedure in any field",
@@ -315,6 +311,8 @@ window.COPY = {
     "s9.wayAgentHint": "The same line works in Claude Code, Cursor and Codex. The agent picks the path that fits its tool.",
     "s9.wayManualTitle": "Install it yourself",
     "s9.wayManualDesc": "Fetch one file from the terminal. Pick your tool and scope and the command changes.",
+    "s9.shellBash": "bash · zsh (macOS · Linux)",
+    "s9.shellPs": "PowerShell (Windows)",
     "s9.scopeUser": "Personal (every project)",
     "s9.scopeProject": "Project (this repo only)",
     "s9.scopeHint": "The personal scope adds no files to your working repository. Choose the project scope to share the skill with your team.",
@@ -331,15 +329,33 @@ window.COPY = {
 /* 설치 명령 — 도구 3 × 범위 2 (언어 무관) */
 window.INSTALL = {
   claude: {
-    user: "mkdir -p ~/.claude/skills/grip-it\ncurl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.claude/skills/grip-it/SKILL.md \\\n  -o ~/.claude/skills/grip-it/SKILL.md",
-    project: "mkdir -p .claude/skills/grip-it\ncurl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.claude/skills/grip-it/SKILL.md \\\n  -o .claude/skills/grip-it/SKILL.md"
+    bash: {
+      user: "mkdir -p ~/.claude/skills/grip-it\ncurl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.claude/skills/grip-it/SKILL.md \\\n  -o ~/.claude/skills/grip-it/SKILL.md",
+      project: "mkdir -p .claude/skills/grip-it\ncurl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.claude/skills/grip-it/SKILL.md \\\n  -o .claude/skills/grip-it/SKILL.md"
+    },
+    powershell: {
+      user: "New-Item -ItemType Directory -Force \"$HOME\\.claude\\skills\\grip-it\" | Out-Null\nInvoke-WebRequest -Uri \"https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.claude/skills/grip-it/SKILL.md\" `\n  -OutFile \"$HOME\\.claude\\skills\\grip-it\\SKILL.md\"",
+      project: "New-Item -ItemType Directory -Force \".claude\\skills\\grip-it\" | Out-Null\nInvoke-WebRequest -Uri \"https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.claude/skills/grip-it/SKILL.md\" `\n  -OutFile \".claude\\skills\\grip-it\\SKILL.md\""
+    }
   },
   cursor: {
-    user: "mkdir -p ~/.cursor/skills/grip-it\ncurl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.cursor/skills/grip-it/SKILL.md \\\n  -o ~/.cursor/skills/grip-it/SKILL.md",
-    project: "mkdir -p .cursor/skills/grip-it\ncurl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.cursor/skills/grip-it/SKILL.md \\\n  -o .cursor/skills/grip-it/SKILL.md"
+    bash: {
+      user: "mkdir -p ~/.cursor/skills/grip-it\ncurl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.cursor/skills/grip-it/SKILL.md \\\n  -o ~/.cursor/skills/grip-it/SKILL.md",
+      project: "mkdir -p .cursor/skills/grip-it\ncurl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.cursor/skills/grip-it/SKILL.md \\\n  -o .cursor/skills/grip-it/SKILL.md"
+    },
+    powershell: {
+      user: "New-Item -ItemType Directory -Force \"$HOME\\.cursor\\skills\\grip-it\" | Out-Null\nInvoke-WebRequest -Uri \"https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.cursor/skills/grip-it/SKILL.md\" `\n  -OutFile \"$HOME\\.cursor\\skills\\grip-it\\SKILL.md\"",
+      project: "New-Item -ItemType Directory -Force \".cursor\\skills\\grip-it\" | Out-Null\nInvoke-WebRequest -Uri \"https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.cursor/skills/grip-it/SKILL.md\" `\n  -OutFile \".cursor\\skills\\grip-it\\SKILL.md\""
+    }
   },
   codex: {
-    user: "mkdir -p ~/.agents/skills/grip-it\ncurl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.agents/skills/grip-it/SKILL.md \\\n  -o ~/.agents/skills/grip-it/SKILL.md",
-    project: "mkdir -p .agents/skills/grip-it\ncurl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.agents/skills/grip-it/SKILL.md \\\n  -o .agents/skills/grip-it/SKILL.md"
+    bash: {
+      user: "mkdir -p ~/.agents/skills/grip-it\ncurl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.agents/skills/grip-it/SKILL.md \\\n  -o ~/.agents/skills/grip-it/SKILL.md",
+      project: "mkdir -p .agents/skills/grip-it\ncurl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.agents/skills/grip-it/SKILL.md \\\n  -o .agents/skills/grip-it/SKILL.md"
+    },
+    powershell: {
+      user: "New-Item -ItemType Directory -Force \"$HOME\\.agents\\skills\\grip-it\" | Out-Null\nInvoke-WebRequest -Uri \"https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.agents/skills/grip-it/SKILL.md\" `\n  -OutFile \"$HOME\\.agents\\skills\\grip-it\\SKILL.md\"",
+      project: "New-Item -ItemType Directory -Force \".agents\\skills\\grip-it\" | Out-Null\nInvoke-WebRequest -Uri \"https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.agents/skills/grip-it/SKILL.md\" `\n  -OutFile \".agents\\skills\\grip-it\\SKILL.md\""
+    }
   }
 };

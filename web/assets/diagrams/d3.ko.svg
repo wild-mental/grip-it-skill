@@ -44,7 +44,9 @@
     <text class="t h" x="790" y="84">다음 · 종료</text>
   </g>
 
-  <path class="ln" d="M471 112 v22 h-25" stroke-dasharray="6 5"/>
-  <path class="ln" d="M661 112 v22 h-190" stroke-dasharray="6 5"/>
-  <text class="t s" x="196" y="152">STEP 2 ↔ 3을 토픽 수만큼 반복합니다</text>
+  <!-- STEP 2 ↔ 3 반복 — 되돌아가는 한 바퀴를 하나의 선으로 잇는다 -->
+  <path class="ln" d="M661 108 v18 q0 8 -8 8 h-174 q-8 0 -8 -8 v-10" stroke-dasharray="6 5"/>
+  <path class="ln" d="M465 120 l6 -8 l6 8"/>
+  <rect fill="#fffaf2" x="496" y="124" width="140" height="20" rx="6"/>
+  <text class="t s" x="566" y="139" text-anchor="middle">토픽 수만큼 반복</text>
 </svg>

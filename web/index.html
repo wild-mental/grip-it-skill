@@ -153,7 +153,7 @@
   <!-- ============ S6 증거 ============ -->
   <section id="s6" class="section">
     <div class="narrow">
-      <h2 data-i18n="s6.title">한 번의 세션, 처음부터 끝까지</h2>
+      <h2 data-i18n="s6.title"><code>/grip-it</code> 수행과정 미리보기 — 호출부터 전체 작업 오너십 확보까지</h2>
       <p class="lead" data-i18n="s6.lead">연구 설계를 맡긴 실제 세션입니다. 네 장면이 차례로 이어집니다.</p>
     </div>
     <div class="wide">
@@ -165,18 +165,18 @@
       <div class="cut">
         <h3><span class="cut-n">1</span> <span data-i18n="s6.cut1t">① 재료 확인 — 근거가 없으면 시작하지 않습니다</span></h3>
         <p class="cut-lead" data-i18n="s6.cut1d">먼저 판단에 쓸 자료가 있는지 봅니다. 목적(R1)과 범위(R2)가 비어 있으면 무엇이 빠졌는지 판정할 수 없으므로, 억지로 뽑지 않고 두 갈래만 제시합니다.</p>
-        <div class="table-scroll"><pre class="code"><code>**[재료 점검]**
+        <div class="term-win"><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-lbl">**[재료 점검]**</span>
 
 | 역할 | 상태 | 근거 |
 |------|------|------|
 | R1 목적·성공기준 | 충족 | 연구계획서.md §1 연구질문·가설 |
 | R2 범위·산출물 | 부분 | 측정 구성이 아직 정해지지 않음 |
-| R3 대상·이해관계자 | 부분 | 모집단 언급만 있고 표본 정의 없음 → 첫 CORE 토픽으로 흡수 |
+| R3 대상·이해관계자 | 부분 | 모집단 언급만 있고 표본 정의 없음 → 첫 <span class="t-core">CORE</span> 토픽으로 흡수 |
 
-**[질문]** (권장안 A를 첫 옵션, 기타를 마지막 옵션)
-- A) 측정 구성 자료를 보강한 뒤 다시 호출 — 가장 정확하며, 세션을 한 번 끊습니다  (권장)
-- B) 지금 대화로 범위를 함께 정해 앵커 문서로 남기고 이어서 시작 — 끊김이 없고, 문답이 3~4회 늘어납니다
-- 기타) 직접 입력 — 위 선택지로 표현되지 않는 방향이 있으면 그대로 적어 주세요</code></pre></div>
+<span class="t-lbl">**[질문]**</span> (권장안 A를 첫 옵션, 기타를 마지막 옵션)
+<span class="t-opt">- A)</span> 측정 구성 자료를 보강한 뒤 다시 호출 — 가장 정확하며, 세션을 한 번 끊습니다  <span class="t-rec">(권장)</span>
+<span class="t-opt">- B)</span> 지금 대화로 범위를 함께 정해 앵커 문서로 남기고 이어서 시작 — 끊김이 없고, 문답이 3~4회 늘어납니다
+<span class="t-opt">- 기타)</span> 직접 입력 — 위 선택지로 표현되지 않는 방향이 있으면 그대로 적어 주세요</code></pre></div></div>
       </div>
 
       <p class="cut-bridge" data-i18n="s6.b1">B를 고르면 범위를 먼저 함께 정하고, 그다음 앞으로 정할 것을 전부 펼쳐 보입니다.</p>
@@ -184,11 +184,11 @@
       <div class="cut">
         <h3><span class="cut-n">2</span> <span data-i18n="s6.cut2t">② 정할 것 전부 — 앞으로 몇 번인지가 여기서 보입니다</span></h3>
         <p class="cut-lead" data-i18n="s6.cut2d">아직 정하지 않은 항목을 전부 꺼내, 개수와 순서를 함께 보여 줍니다. 되돌리기 어려운 것은 CORE, 언제든 바꿀 수 있는 것은 MINOR로 나눕니다.</p>
-        <div class="table-scroll"><pre class="code"><code>RESOLVED: 0 / DROPPED: 0 / TOTAL: 4
-- [ ] T1 | CORE  | 표본 정의와 모집 방식              | depends:-  | status:UNRESOLVED
-- [ ] T2 | CORE  | 주요 변수 측정 도구 선택           | depends:T1 | status:UNRESOLVED
-- [ ] T3 | CORE  | 주 분석 방법과 유의수준            | depends:T2 | status:UNRESOLVED
-- [ ] T4 | MINOR | 코딩북 라벨 명명 규칙              | depends:T2 | status:UNRESOLVED</code></pre></div>
+        <div class="term-win"><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-key">RESOLVED</span>: 0 / <span class="t-key">DROPPED</span>: 0 / <span class="t-key">TOTAL</span>: 4
+<span class="t-dim">- [ ]</span> T1 | <span class="t-core">CORE</span>  | 표본 정의와 모집 방식              | <span class="t-dim">depends:-</span>  | <span class="t-un">status:UNRESOLVED</span>
+<span class="t-dim">- [ ]</span> T2 | <span class="t-core">CORE</span>  | 주요 변수 측정 도구 선택           | <span class="t-dim">depends:T1</span> | <span class="t-un">status:UNRESOLVED</span>
+<span class="t-dim">- [ ]</span> T3 | <span class="t-core">CORE</span>  | 주 분석 방법과 유의수준            | <span class="t-dim">depends:T2</span> | <span class="t-un">status:UNRESOLVED</span>
+<span class="t-dim">- [ ]</span> T4 | <span class="t-minor">MINOR</span> | 코딩북 라벨 명명 규칙              | <span class="t-dim">depends:T2</span> | <span class="t-un">status:UNRESOLVED</span></code></pre></div></div>
       </div>
 
       <p class="cut-bridge" data-i18n="s6.b2">그다음은 순서대로 하나씩입니다. 한 번에 하나만 묻습니다.</p>
@@ -196,20 +196,20 @@
       <div class="cut">
         <h3><span class="cut-n">3</span> <span data-i18n="s6.cut3t">③ 하나씩 — 권장안과 근거, 그리고 마지막의 ‘기타’</span></h3>
         <p class="cut-lead" data-i18n="s6.cut3d">선택지마다 무엇을 얻고 무엇을 잃는지 붙고, 권장안에는 왜 그것인지가 붙습니다. 어려운 말은 아래에 풀어 두고, 마지막 칸은 언제나 직접 입력입니다.</p>
-        <div class="table-scroll"><pre class="code"><code>**[진척]** RESOLVED 2 / DROPPED 0 / TOTAL 4 · 현재 토픽: T3 주 분석 방법과 유의수준
+        <div class="term-win"><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-lbl">**[진척]**</span> <span class="t-key">RESOLVED</span> 2 / <span class="t-key">DROPPED</span> 0 / <span class="t-key">TOTAL</span> 4 · 현재 토픽: T3 주 분석 방법과 유의수준
 
-**[선택지]**
-- A) 사전등록한 주분석 1개 + 탐색적 분석 분리 — 해석이 명확하고, 탐색 결과의 지위가 낮아집니다
-- B) 다중비교 보정 포함 다중 주분석 — 가설을 넓게 보되, 검정력이 떨어집니다
-- 기타) 직접 입력 — 위 선택지로 표현되지 않는 방향이 있으면 그대로 적어 주세요
+<span class="t-lbl">**[선택지]**</span>
+<span class="t-opt">- A)</span> 사전등록한 주분석 1개 + 탐색적 분석 분리 — 해석이 명확하고, 탐색 결과의 지위가 낮아집니다
+<span class="t-opt">- B)</span> 다중비교 보정 포함 다중 주분석 — 가설을 넓게 보되, 검정력이 떨어집니다
+<span class="t-opt">- 기타)</span> 직접 입력 — 위 선택지로 표현되지 않는 방향이 있으면 그대로 적어 주세요
 
-**[권장]** A) — 참조 자료의 제약(R4)에 연구윤리 심의 일정이 있고,
+<span class="t-lbl">**[권장]**</span> A) — 참조 자료의 제약(R4)에 연구윤리 심의 일정이 있고,
            사전등록 초안을 규범 문서로 쓰기로 정해져 있어
            주분석을 하나로 고정하는 편이 안전합니다.
 
-**[용어]**
+<span class="t-lbl">**[용어]**</span>
 - preregistration(사전등록: 분석 계획을 데이터 수집 전에 공개 등록하는 절차)
-- 유의수준 — 귀무가설을 기각하는 기준이 되는 확률입니다</code></pre></div>
+- 유의수준 — 귀무가설을 기각하는 기준이 되는 확률입니다</code></pre></div></div>
       </div>
 
       <p class="cut-bridge" data-i18n="s6.b3">정해지면 다음 질문으로 넘어가기 전에 문서부터 고칩니다.</p>
@@ -217,14 +217,14 @@
       <div class="cut">
         <h3><span class="cut-n">4</span> <span data-i18n="s6.cut4t">④ 반영 — 문서 두 곳과 기록부에 남깁니다</span></h3>
         <p class="cut-lead" data-i18n="s6.cut4d">정한 것을 대화에만 두지 않습니다. 왜 그렇게 정했는지가 남는 문서와, 이후 작업이 따르게 되는 문서, 그리고 기록부까지 세 곳에 곧바로 반영합니다.</p>
-        <div class="table-scroll"><pre class="code"><code>**[반영 완료]** T3 → decision: 사전등록한 주분석 1개 + 탐색적 분석 분리
+        <div class="term-win"><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-lbl">**[반영 완료]**</span> T3 → decision: 사전등록한 주분석 1개 + 탐색적 분석 분리
 - 근거 문서: 연구계획서.md §4 분석 절 갱신
 - 규범 문서: 사전등록 초안에 주분석·유의수준 고정
-- 기록부: GRIP_REGISTER.md (RESOLVED 3 / DROPPED 0 / TOTAL 4)
+- 기록부: GRIP_REGISTER.md (<span class="t-key">RESOLVED</span> 3 / <span class="t-key">DROPPED</span> 0 / <span class="t-key">TOTAL</span> 4)
 
 ---
 
-**[진척]** RESOLVED 3 / DROPPED 0 / TOTAL 4 · 현재 토픽: T4 코딩북 라벨 명명 규칙</code></pre></div>
+<span class="t-lbl">**[진척]**</span> <span class="t-key">RESOLVED</span> 3 / <span class="t-key">DROPPED</span> 0 / <span class="t-key">TOTAL</span> 4 · 현재 토픽: T4 코딩북 라벨 명명 규칙</code></pre></div></div>
       </div>
     </div>
     <div class="narrow">

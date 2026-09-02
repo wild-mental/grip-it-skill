@@ -25,7 +25,7 @@ window.COPY = {
     "s0.dropManualTitle": "직접 설치하기",
     "s0.dropManualHint": "도구·범위별 명령은 <a href=\"#s9\">아래 설치 절</a>에 있습니다.",
     "s0.repoCta": "GitHub에서 보기",
-    "s0.crack": "그런데 실제로 해보면, 결정까지 함께 넘어가 있습니다.",
+    "s0.crack": "그런데 막상 맡겨 보면, 넘어가는 건 실행만이 아닙니다.",
 
     "s1.title": "쥐고 있다고 생각했는데, 빠져나가는 순간들",
     "s1.scene1": "자료가 부족한데도 AI가 그럴듯한 항목을 만들어 냅니다.",
@@ -186,7 +186,7 @@ window.COPY = {
     "s0.dropManualTitle": "Install it yourself",
     "s0.dropManualHint": "Per-tool and per-scope commands are in the <a href=\"#s9\">install section</a> below.",
     "s0.repoCta": "View on GitHub",
-    "s0.crack": "In practice, though, the deciding gets handed over too.",
+    "s0.crack": "Hand it over, though, and it is not only the doing that goes.",
 
     "s1.title": "Moments when it slips out of your hands",
     "s1.scene1": "The AI produces plausible-looking items even when the material is too thin.",

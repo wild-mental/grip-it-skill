@@ -70,7 +70,7 @@ code, pre { font-family: var(--font-mono); }
 }
 .topbar-inner {
   max-width: var(--w-wide); margin: 0 auto; padding: 0.52rem 1.25rem;
-  display: flex; align-items: center; gap: 1.6rem;
+  display: flex; align-items: center; gap: 0.6rem;
 }
 /* 상단 바 5.28rem — 로고 4.24rem 이 높이의 80%를 채운다.
    위아래 여백은 0.52rem 씩만 남긴다. */
@@ -82,7 +82,7 @@ code, pre { font-family: var(--font-mono); }
   .brand img { height: 2.8rem; }
 }
 /* 로고를 뺀 나머지 폭을 네비가 전부 차지하고, 그 안에서 링크가 균등하게 벌어진다 */
-.topbar-nav { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 1.6rem; }
+.topbar-nav { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 0.6rem; }
 .langswitch { display: inline-flex; border: 1px solid var(--blue-100); border-radius: 999px; overflow: hidden; }
 .lang-btn {
   border: 0; background: transparent; color: var(--navy-500);
@@ -421,7 +421,7 @@ main, .footer { position: relative; z-index: 1; }
 /* ---------- 상단 네비 섹션 바로가기 ---------- */
 .navlinks {
   flex: 1 1 auto; min-width: 0;
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; justify-content: space-around;
 }
 .navlinks a {
   font-size: 0.86rem; text-decoration: none; color: var(--navy-700);

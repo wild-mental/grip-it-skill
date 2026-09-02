@@ -284,6 +284,7 @@ main, .footer { position: relative; z-index: 1; }
 .finale {
   margin: 2.5rem 0 0; font-size: clamp(1.25rem, 3vw, 1.7rem);
   font-weight: 800; letter-spacing: -0.015em;
+  line-height: 1.4;   /* 두 줄이 되었으므로 줄 간격을 잡아 준다 */
 }
 
 /* ---------- 푸터 ---------- */

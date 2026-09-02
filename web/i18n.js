@@ -159,7 +159,7 @@ window.COPY = {
     "s9.use1": "<code>/grip-it</code> — 참고할 자료와 정리하고 싶은 방향을 알려 주시면, 아직 안 정해진 것들을 전부 꺼내 보여 드립니다.",
     "s9.use2": "“기획서 기준으로, 데이터 설계에서 아직 안 정해진 것들 같이 정하자.”",
     "s9.use3": "“오늘은 질문 5개까지만.” — 문항 수를 정해 두시면 그만큼만 묻고 끝냅니다. 남은 것은 기록부에 그대로 있어 다음에 이어서 하실 수 있습니다.",
-    "s9.finale": "작업 실행은 Hands Off, 의사 결정은 Grip Tight 하십시오.",
+    "s9.finale": "작업 실행은 Hands Off, 의사 결정은 Grip Tight!<br>GRIP IT이 해결합니다.",
 
     "footer.copy": "© 2026 MakersWorld co., ltd. · MIT License"
   },
@@ -320,7 +320,7 @@ window.COPY = {
     "s9.use1": "<code>/grip-it</code> — tell it what to read and what you want cleared up, and it surfaces everything still unsettled.",
     "s9.use2": "\"Using the planning doc, let's settle what is still open in the data design.\"",
     "s9.use3": "\"Only five questions today.\" — name a number and it stops there. The rest stays in the register for next time.",
-    "s9.finale": "Hands Off on the doing. Grip Tight on the deciding.",
+    "s9.finale": "Hands Off on the doing. Grip Tight on the deciding!<br>That is what GRIP IT does.",
 
     "footer.copy": "© 2026 MakersWorld co., ltd. · MIT License"
   }

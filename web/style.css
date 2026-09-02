@@ -216,13 +216,8 @@ main, .footer { position: relative; z-index: 1; }
   .gl-row:nth-child(2) { border-top: 1px solid var(--sun-200); }
 }
 
-/* ---------- S4 대비 ---------- */
-.contrast { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin: 1.5rem 0; }
-.contrast-col { border-radius: 10px; padding: 1rem; background: #fff; border: 1px solid var(--sun-200); }
-.contrast-col.is-new { border-color: var(--blue-500); }
-.contrast-col p { margin: 0.4rem 0 0; font-size: 1.02rem; }
+/* ---------- S3 대조 — 지친 인터뷰 vs 함께 붙잡기 ---------- */
 .tag { font-size: 0.76rem; letter-spacing: 0.04em; color: var(--navy-500); }
-.contrast-col.is-new .tag { color: var(--blue-600); font-weight: 700; }
 
 /* ---------- 표 ---------- */
 .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
@@ -296,8 +291,7 @@ main, .footer { position: relative; z-index: 1; }
 @media (max-width: 720px) {
   body { font-size: 16px; }
   .hero-visual { height: 46vh; min-height: 260px; }
-  .contrast { grid-template-columns: 1fr; }
-
+  
   /* 도메인 표는 도메인별 탭으로 접는다 (04번 T15) */
   .domain-tabs { display: flex; }
   .domain-table th[data-col]:not(.is-on),
@@ -455,3 +449,45 @@ main, .footer { position: relative; z-index: 1; }
 .code.wrap    { white-space: pre-wrap; overflow-wrap: anywhere; }
 .code.scrollx { white-space: pre; overflow-x: auto; }
 @media (max-width: 720px) { .drop-ways { grid-template-columns: 1fr; } }
+
+
+/* ---------- S3 좌우 대조 ---------- */
+.turn { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: stretch; }
+.turn-col {
+  display: flex; flex-direction: column;
+  padding: 1.7rem 1.6rem; border-radius: 18px;
+}
+.turn-col .tag { display: block; margin-bottom: 0.5rem; }
+.turn-col h2 {
+  font-size: clamp(1.2rem, 2.3vw, 1.6rem); line-height: 1.4; margin: 0 0 0.9rem;
+}
+.turn-col p { font-size: 0.98rem; }
+.turn-col .fine { margin-top: auto; padding-top: 0.8rem; }
+
+/* 왼쪽 — 지친 쪽. 난색으로 눌러 둔다 */
+.turn-col.is-old { background: var(--sun-100); border: 1px solid var(--sun-200); }
+.turn-col.is-old h2 { color: var(--navy-500); }
+.turn-col.is-old p { color: var(--navy-500); }
+
+/* 오른쪽 — GRIP IT. 한색으로 살린다 */
+.turn-col.is-new {
+  background: #fff; border: 2px solid var(--blue-500);
+  box-shadow: 0 10px 26px rgba(22, 104, 216, 0.10);
+}
+.turn-col.is-new h2 { color: var(--blue-600); }
+
+/* 두 칸의 예시 대사 — 같은 자리에서 대비된다 */
+.sample {
+  margin: 0.4rem 0 0; padding: 0.7rem 0.9rem; border-radius: 10px;
+  font-size: 1.02rem; font-weight: 700;
+}
+.turn-col.is-old .sample { background: #fff; color: var(--navy-700); border: 1px dashed var(--sun-200); }
+.turn-col.is-new .sample { background: var(--blue-100); color: var(--navy-900); }
+
+/* 프롬프트 줄 — 두 칸 아래를 가로로 잇는다 */
+.prompt-line {
+  display: block; width: 100%; height: auto;
+  margin: 1.5rem 0 0; border-radius: 12px;
+  border: 1px solid var(--sun-200);
+}
+@media (max-width: 860px) { .turn { grid-template-columns: 1fr; } }

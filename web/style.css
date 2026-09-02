@@ -326,7 +326,6 @@ main, .footer { position: relative; z-index: 1; }
 .install-drop {
   margin-top: 1rem; padding: 1.1rem 1.2rem;
   background: #fff; border: 1px solid var(--sun-200); border-radius: 14px;
-  max-width: 34rem;
 }
 .install-drop[hidden] { display: none; }
 .drop-title { margin: 0 0 0.7rem; font-size: 0.92rem; color: var(--navy-700); }
@@ -408,3 +407,28 @@ main, .footer { position: relative; z-index: 1; }
   white-space: pre-wrap; overflow-wrap: anywhere;
 }
 @media (max-width: 860px) { .cut-grid { grid-template-columns: 1fr; } }
+
+
+/* ---------- 상단 네비 섹션 바로가기 ---------- */
+.navlinks { display: flex; align-items: center; gap: 0.85rem; }
+.navlinks a {
+  font-size: 0.86rem; text-decoration: none; color: var(--navy-700);
+  white-space: nowrap; padding: 0.15rem 0;
+  border-bottom: 2px solid transparent;
+}
+.navlinks a:hover { color: var(--blue-600); border-bottom-color: var(--blue-500); }
+/* 좁은 화면에서는 로고·언어·저장소만 남긴다 */
+@media (max-width: 1080px) { .navlinks { display: none; } }
+
+/* ---------- 히어로 설치 요약 — 두 방식을 좌우로 ---------- */
+.drop-ways { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+.drop-way { display: flex; flex-direction: column; min-width: 0; }
+.drop-title { margin: 0 0 0.2rem; font-size: 0.95rem; font-weight: 700; color: var(--navy-900); }
+.drop-sub { margin: 0 0 0.6rem; font-size: 0.84rem; color: var(--navy-500); }
+.drop-way .code { font-size: 0.78rem; flex: 1 1 auto; }
+.drop-way .copy-btn { align-self: flex-start; margin-top: 0.7rem; }
+/* 에이전트 문장은 접고, 셸 명령은 가로로 민다 — 어느 쪽도 화면 폭을 넘지 않는다 */
+.code.wrap    { white-space: pre-wrap; overflow-wrap: anywhere; }
+.code.scrollx { white-space: pre; overflow-x: auto; }
+.drop-actions { margin: 0.9rem 0 0; }
+@media (max-width: 720px) { .drop-ways { grid-template-columns: 1fr; } }

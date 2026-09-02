@@ -153,7 +153,7 @@
 
     if (t.hasAttribute("data-copy-target")) {
       var target = t.getAttribute("data-copy-target");
-      var ids = { "agent": "agent-prompt", "hero-agent": "hero-agent-prompt", "install": "install-cmd" };
+      var ids = { "agent": "agent-prompt", "hero-agent": "hero-agent-prompt", "hero-install": "hero-install-cmd", "install": "install-cmd" };
       var code = document.getElementById(ids[target] || "install-cmd");
       if (code) copyText(code.textContent, t);
     }

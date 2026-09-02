@@ -20,6 +20,15 @@
       <img src="assets/logo/grip-it-full-logo.png" alt="GRIP IT" width="2172" height="724" decoding="async">
     </a>
     <nav class="topbar-nav">
+      <div class="navlinks">
+        <a href="#s2" data-i18n="nav.s2">작업오너십</a>
+        <a href="#s3" data-i18n="nav.s3">문제의식</a>
+        <a href="#s5" data-i18n="nav.s5">스킬동작</a>
+        <a href="#s6" data-i18n="nav.s6">체험하기</a>
+        <a href="#s7" data-i18n="nav.s7">적용분야</a>
+        <a href="#s8" data-i18n="nav.s8">스킬원리</a>
+        <a href="#s9" data-i18n="nav.s9">설치 & 시작</a>
+      </div>
       <div class="langswitch" role="group" aria-label="Language">
         <button type="button" class="lang-btn is-on" data-lang-btn="ko">KO</button>
         <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
@@ -53,14 +62,27 @@
       </div>
 
       <div class="install-drop" id="install-drop" hidden>
-        <p class="drop-title" data-i18n="s0.dropTitle">쓰시는 에이전트에게 이 문장을 붙여 넣으시면 됩니다.</p>
-        <pre class="code"><code id="hero-agent-prompt">github.com/wild-mental/grip-it-skill 의 README 하단
+        <div class="drop-ways">
+
+          <div class="drop-way">
+            <p class="drop-title" data-i18n="s0.dropAgentTitle">에이전트에게 맡기기</p>
+            <p class="drop-sub" data-i18n="s0.dropTitle">쓰시는 에이전트에게 이 문장을 붙여 넣으시면 됩니다.</p>
+            <pre class="code wrap"><code id="hero-agent-prompt">github.com/wild-mental/grip-it-skill 의 README 하단
 "For LLMs" 지침을 따라 grip-it 스킬을 설치해줘.
 개인 범위(~/)로 설치하면 돼.</code></pre>
-        <div class="drop-actions">
-          <button type="button" class="copy-btn" data-copy-target="hero-agent" data-i18n="s9.wayAgentCopy">이 문장 복사</button>
-          <a class="drop-more" href="#s9" data-i18n="s0.dropMore">직접 설치하는 방법도 보기 →</a>
+            <button type="button" class="copy-btn" data-copy-target="hero-agent" data-i18n="s9.wayAgentCopy">이 문장 복사</button>
+          </div>
+
+          <div class="drop-way">
+            <p class="drop-title" data-i18n="s0.dropManualTitle">직접 설치하기</p>
+            <p class="drop-sub" data-i18n="s0.dropManualHint">도구·범위별 명령은 아래 설치 절에 있습니다.</p>
+            <pre class="code scrollx"><code id="hero-install-cmd">mkdir -p ~/.claude/skills/grip-it
+curl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.claude/skills/grip-it/SKILL.md -o ~/.claude/skills/grip-it/SKILL.md</code></pre>
+            <button type="button" class="copy-btn" data-copy-target="hero-install" data-i18n="ui.copy">설치 명령 복사</button>
+          </div>
+
         </div>
+        <p class="drop-actions"><a class="drop-more" href="#s9" data-i18n="s0.dropMore">직접 설치하는 방법도 보기 →</a></p>
       </div>
     </div>
   </section>

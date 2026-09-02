@@ -5,6 +5,13 @@
 window.COPY = {
   ko: {
     "meta.desc": "AI에게 일은 맡기되 결정은 내가 쥐는 방법. GRIP IT은 시작하기 전에 아직 정하지 않은 것들을 전부 꺼내 하나씩 함께 정하고, 정한 것을 문서에 남깁니다.",
+    "nav.s2": "작업오너십",
+    "nav.s3": "문제의식",
+    "nav.s5": "스킬동작",
+    "nav.s6": "체험하기",
+    "nav.s7": "적용분야",
+    "nav.s8": "스킬원리",
+    "nav.s9": "설치 & 시작",
     "nav.repo": "저장소",
     "ui.copy": "설치 명령 복사",
 
@@ -14,6 +21,9 @@ window.COPY = {
     "s0.def": "일을 시작하기 전에, 아직 정하지 않은 것들을 전부 꺼내 하나씩 함께 정합니다. 정한 것은 문서에 남아 이후 AI 작업이 그것을 따릅니다. <code>grip-it</code> 스킬 하나면 됩니다.",
     "s0.installCta": "설치 방법 보기",
     "s0.dropTitle": "쓰시는 에이전트에게 이 문장을 붙여 넣으시면 됩니다.",
+    "s0.dropAgentTitle": "에이전트에게 맡기기",
+    "s0.dropManualTitle": "직접 설치하기",
+    "s0.dropManualHint": "도구·범위별 명령은 아래 설치 절에 있습니다.",
     "s0.dropMore": "직접 설치하는 방법도 보기 →",
     "s0.repoCta": "GitHub에서 보기",
     "s0.crack": "그런데 실제로 해보면, 결정까지 함께 넘어가 있습니다.",
@@ -158,6 +168,13 @@ window.COPY = {
 
   en: {
     "meta.desc": "How to stay hands-off about the doing while keeping a firm grip on the deciding. GRIP IT surfaces every unresolved decision before you start, settles them one at a time, and pins each one into your documents.",
+    "nav.s2": "Ownership",
+    "nav.s3": "The problem",
+    "nav.s5": "What it does",
+    "nav.s6": "See it run",
+    "nav.s7": "Any field",
+    "nav.s8": "What remains",
+    "nav.s9": "Install",
     "nav.repo": "Repository",
     "ui.copy": "Copy install command",
 
@@ -167,6 +184,9 @@ window.COPY = {
     "s0.def": "GRIP IT is the <code>grip-it</code> skill: before the work starts it surfaces every decision that is still open, settles them with you one at a time, and pins each decision into your documents so later AI work has to follow it.",
     "s0.installCta": "How to install",
     "s0.dropTitle": "Paste this line to the agent you use.",
+    "s0.dropAgentTitle": "Let the agent do it",
+    "s0.dropManualTitle": "Install it yourself",
+    "s0.dropManualHint": "Per-tool and per-scope commands are in the install section below.",
     "s0.dropMore": "See how to install it yourself →",
     "s0.repoCta": "View on GitHub",
     "s0.crack": "In practice, though, the deciding gets handed over too.",

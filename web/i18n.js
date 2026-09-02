@@ -23,8 +23,7 @@ window.COPY = {
     "s0.dropTitle": "쓰시는 에이전트에게 이 문장을 붙여 넣으시면 됩니다.",
     "s0.dropAgentTitle": "에이전트에게 맡기기",
     "s0.dropManualTitle": "직접 설치하기",
-    "s0.dropManualHint": "도구·범위별 명령은 아래 설치 절에 있습니다.",
-    "s0.dropMore": "직접 설치하는 방법도 보기 →",
+    "s0.dropManualHint": "도구·범위별 명령은 <a href=\"#s9\">아래 설치 절</a>에 있습니다.",
     "s0.repoCta": "GitHub에서 보기",
     "s0.crack": "그런데 실제로 해보면, 결정까지 함께 넘어가 있습니다.",
 
@@ -186,8 +185,7 @@ window.COPY = {
     "s0.dropTitle": "Paste this line to the agent you use.",
     "s0.dropAgentTitle": "Let the agent do it",
     "s0.dropManualTitle": "Install it yourself",
-    "s0.dropManualHint": "Per-tool and per-scope commands are in the install section below.",
-    "s0.dropMore": "See how to install it yourself →",
+    "s0.dropManualHint": "Per-tool and per-scope commands are in the <a href=\"#s9\">install section</a> below.",
     "s0.repoCta": "View on GitHub",
     "s0.crack": "In practice, though, the deciding gets handed over too.",
 

@@ -340,9 +340,6 @@ main, .footer { position: relative; z-index: 1; }
 .install-drop[hidden] { display: none; }
 .drop-title { margin: 0 0 0.7rem; font-size: 0.92rem; color: var(--navy-700); }
 .install-drop .code { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.82rem; }
-.drop-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem; margin-top: 0.8rem; }
-.drop-more { font-size: 0.88rem; text-decoration: none; }
-.drop-more:hover { text-decoration: underline; }
 
 /* ---------- S6 데모 — 터미널 창 (Claude Code CLI 느낌) ----------
    밝은 페이지 안에서 이 블록만 어둡게 둔다. 실제 화면을 인용하는 자리이므로
@@ -425,13 +422,13 @@ main, .footer { position: relative; z-index: 1; }
   display: flex; align-items: center; justify-content: space-around;
 }
 .navlinks a {
-  font-size: 0.86rem; text-decoration: none; color: var(--navy-700);
+  font-size: 1.12rem; text-decoration: none; color: var(--navy-700);
   white-space: nowrap; padding: 0.15rem 0.1rem;
   border-bottom: 2px solid transparent;
 }
 .navlinks a:hover { color: var(--blue-600); border-bottom-color: var(--blue-500); }
 /* 좁은 화면에서는 로고·언어·저장소만 남긴다 */
-@media (max-width: 1080px) { .navlinks { display: none; } }
+@media (max-width: 1200px) { .navlinks { display: none; } }
 
 /* ---------- 히어로 설치 요약 — 두 방식을 좌우로 ---------- */
 .drop-ways { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
@@ -440,8 +437,8 @@ main, .footer { position: relative; z-index: 1; }
 .drop-sub { margin: 0 0 0.6rem; font-size: 0.84rem; color: var(--navy-500); }
 .drop-way .code { font-size: 0.78rem; flex: 1 1 auto; }
 .drop-way .copy-btn { align-self: flex-start; margin-top: 0.7rem; }
+.drop-sub a { color: var(--blue-600); }
 /* 에이전트 문장은 접고, 셸 명령은 가로로 민다 — 어느 쪽도 화면 폭을 넘지 않는다 */
 .code.wrap    { white-space: pre-wrap; overflow-wrap: anywhere; }
 .code.scrollx { white-space: pre; overflow-x: auto; }
-.drop-actions { margin: 0.9rem 0 0; }
 @media (max-width: 720px) { .drop-ways { grid-template-columns: 1fr; } }

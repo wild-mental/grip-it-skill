@@ -62,13 +62,13 @@ code, pre { font-family: var(--font-mono); }
   backdrop-filter: saturate(180%) blur(8px);
 }
 .topbar-inner {
-  max-width: var(--w-wide); margin: 0 auto; padding: 0.6rem 1.25rem;
+  max-width: var(--w-wide); margin: 0 auto; padding: 0.9rem 1.25rem;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
 }
-.brand {
-  font-weight: 800; letter-spacing: 0.08em; text-decoration: none;
-  color: var(--navy-900); font-size: 1rem;
-}
+/* 상단 바 높이를 이전의 약 1.5배로 — 풀 로고가 들어갈 자리를 만든다 */
+.brand { display: inline-flex; align-items: center; text-decoration: none; }
+.brand img { height: 2.6rem; width: auto; display: block; }
+@media (max-width: 560px) { .brand img { height: 2rem; } }
 .topbar-nav { display: flex; align-items: center; gap: 0.9rem; }
 .langswitch { display: inline-flex; border: 1px solid var(--blue-100); border-radius: 999px; overflow: hidden; }
 .lang-btn {
@@ -374,3 +374,10 @@ main, .footer { position: relative; z-index: 1; }
 .t-dim   { color: #7d8899; }
 
 .term-win[hidden] { display: none; }
+
+
+/* 푸터 심볼 */
+.footer-mark {
+  height: 2.6rem; width: auto; display: block;
+  margin: 0 0 0.9rem; opacity: 0.9;
+}

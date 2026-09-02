@@ -33,6 +33,12 @@
       else el.innerHTML = text;
     }
 
+    var figs = document.querySelectorAll("img[data-src-ko]");
+    for (var f = 0; f < figs.length; f++) {
+      var want = figs[f].getAttribute(lang === "en" ? "data-src-en" : "data-src-ko");
+      if (want && figs[f].getAttribute("src") !== want) figs[f].setAttribute("src", want);
+    }
+
     var btns = document.querySelectorAll("[data-lang-btn]");
     for (var j = 0; j < btns.length; j++) {
       btns[j].classList.toggle("is-on", btns[j].getAttribute("data-lang-btn") === lang);
@@ -129,9 +135,9 @@
 
     if (t.hasAttribute("data-copy-target")) {
       var target = t.getAttribute("data-copy-target");
-      var code = target === "install"
-        ? document.getElementById("install-cmd")
-        : t.closest(".install-preview").querySelector("code");
+      var code = target === "agent"
+        ? document.getElementById("agent-prompt")
+        : document.getElementById("install-cmd");
       if (code) copyText(code.textContent, t);
     }
   });

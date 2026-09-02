@@ -118,29 +118,33 @@ main, .footer { position: relative; z-index: 1; }
   padding: 26vh 0 5rem;
 }
 .hero-copy { position: relative; width: 100%; }
+.wordmark {
+  margin: 0 0 0.5rem; font-size: 0.95rem; font-weight: 800;
+  letter-spacing: 0.28em; color: var(--blue-600);
+}
+.catch {
+  margin: 0.55rem 0 1.3rem; font-size: 1.22rem; font-weight: 700;
+  color: var(--navy-700); line-height: 1.45;
+}
 .hero h1 {
   font-size: clamp(2rem, 5.4vw, 3.2rem); line-height: 1.25; margin: 0 0 0.6rem;
   letter-spacing: -0.02em;
 }
-.hero .lead { font-size: 1.06rem; color: var(--navy-700); margin: 0 0 1.2rem; }
 .hero .def { color: var(--navy-700); margin: 0 0 1.8rem; }
 
-.install-preview {
-  border: 1px solid var(--blue-100); border-radius: 12px;
-  background: #fff; padding: 1rem 1rem 0.85rem;
+.solid-btn {
+  display: inline-block; text-decoration: none;
+  background: var(--blue-600); color: #fff; border: 1px solid var(--blue-600);
 }
-.install-label {
-  display: inline-block; font-size: 0.78rem; letter-spacing: 0.04em;
-  color: var(--blue-600); font-weight: 700; margin-bottom: 0.5rem;
-}
+.solid-btn:hover { background: var(--blue-500); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 0.75rem; }
 .crack {
-  margin: 2.2rem 0 0; font-size: 1.05rem; color: var(--navy-700);
+  margin: 0 0 0.6rem; font-size: 1.02rem; color: var(--navy-500);
   border-left: 3px solid var(--blue-500); padding-left: 0.9rem;
 }
 
 /* ---------- 버튼 ---------- */
-.copy-btn, .ghost-btn {
+.copy-btn, .ghost-btn, .solid-btn {
   font: inherit; font-size: 0.9rem; border-radius: 8px; cursor: pointer;
   padding: 0.45rem 0.9rem; text-decoration: none; display: inline-block;
 }
@@ -182,10 +186,19 @@ main, .footer { position: relative; z-index: 1; }
 .scene p { margin: 0; }
 
 /* ---------- S2 용어 ---------- */
-.glossary { margin: 1.5rem 0 0; }
-.gl-row { padding: 0.7rem 0; border-top: 1px solid var(--sun-200); }
-.gl-row dt { font-weight: 700; }
-.gl-row dd { margin: 0.25rem 0 0; color: var(--navy-700); }
+.glossary {
+  margin: 1.6rem 0 0; padding: 1.1rem 1.2rem;
+  background: var(--sun-100); border: 1px solid var(--sun-200); border-radius: 12px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.2rem 1.6rem;
+}
+.gl-row { padding: 0.55rem 0; border-top: 1px solid var(--sun-200); }
+.gl-row:nth-child(-n+2) { border-top: 0; }
+.gl-row dt { font-size: 0.86rem; font-weight: 700; color: var(--navy-700); }
+.gl-row dd { margin: 0.2rem 0 0; font-size: 0.86rem; line-height: 1.55; color: var(--navy-500); }
+@media (max-width: 720px) {
+  .glossary { grid-template-columns: 1fr; }
+  .gl-row:nth-child(2) { border-top: 1px solid var(--sun-200); }
+}
 
 /* ---------- S4 대비 ---------- */
 .contrast { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin: 1.5rem 0; }
@@ -273,3 +286,21 @@ main, .footer { position: relative; z-index: 1; }
   .domain-table th[data-col]:not(.is-on),
   .domain-table td[data-col]:not(.is-on) { display: none; }
 }
+
+
+/* 설치 — 두 방법을 좌우로 나란히, 클릭 접근성 동일 */
+.install-ways {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem;
+  margin: 1.4rem 0 0;
+}
+.way {
+  display: flex; flex-direction: column;
+  padding: 1.2rem; border-radius: 14px;
+  background: #fff; border: 1px solid var(--sun-200);
+}
+.way-title { margin: 0 0 0.35rem; font-size: 1.02rem; }
+.way-desc { margin: 0 0 0.9rem; font-size: 0.9rem; color: var(--navy-500); }
+.way .code { flex: 1 1 auto; }
+.way .copy-btn { align-self: flex-start; margin-top: 0.8rem; }
+.way .hint { margin: 0.7rem 0 0; }
+@media (max-width: 860px) { .install-ways { grid-template-columns: 1fr; } }

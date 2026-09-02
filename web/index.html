@@ -34,28 +34,22 @@
   <!-- ============ S0 후킹 ============ -->
   <section id="s0" class="hero">
     <div class="hero-copy narrow">
-      <h1 data-i18n="s0.title">실행은 맡기고, 결정은 쥔다</h1>
-      <p class="lead" data-i18n="s0.sub">AI 에이전트에게 일을 맡길 때, 우리가 놓치고 싶지 않은 단 하나</p>
+      <p class="wordmark" data-i18n="s0.brand">GRIP IT</p>
+      <h1 data-i18n="s0.title">AI-Native 를 위한 핸즈오프 에이전트 오너십의 기술</h1>
+      <p class="catch" data-i18n="s0.catch">작업 실행은 Hands Off, 의사 결정은 Grip Tight!</p>
       <p class="def" data-i18n="s0.def">일을 시작하기 전에, 아직 정하지 않은 것들을 전부 꺼내 하나씩 함께 정합니다. 정한 것은 문서에 남아 이후 AI 작업이 그것을 따릅니다. <code>grip-it</code> 스킬 하나면 됩니다.</p>
 
-      <div class="install-preview">
-        <span class="install-label" data-i18n="s0.installLabel">파일 하나만 받으면 됩니다</span>
-        <pre class="code"><code>mkdir -p ~/.claude/skills/grip-it
-curl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.claude/skills/grip-it/SKILL.md \
-  -o ~/.claude/skills/grip-it/SKILL.md</code></pre>
-        <div class="hero-actions">
-          <button type="button" class="copy-btn" data-copy-target="preview" data-i18n="ui.copy">설치 명령 복사</button>
-          <a class="ghost-btn" href="https://github.com/wild-mental/grip-it-skill" data-i18n="s0.repoCta">GitHub에서 보기</a>
-        </div>
+      <div class="hero-actions">
+        <a class="solid-btn" href="#s9" data-i18n="s0.installCta">설치 방법 보기</a>
+        <a class="ghost-btn" href="https://github.com/wild-mental/grip-it-skill" data-i18n="s0.repoCta">GitHub에서 보기</a>
       </div>
-
-      <p class="crack" data-i18n="s0.crack">그런데 실제로 해보면, 결정까지 함께 넘어가 있습니다.</p>
     </div>
   </section>
 
   <!-- ============ S1 공감 ============ -->
   <section id="s1" class="section">
     <div class="narrow">
+      <p class="crack" data-i18n="s0.crack">그런데 실제로 해보면, 결정까지 함께 넘어가 있습니다.</p>
       <h2 data-i18n="s1.title">쥐고 있다고 생각했는데, 빠져나가는 순간들</h2>
       <ol class="scenes">
         <li class="scene" data-reveal><span class="scene-n">01</span><p data-i18n="s1.scene1">자료가 부족한데도 AI가 그럴듯한 항목을 만들어 냅니다.</p></li>
@@ -75,7 +69,7 @@ curl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.cla
       <p class="lead" data-i18n="s2.lead">우리가 AI에게 넘기고 싶은 것은 <em>실행</em>입니다. 그런데 실행을 넘기는 자리에서 <em>결정</em>까지 함께 넘어갑니다. 이 페이지가 말하는 문제는 그것 하나입니다.</p>
     </div>
     <div class="wide">
-      <img class="diagram" src="assets/diagrams/d1.svg" alt="실행은 놓고 이해·방향·결정은 쥔 상태를 나타낸 도식" width="880" height="300" data-i18n-attr="alt" data-i18n="s2.d1alt">
+      <img data-src-ko="assets/diagrams/d1.ko.svg" data-src-en="assets/diagrams/d1.en.svg" class="diagram" src="assets/diagrams/d1.ko.svg" alt="실행은 놓고 이해·방향·결정은 쥔 상태를 나타낸 도식" width="880" height="300" data-i18n-attr="alt" data-i18n="s2.d1alt">
     </div>
     <div class="narrow">
       <dl class="glossary">
@@ -151,7 +145,7 @@ curl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.cla
       <p class="lead" data-i18n="s6.lead">연구 설계를 맡긴 실제 세션입니다. 네 장면이 차례로 이어집니다.</p>
     </div>
     <div class="wide">
-      <img class="diagram" src="assets/diagrams/d3.svg" alt="재료 확인에서 시작해 정할 것을 꺼내고, 하나씩 정하고, 문서에 반영하고, 다음에 이어서 하는 흐름을 나타낸 그림" width="880" height="180" data-i18n-attr="alt" data-i18n="s6.d3alt">
+      <img data-src-ko="assets/diagrams/d3.ko.svg" data-src-en="assets/diagrams/d3.en.svg" class="diagram" src="assets/diagrams/d3.ko.svg" alt="재료 확인에서 시작해 정할 것을 꺼내고, 하나씩 정하고, 문서에 반영하고, 다음에 이어서 하는 흐름을 나타낸 그림" width="880" height="180" data-i18n-attr="alt" data-i18n="s6.d3alt">
     </div>
     <div class="wide demo">
       <p class="demo-note" data-i18n="s6.note">아래 네 장면은 실제 화면에 나오는 그대로입니다.</p>
@@ -308,7 +302,7 @@ curl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.cla
       <p class="lead" data-i18n="s8.lead">세션이 끝나면 두 가지가 남습니다. <strong>정해 가는 과정</strong>은 기록부 한 파일에, <strong>정해진 결과</strong>는 원래 쓰시던 프로젝트 문서에 남습니다.</p>
     </div>
     <div class="wide">
-      <img class="diagram" src="assets/diagrams/d2.svg" alt="기록부 한 파일과, 근거가 남는 문서·이후 작업이 따르는 문서로 나뉜 프로젝트 문서를 나타낸 그림" width="880" height="280" data-i18n-attr="alt" data-i18n="s8.d2alt">
+      <img data-src-ko="assets/diagrams/d2.ko.svg" data-src-en="assets/diagrams/d2.en.svg" class="diagram" src="assets/diagrams/d2.ko.svg" alt="기록부 한 파일과, 근거가 남는 문서·이후 작업이 따르는 문서로 나뉜 프로젝트 문서를 나타낸 그림" width="880" height="280" data-i18n-attr="alt" data-i18n="s8.d2alt">
     </div>
     <div class="narrow">
       <p class="callout" data-i18n="s8.prereg">연구에서 쓰는 preregistration(사전등록: 분석 계획을 데이터를 모으기 전에 미리 공개해 두는 절차)이 좋은 예입니다. 한 번 등록해 두면 이후 행동이 거기 묶이고, 벗어나려면 이유를 밝혀야 합니다. 정한 것을 지키게 만드는 문서란 이런 것입니다.</p>
@@ -321,23 +315,39 @@ curl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.cla
   <section id="s9" class="section">
     <div class="narrow">
       <h2 data-i18n="s9.title">설치</h2>
-      <p class="lead" data-i18n="s9.lead">저장소를 통째로 내려받지 않습니다. <code>SKILL.md</code> 파일 하나만 받으면 끝입니다.</p>
+      <p class="lead" data-i18n="s9.lead">두 가지 방법이 있습니다. 에이전트에게 맡기셔도 되고, 직접 받으셔도 됩니다. 어느 쪽이든 <code>SKILL.md</code> 파일 하나면 끝입니다.</p>
 
-      <div class="install">
-        <div class="install-tabs" role="tablist" aria-label="Tool">
-          <button type="button" class="tab is-on" data-tool="claude">Claude Code</button>
-          <button type="button" class="tab" data-tool="cursor">Cursor</button>
-          <button type="button" class="tab" data-tool="codex">Codex</button>
+      <div class="install-ways">
+
+        <div class="way way-agent">
+          <h3 class="way-title" data-i18n="s9.wayAgentTitle">에이전트에게 맡기기</h3>
+          <p class="way-desc" data-i18n="s9.wayAgentDesc">아래 문장을 그대로 복사해 쓰시는 에이전트에게 붙여 넣으시면, 알아서 받아 설치합니다.</p>
+          <pre class="code"><code id="agent-prompt">github.com/wild-mental/grip-it-skill 의 README 하단
+"For LLMs" 지침을 따라 grip-it 스킬을 설치해줘.
+개인 범위(~/)로 설치하면 돼.</code></pre>
+          <button type="button" class="copy-btn" data-copy-target="agent" data-i18n="s9.wayAgentCopy">이 문장 복사</button>
+          <p class="hint" data-i18n="s9.wayAgentHint">Claude Code · Cursor · Codex 어디서든 같은 문장으로 됩니다. 도구에 맞는 경로는 에이전트가 골라 줍니다.</p>
         </div>
-        <div class="install-scopes" role="tablist" aria-label="Scope">
-          <button type="button" class="chip is-on" data-scope="user" data-i18n="s9.scopeUser">개인 — 내가 여는 모든 프로젝트</button>
-          <button type="button" class="chip" data-scope="project" data-i18n="s9.scopeProject">프로젝트 — 지금 이 저장소에서만</button>
-        </div>
-        <pre class="code"><code id="install-cmd">mkdir -p ~/.claude/skills/grip-it
+
+        <div class="way way-manual">
+          <h3 class="way-title" data-i18n="s9.wayManualTitle">직접 설치하기</h3>
+          <p class="way-desc" data-i18n="s9.wayManualDesc">터미널에서 파일 하나를 받는 방식입니다. 도구와 범위를 고르시면 명령이 바뀝니다.</p>
+          <div class="install-tabs" role="tablist" aria-label="Tool">
+            <button type="button" class="tab is-on" data-tool="claude">Claude Code</button>
+            <button type="button" class="tab" data-tool="cursor">Cursor</button>
+            <button type="button" class="tab" data-tool="codex">Codex</button>
+          </div>
+          <div class="install-scopes" role="tablist" aria-label="Scope">
+            <button type="button" class="chip is-on" data-scope="user" data-i18n="s9.scopeUser">개인 — 내가 여는 모든 프로젝트</button>
+            <button type="button" class="chip" data-scope="project" data-i18n="s9.scopeProject">프로젝트 — 지금 이 저장소에서만</button>
+          </div>
+          <pre class="code"><code id="install-cmd">mkdir -p ~/.claude/skills/grip-it
 curl -fsSL https://raw.githubusercontent.com/wild-mental/grip-it-skill/main/.claude/skills/grip-it/SKILL.md \
   -o ~/.claude/skills/grip-it/SKILL.md</code></pre>
-        <button type="button" class="copy-btn" data-copy-target="install" data-i18n="ui.copy">설치 명령 복사</button>
-        <p class="hint" data-i18n="s9.scopeHint">개인 범위로 받으면 작업 중인 저장소에 파일이 추가되지 않습니다. 팀과 함께 쓰시려면 프로젝트 범위를 고르시면 됩니다.</p>
+          <button type="button" class="copy-btn" data-copy-target="install" data-i18n="ui.copy">설치 명령 복사</button>
+          <p class="hint" data-i18n="s9.scopeHint">개인 범위로 받으면 작업 중인 저장소에 파일이 추가되지 않습니다. 팀과 함께 쓰시려면 프로젝트 범위를 고르시면 됩니다.</p>
+        </div>
+
       </div>
 
       <h3 data-i18n="s9.useTitle">첫 사용</h3>

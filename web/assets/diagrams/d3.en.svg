@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 180" width="880" height="180" role="img" aria-label="Session flow">
+  <style>
+    .ln { fill: none; stroke: #0f2440; stroke-width: 2; }
+    .fill { fill: #dceafc; }
+    .t { font-family: "Pretendard","Noto Sans KR",system-ui,sans-serif; fill: #0f2440; }
+    .h { font-size: 14px; font-weight: 700; }
+    .s { font-size: 11px; fill: #40566f; }
+    .k { font-size: 11px; fill: #1668d8; font-weight: 700; }
+  </style>
+
+  <g>
+    <rect class="ln" x="16" y="42" width="150" height="66" rx="10"/>
+    <text class="t k" x="30" y="64">STEP 0.5</text>
+    <text class="t h" x="30" y="84">Material check</text>
+  </g>
+  <path class="ln" d="M172 75 h28"/><path class="ln" d="M190 67 l12 8 l-12 8"/>
+
+  <g>
+    <rect class="ln" x="206" y="42" width="150" height="66" rx="10"/>
+    <text class="t k" x="220" y="64">STEP 1</text>
+    <text class="t h" x="220" y="84">Grip Register</text>
+  </g>
+  <path class="ln" d="M362 75 h28"/><path class="ln" d="M380 67 l12 8 l-12 8"/>
+
+  <g>
+    <rect class="fill" x="396" y="42" width="150" height="66" rx="10"/>
+    <rect class="ln" x="396" y="42" width="150" height="66" rx="10"/>
+    <text class="t k" x="410" y="64">STEP 2</text>
+    <text class="t h" x="410" y="84">One topic at a time</text>
+  </g>
+  <path class="ln" d="M552 75 h28"/><path class="ln" d="M570 67 l12 8 l-12 8"/>
+
+  <g>
+    <rect class="fill" x="586" y="42" width="150" height="66" rx="10"/>
+    <rect class="ln" x="586" y="42" width="150" height="66" rx="10"/>
+    <text class="t k" x="600" y="64">STEP 3</text>
+    <text class="t h" x="600" y="84">Persist at once</text>
+  </g>
+  <path class="ln" d="M742 75 h28"/><path class="ln" d="M760 67 l12 8 l-12 8"/>
+
+  <g>
+    <rect class="ln" x="776" y="42" width="88" height="66" rx="10"/>
+    <text class="t k" x="790" y="64">STEP 4</text>
+    <text class="t h" x="790" y="84">Next / stop</text>
+  </g>
+
+  <path class="ln" d="M471 112 v22 h-25" stroke-dasharray="6 5"/>
+  <path class="ln" d="M661 112 v22 h-190" stroke-dasharray="6 5"/>
+  <text class="t s" x="196" y="152">repeated once per topic</text>
+</svg>

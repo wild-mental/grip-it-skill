@@ -12,9 +12,8 @@
   <!-- 실행 — 놓는다 -->
   <rect class="dash" x="40" y="70" width="330" height="160" rx="14"/>
   <text class="t k" x="66" y="104">HANDS-OFF</text>
-  <text class="t h" x="66" y="140">실행 · Doing</text>
-  <text class="t s" x="66" y="170">손을 뗀다 — 에이전트가 수행합니다</text>
-  <text class="t s" x="66" y="192">Released to the agent</text>
+  <text class="t h" x="66" y="140">Doing</text>
+  <text class="t s" x="66" y="170">Released to the agent</text>
   <path class="dash" d="M66 210 h280"/>
 
   <!-- 화살표 -->
@@ -25,10 +24,8 @@
   <rect class="fill" x="510" y="70" width="330" height="160" rx="14"/>
   <rect class="ln" x="510" y="70" width="330" height="160" rx="14"/>
   <text class="t k" x="536" y="104">GRIP</text>
-  <text class="t h" x="536" y="140">이해 · 방향 · 결정</text>
-  <text class="t h" x="536" y="166">Understanding · Direction · Decisions</text>
-  <text class="t s" x="536" y="196">단단히 쥔다 — 사용자가 결정합니다</text>
-  <text class="t s" x="536" y="216">Held by you</text>
+  <text class="t h" x="536" y="140">Understanding · Direction · Decisions</text>
+  <text class="t s" x="536" y="196">Held by you</text>
 
-  <text class="t s" x="40" y="272">오너십이 새는 곳은 왼쪽이 아니라 오른쪽입니다. · Ownership leaks on the right, not the left.</text>
+  <text class="t s" x="40" y="272">What slips away is on the right, not the left.</text>
 </svg>

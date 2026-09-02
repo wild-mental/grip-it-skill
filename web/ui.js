@@ -33,6 +33,14 @@
       else el.innerHTML = text;
     }
 
+    /* 데모 4컷은 하이라이팅 마크업이 붙어 있어 사전으로 갈아끼우지 않는다.
+       언어별 블록 두 벌을 두고 한쪽만 보인다. */
+    var blocks = document.querySelectorAll("[data-lang-block]");
+    for (var b = 0; b < blocks.length; b++) {
+      var mine = blocks[b].getAttribute("data-lang-block") === lang;
+      if (mine) { blocks[b].removeAttribute("hidden"); } else { blocks[b].setAttribute("hidden", ""); }
+    }
+
     var figs = document.querySelectorAll("img[data-src-ko]");
     for (var f = 0; f < figs.length; f++) {
       var want = figs[f].getAttribute(lang === "en" ? "data-src-en" : "data-src-ko");

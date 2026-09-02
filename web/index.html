@@ -165,7 +165,7 @@
       <div class="cut">
         <h3><span class="cut-n">1</span> <span data-i18n="s6.cut1t">① 재료 확인 — 근거가 없으면 시작하지 않습니다</span></h3>
         <p class="cut-lead" data-i18n="s6.cut1d">먼저 판단에 쓸 자료가 있는지 봅니다. 목적(R1)과 범위(R2)가 비어 있으면 무엇이 빠졌는지 판정할 수 없으므로, 억지로 뽑지 않고 두 갈래만 제시합니다.</p>
-        <div class="term-win"><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-lbl">**[재료 점검]**</span>
+        <div class="term-win" data-lang-block="ko"><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-lbl">**[재료 점검]**</span>
 
 | 역할 | 상태 | 근거 |
 |------|------|------|
@@ -177,6 +177,18 @@
 <span class="t-opt">- A)</span> 측정 구성 자료를 보강한 뒤 다시 호출 — 가장 정확하며, 세션을 한 번 끊습니다  <span class="t-rec">(권장)</span>
 <span class="t-opt">- B)</span> 지금 대화로 범위를 함께 정해 앵커 문서로 남기고 이어서 시작 — 끊김이 없고, 문답이 3~4회 늘어납니다
 <span class="t-opt">- 기타)</span> 직접 입력 — 위 선택지로 표현되지 않는 방향이 있으면 그대로 적어 주세요</code></pre></div></div>
+        <div class="term-win" data-lang-block="en" hidden><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-lbl">**[Material check]**</span>
+
+| Role | Status | Basis |
+|------|--------|-------|
+| R1 Purpose · success criteria | Present | protocol.md §1 research question · hypotheses |
+| R2 Scope · deliverable | Partial | measurement structure not decided yet |
+| R3 Audience · stakeholders | Partial | population named, no sample definition → absorbed as first <span class="t-core">CORE</span> topic |
+
+<span class="t-lbl">**[Question]**</span> (recommendation first, "other" last)
+<span class="t-opt">- A)</span> Add the measurement material and call again — most accurate, breaks the session once  <span class="t-rec">(recommended)</span>
+<span class="t-opt">- B)</span> Settle the scope here, keep it as an anchor, and continue — no break, adds 3~4 rounds
+<span class="t-opt">- other)</span> Free text — if none of these fit, write your own</code></pre></div></div>
       </div>
 
       <p class="cut-bridge" data-i18n="s6.b1">B를 고르면 범위를 먼저 함께 정하고, 그다음 앞으로 정할 것을 전부 펼쳐 보입니다.</p>
@@ -184,11 +196,16 @@
       <div class="cut">
         <h3><span class="cut-n">2</span> <span data-i18n="s6.cut2t">② 정할 것 전부 — 앞으로 몇 번인지가 여기서 보입니다</span></h3>
         <p class="cut-lead" data-i18n="s6.cut2d">아직 정하지 않은 항목을 전부 꺼내, 개수와 순서를 함께 보여 줍니다. 되돌리기 어려운 것은 CORE, 언제든 바꿀 수 있는 것은 MINOR로 나눕니다.</p>
-        <div class="term-win"><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-key">RESOLVED</span>: 0 / <span class="t-key">DROPPED</span>: 0 / <span class="t-key">TOTAL</span>: 4
+        <div class="term-win" data-lang-block="ko"><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-key">RESOLVED</span>: 0 / <span class="t-key">DROPPED</span>: 0 / <span class="t-key">TOTAL</span>: 4
 <span class="t-dim">- [ ]</span> T1 | <span class="t-core">CORE</span>  | 표본 정의와 모집 방식              | <span class="t-dim">depends:-</span>  | <span class="t-un">status:UNRESOLVED</span>
 <span class="t-dim">- [ ]</span> T2 | <span class="t-core">CORE</span>  | 주요 변수 측정 도구 선택           | <span class="t-dim">depends:T1</span> | <span class="t-un">status:UNRESOLVED</span>
 <span class="t-dim">- [ ]</span> T3 | <span class="t-core">CORE</span>  | 주 분석 방법과 유의수준            | <span class="t-dim">depends:T2</span> | <span class="t-un">status:UNRESOLVED</span>
 <span class="t-dim">- [ ]</span> T4 | <span class="t-minor">MINOR</span> | 코딩북 라벨 명명 규칙              | <span class="t-dim">depends:T2</span> | <span class="t-un">status:UNRESOLVED</span></code></pre></div></div>
+        <div class="term-win" data-lang-block="en" hidden><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-key">RESOLVED</span>: 0 / <span class="t-key">DROPPED</span>: 0 / <span class="t-key">TOTAL</span>: 4
+<span class="t-dim">- [ ]</span> T1 | <span class="t-core">CORE</span>  | Sample definition and recruitment | <span class="t-dim">depends:-</span>  | <span class="t-un">status:UNRESOLVED</span>
+<span class="t-dim">- [ ]</span> T2 | <span class="t-core">CORE</span>  | Measurement instrument selection  | <span class="t-dim">depends:T1</span> | <span class="t-un">status:UNRESOLVED</span>
+<span class="t-dim">- [ ]</span> T3 | <span class="t-core">CORE</span>  | Primary analysis and alpha level  | <span class="t-dim">depends:T2</span> | <span class="t-un">status:UNRESOLVED</span>
+<span class="t-dim">- [ ]</span> T4 | <span class="t-minor">MINOR</span> | Codebook label naming convention  | <span class="t-dim">depends:T2</span> | <span class="t-un">status:UNRESOLVED</span></code></pre></div></div>
       </div>
 
       <p class="cut-bridge" data-i18n="s6.b2">그다음은 순서대로 하나씩입니다. 한 번에 하나만 묻습니다.</p>
@@ -196,7 +213,7 @@
       <div class="cut">
         <h3><span class="cut-n">3</span> <span data-i18n="s6.cut3t">③ 하나씩 — 권장안과 근거, 그리고 마지막의 ‘기타’</span></h3>
         <p class="cut-lead" data-i18n="s6.cut3d">선택지마다 무엇을 얻고 무엇을 잃는지 붙고, 권장안에는 왜 그것인지가 붙습니다. 어려운 말은 아래에 풀어 두고, 마지막 칸은 언제나 직접 입력입니다.</p>
-        <div class="term-win"><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-lbl">**[진척]**</span> <span class="t-key">RESOLVED</span> 2 / <span class="t-key">DROPPED</span> 0 / <span class="t-key">TOTAL</span> 4 · 현재 토픽: T3 주 분석 방법과 유의수준
+        <div class="term-win" data-lang-block="ko"><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-lbl">**[진척]**</span> <span class="t-key">RESOLVED</span> 2 / <span class="t-key">DROPPED</span> 0 / <span class="t-key">TOTAL</span> 4 · 현재 토픽: T3 주 분석 방법과 유의수준
 
 <span class="t-lbl">**[선택지]**</span>
 <span class="t-opt">- A)</span> 사전등록한 주분석 1개 + 탐색적 분석 분리 — 해석이 명확하고, 탐색 결과의 지위가 낮아집니다
@@ -210,6 +227,20 @@
 <span class="t-lbl">**[용어]**</span>
 - preregistration(사전등록: 분석 계획을 데이터 수집 전에 공개 등록하는 절차)
 - 유의수준 — 귀무가설을 기각하는 기준이 되는 확률입니다</code></pre></div></div>
+        <div class="term-win" data-lang-block="en" hidden><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-lbl">**[Progress]**</span> <span class="t-key">RESOLVED</span> 2 / <span class="t-key">DROPPED</span> 0 / <span class="t-key">TOTAL</span> 4 · current topic: T3 Primary analysis and alpha level
+
+<span class="t-lbl">**[Options]**</span>
+<span class="t-opt">- A)</span> One preregistered primary analysis, exploratory kept separate — clearer reading, exploratory results carry less weight
+<span class="t-opt">- B)</span> Several primary analyses with correction — broader hypotheses, lower power
+<span class="t-opt">- other)</span> Free text — if none of these fit, write your own
+
+<span class="t-lbl">**[Recommendation]**</span> A) — the constraints (R4) name an ethics review date, and the
+                 preregistration draft is already set as the normative doc, so
+                 fixing a single primary analysis is the safer path.
+
+<span class="t-lbl">**[Terms]**</span>
+- preregistration — publishing the analysis plan before data collection
+- alpha level — the probability threshold for rejecting the null hypothesis</code></pre></div></div>
       </div>
 
       <p class="cut-bridge" data-i18n="s6.b3">정해지면 다음 질문으로 넘어가기 전에 문서부터 고칩니다.</p>
@@ -217,7 +248,7 @@
       <div class="cut">
         <h3><span class="cut-n">4</span> <span data-i18n="s6.cut4t">④ 반영 — 문서 두 곳과 기록부에 남깁니다</span></h3>
         <p class="cut-lead" data-i18n="s6.cut4d">정한 것을 대화에만 두지 않습니다. 왜 그렇게 정했는지가 남는 문서와, 이후 작업이 따르게 되는 문서, 그리고 기록부까지 세 곳에 곧바로 반영합니다.</p>
-        <div class="term-win"><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-lbl">**[반영 완료]**</span> T3 → decision: 사전등록한 주분석 1개 + 탐색적 분석 분리
+        <div class="term-win" data-lang-block="ko"><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-lbl">**[반영 완료]**</span> T3 → decision: 사전등록한 주분석 1개 + 탐색적 분석 분리
 - 근거 문서: 연구계획서.md §4 분석 절 갱신
 - 규범 문서: 사전등록 초안에 주분석·유의수준 고정
 - 기록부: GRIP_REGISTER.md (<span class="t-key">RESOLVED</span> 3 / <span class="t-key">DROPPED</span> 0 / <span class="t-key">TOTAL</span> 4)
@@ -225,6 +256,14 @@
 ---
 
 <span class="t-lbl">**[진척]**</span> <span class="t-key">RESOLVED</span> 3 / <span class="t-key">DROPPED</span> 0 / <span class="t-key">TOTAL</span> 4 · 현재 토픽: T4 코딩북 라벨 명명 규칙</code></pre></div></div>
+        <div class="term-win" data-lang-block="en" hidden><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-lbl">**[Applied]**</span> T3 → decision: one preregistered primary analysis, exploratory kept separate
+- Rationale doc: protocol.md §4 analysis section updated
+- Normative doc: primary analysis and alpha level fixed in the preregistration draft
+- Register: GRIP_REGISTER.md (<span class="t-key">RESOLVED</span> 3 / <span class="t-key">DROPPED</span> 0 / <span class="t-key">TOTAL</span> 4)
+
+---
+
+<span class="t-lbl">**[Progress]**</span> <span class="t-key">RESOLVED</span> 3 / <span class="t-key">DROPPED</span> 0 / <span class="t-key">TOTAL</span> 4 · current topic: T4 Codebook label naming convention</code></pre></div></div>
       </div>
     </div>
     <div class="narrow">

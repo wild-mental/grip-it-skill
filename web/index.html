@@ -279,6 +279,76 @@
   </section>
 
   <!-- ============ S7 범용 ============ -->
+
+  <!-- ============ [테스트] S6 대안 — 2×2 배치 시안 ============ -->
+  <section id="s6-alt" class="section is-test">
+    <div class="narrow">
+      <p class="test-tag">테스트용 중복 섹션 · 2×2 배치 시안</p>
+      <h2><code>/grip-it</code> 수행과정 미리보기 — 호출부터 전체 작업 오너십 확보까지</h2>
+      <p class="lead">같은 네 장면을 두 줄로 접어 본 안입니다. 문구는 축약했고, 긴 줄은 칸 안에서 접힙니다.</p>
+    </div>
+    <div class="wide">
+      <div class="cut-grid">
+        <div class="cut">
+          <h3><span class="cut-n">1</span> <span>① 재료 확인 — 근거가 없으면 시작하지 않습니다</span></h3>
+          <p class="cut-lead">판단에 쓸 자료가 있는지 먼저 봅니다. 목적(R1)과 범위(R2)가 비면 뽑지 않고 두 갈래만 냅니다.</p>
+          <div class="term-win"><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-lbl">**[재료 점검]**</span>
+
+| 역할 | 상태 | 근거 |
+|------|------|------|
+| R1 목적·성공기준 | 충족 | 연구계획서.md §1 |
+| R2 범위·산출물 | 부분 | 측정 구성 미정 |
+| R3 대상·이해관계자 | 부분 | 첫 <span class="t-core">CORE</span> 토픽으로 흡수 |
+
+<span class="t-lbl">**[질문]**</span> (권장안 첫 옵션, 기타 마지막)
+<span class="t-opt">- A)</span> 자료 보강 후 재호출 — 정확, 한 번 끊김  <span class="t-rec">(권장)</span>
+<span class="t-opt">- B)</span> 지금 함께 정하고 이어서 — 끊김 없음, 3~4회 추가
+<span class="t-opt">- 기타)</span> 직접 입력</code></pre></div></div>
+        </div>
+        <div class="cut">
+          <h3><span class="cut-n">2</span> <span>② 정할 것 전부 — 앞으로 몇 번인지가 보입니다</span></h3>
+          <p class="cut-lead">아직 정하지 않은 항목을 전부 꺼내 개수와 순서를 보여 줍니다. 되돌리기 어려우면 CORE 입니다.</p>
+          <div class="term-win"><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-key">RESOLVED</span>: 0 / <span class="t-key">DROPPED</span>: 0 / <span class="t-key">TOTAL</span>: 4
+<span class="t-dim">- [ ]</span> T1 | <span class="t-core">CORE</span>  | 표본 정의·모집 | <span class="t-dim">depends:-</span>  | <span class="t-un">status:UNRESOLVED</span>
+<span class="t-dim">- [ ]</span> T2 | <span class="t-core">CORE</span>  | 측정 도구 선택 | <span class="t-dim">depends:T1</span> | <span class="t-un">status:UNRESOLVED</span>
+<span class="t-dim">- [ ]</span> T3 | <span class="t-core">CORE</span>  | 분석·유의수준 | <span class="t-dim">depends:T2</span> | <span class="t-un">status:UNRESOLVED</span>
+<span class="t-dim">- [ ]</span> T4 | <span class="t-minor">MINOR</span> | 코딩북 라벨 | <span class="t-dim">depends:T2</span> | <span class="t-un">status:UNRESOLVED</span></code></pre></div></div>
+        </div>
+        <div class="cut">
+          <h3><span class="cut-n">3</span> <span>③ 하나씩 — 권장안과 근거, 마지막의 ‘기타’</span></h3>
+          <p class="cut-lead">선택지마다 얻는 것과 잃는 것이 붙고, 권장안에는 왜 그것인지가 붙습니다.</p>
+          <div class="term-win"><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-lbl">**[진척]**</span> <span class="t-key">RESOLVED</span> 2 / <span class="t-key">DROPPED</span> 0 / <span class="t-key">TOTAL</span> 4 · T3 분석·유의수준
+
+<span class="t-lbl">**[선택지]**</span>
+<span class="t-opt">- A)</span> 사전등록 주분석 1개 + 탐색 분리
+     해석이 명확, 탐색 결과의 지위는 낮아짐
+<span class="t-opt">- B)</span> 다중비교 보정 포함 다중 주분석
+     가설은 넓게, 검정력은 낮아짐
+<span class="t-opt">- 기타)</span> 직접 입력
+
+<span class="t-lbl">**[권장]**</span> A) — 윤리 심의 일정이 있고, 사전등록 초안을
+         규범 문서로 쓰기로 정해져 있습니다.
+
+<span class="t-lbl">**[용어]**</span>
+- preregistration(사전등록: 수집 전 분석계획 공개)
+- 유의수준 — 귀무가설을 기각하는 기준 확률</code></pre></div></div>
+        </div>
+        <div class="cut">
+          <h3><span class="cut-n">4</span> <span>④ 반영 — 문서 두 곳과 기록부에 남깁니다</span></h3>
+          <p class="cut-lead">정한 것을 대화에만 두지 않습니다. 해소되는 즉시 세 곳에 반영합니다.</p>
+          <div class="term-win"><div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-name">claude</span></div><div class="table-scroll"><pre class="code term"><code><span class="t-lbl">**[반영 완료]**</span> T3 → decision: 사전등록 주분석 1개 + 탐색 분리
+- 근거 문서: 연구계획서.md §4 분석 절 갱신
+- 규범 문서: 사전등록 초안에 주분석·유의수준 고정
+- 기록부: GRIP_REGISTER.md (<span class="t-key">RESOLVED</span> 3 / <span class="t-key">TOTAL</span> 4)
+
+---
+
+<span class="t-lbl">**[진척]**</span> <span class="t-key">RESOLVED</span> 3 / <span class="t-key">DROPPED</span> 0 / <span class="t-key">TOTAL</span> 4 · T4 코딩북 라벨</code></pre></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="s7" class="section">
     <div class="narrow">
       <h2 data-i18n="s7.title">어느 분야든 같은 절차</h2>

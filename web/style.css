@@ -39,8 +39,9 @@
 
 html { scroll-behavior: smooth; }
 
-/* 앵커로 이동할 때 sticky 상단 바 아래로 제목이 들어가지 않게 한다 */
-section[id] { scroll-margin-top: calc(var(--topbar-h) + 1.2rem); }
+/* 앵커로 이동할 때 sticky 상단 바 아래로 제목이 들어가지 않게 한다.
+   섹션 자체가 padding-top 4.5rem 을 갖고 있으므로 여기서는 바 높이만 비운다. */
+section[id] { scroll-margin-top: var(--topbar-h); }
 
 body {
   margin: 0;

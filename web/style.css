@@ -491,3 +491,17 @@ main, .footer { position: relative; z-index: 1; }
   border: 1px solid var(--sun-200);
 }
 @media (max-width: 860px) { .turn { grid-template-columns: 1fr; } }
+
+
+/* ---------- preview 브랜치 표시 ----------
+   프리뷰 빌드임을 한눈에 알리는 표식. main 에는 없다. */
+.preview-pill {
+  position: absolute; z-index: 2;
+  top: calc(var(--topbar-h) + 1rem); right: 1.5rem;
+  padding: 0.25rem 0.75rem; border-radius: 999px;
+  background: var(--blue-100); color: var(--blue-600);
+  border: 1px solid var(--blue-500);
+  font-family: var(--font-mono); font-size: 0.74rem;
+  letter-spacing: 0.1em; text-transform: lowercase;
+}
+@media (max-width: 560px) { .preview-pill { right: 1rem; font-size: 0.68rem; } }

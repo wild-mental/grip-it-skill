@@ -155,7 +155,7 @@ main, .footer { position: relative; z-index: 1; }
 .solid-btn:hover { background: var(--blue-500); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 0.75rem; }
 .crack {
-  margin: 0 0 0.6rem; font-size: 1.02rem; color: var(--navy-500);
+  margin: 0 0 0.9rem; font-size: 1.02rem; line-height: 1.6; color: var(--navy-500);
   border-left: 3px solid var(--blue-500); padding-left: 0.9rem;
 }
 

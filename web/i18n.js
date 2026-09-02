@@ -25,9 +25,9 @@ window.COPY = {
     "s0.dropManualTitle": "직접 설치하기",
     "s0.dropManualHint": "도구·범위별 명령은 <a href=\"#s9\">아래 설치 절</a>에 있습니다.",
     "s0.repoCta": "GitHub에서 보기",
-    "s0.crack": "그런데 막상 맡겨 보면, 넘어가는 건 실행만이 아닙니다.",
+    "s0.crack": "AI가 뭘 작업해 온 건지 도통 모르겠을 때,<br>AI가 시키는 대로 의사결정까지 휘둘릴 때.",
 
-    "s1.title": "작업 오너십이 손가락 사이로 술술 빠져나가는 안타까운 순간들",
+    "s1.title": "작업 오너십이 손가락 사이로 술술 빠져나가는<br>안타까운 순간들",
     "s1.scene1": "자료가 부족한데도 AI가 그럴듯한 항목을 만들어 냅니다.",
     "s1.scene2": "무슨 말인지 모르는 단어가 섞인 제안을, 일단 그렇게 하자고 넘깁니다.",
     "s1.scene3": "AI가 내민 보기 중에서만 고르게 됩니다. 정작 하고 싶던 말은 못 하고요.",
@@ -186,9 +186,9 @@ window.COPY = {
     "s0.dropManualTitle": "Install it yourself",
     "s0.dropManualHint": "Per-tool and per-scope commands are in the <a href=\"#s9\">install section</a> below.",
     "s0.repoCta": "View on GitHub",
-    "s0.crack": "Hand it over, though, and it is not only the doing that goes.",
+    "s0.crack": "When you cannot tell what the AI actually did,<br>and you end up following its lead on the decisions too.",
 
-    "s1.title": "Moments when ownership of the work slips right through your fingers",
+    "s1.title": "Moments when ownership of the work<br>slips right through your fingers",
     "s1.scene1": "The AI produces plausible-looking items even when the material is too thin.",
     "s1.scene2": "You wave through a proposal containing words you do not actually know.",
     "s1.scene3": "You end up picking from what the AI offered — and never say what you meant.",

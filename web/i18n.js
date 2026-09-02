@@ -32,7 +32,7 @@ window.COPY = {
     "s1.scene2": "무슨 말인지 모르는 단어가 섞인 제안을, 일단 그렇게 하자고 넘깁니다.",
     "s1.scene3": "AI가 내민 보기 중에서만 고르게 됩니다. 정작 하고 싶던 말은 못 하고요.",
     "s1.scene4": "어렵게 정한 것이 대화에 묻히고, 다음에 다시 물으면 AI가 또 다르게 답합니다.",
-    "s1.close": "결정은 분명 내 것이었는데, 결과물은 내 것이 아니게 됩니다.",
+    "s1.close": "작업 진도는 멈추고, 길을 잃은 느낌을 받게 됩니다.",
     "s1.bridge": "이 네 장면에는 공통점이 하나 있습니다.",
 
     "s2.title": "놓친 것은 실행이 아니라 결정이었습니다",
@@ -193,7 +193,7 @@ window.COPY = {
     "s1.scene2": "You wave through a proposal containing words you do not actually know.",
     "s1.scene3": "You end up picking from what the AI offered — and never say what you meant.",
     "s1.scene4": "What you settled gets buried in the chat, and next time the AI answers differently.",
-    "s1.close": "The decisions were clearly yours, and yet the result is not.",
+    "s1.close": "Progress stalls, and you are left with the feeling of having lost your way.",
     "s1.bridge": "These four scenes have one thing in common.",
 
     "s2.title": "What you lost was the deciding, not the doing",

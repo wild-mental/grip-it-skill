@@ -40,8 +40,20 @@
       <p class="def" data-i18n="s0.def">일을 시작하기 전에, 아직 정하지 않은 것들을 전부 꺼내 하나씩 함께 정합니다. 정한 것은 문서에 남아 이후 AI 작업이 그것을 따릅니다. <code>grip-it</code> 스킬 하나면 됩니다.</p>
 
       <div class="hero-actions">
-        <a class="solid-btn" href="#s9" data-i18n="s0.installCta">설치 방법 보기</a>
+        <button type="button" class="solid-btn" data-toggle="install-drop"
+                aria-expanded="false" aria-controls="install-drop" data-i18n="s0.installCta">설치 방법 보기</button>
         <a class="ghost-btn" href="https://github.com/wild-mental/grip-it-skill" data-i18n="s0.repoCta">GitHub에서 보기</a>
+      </div>
+
+      <div class="install-drop" id="install-drop" hidden>
+        <p class="drop-title" data-i18n="s0.dropTitle">쓰시는 에이전트에게 이 문장을 붙여 넣으시면 됩니다.</p>
+        <pre class="code"><code id="hero-agent-prompt">github.com/wild-mental/grip-it-skill 의 README 하단
+"For LLMs" 지침을 따라 grip-it 스킬을 설치해줘.
+개인 범위(~/)로 설치하면 돼.</code></pre>
+        <div class="drop-actions">
+          <button type="button" class="copy-btn" data-copy-target="hero-agent" data-i18n="s9.wayAgentCopy">이 문장 복사</button>
+          <a class="drop-more" href="#s9" data-i18n="s0.dropMore">직접 설치하는 방법도 보기 →</a>
+        </div>
       </div>
     </div>
   </section>

@@ -133,11 +133,20 @@
     if (t.hasAttribute("data-tool")) { state.tool = t.getAttribute("data-tool"); applyInstall(); return; }
     if (t.hasAttribute("data-scope")) { state.scope = t.getAttribute("data-scope"); applyInstall(); return; }
 
+    if (t.hasAttribute("data-toggle")) {
+      var panel = document.getElementById(t.getAttribute("data-toggle"));
+      if (panel) {
+        var open = panel.hasAttribute("hidden");
+        if (open) { panel.removeAttribute("hidden"); } else { panel.setAttribute("hidden", ""); }
+        t.setAttribute("aria-expanded", open ? "true" : "false");
+      }
+      return;
+    }
+
     if (t.hasAttribute("data-copy-target")) {
       var target = t.getAttribute("data-copy-target");
-      var code = target === "agent"
-        ? document.getElementById("agent-prompt")
-        : document.getElementById("install-cmd");
+      var ids = { "agent": "agent-prompt", "hero-agent": "hero-agent-prompt", "install": "install-cmd" };
+      var code = document.getElementById(ids[target] || "install-cmd");
       if (code) copyText(code.textContent, t);
     }
   });

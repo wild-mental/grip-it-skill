@@ -113,9 +113,9 @@ main, .footer { position: relative; z-index: 1; }
 /* ---------- S0 히어로 (전체 폭) ---------- */
 .hero {
   position: relative;
-  min-height: 96vh;
+  min-height: 66vh;
   display: flex; align-items: flex-end;
-  padding: 26vh 0 5rem;
+  padding: 9vh 0 4rem;
 }
 .hero-copy { position: relative; width: 100%; }
 .hero .wordmark {
@@ -316,3 +316,17 @@ main, .footer { position: relative; z-index: 1; }
   word-break: normal;
 }
 .way .code code { white-space: pre-wrap; }
+
+
+/* 설치 요약 — 히어로에서 펼쳐 보는 축약본 */
+.install-drop {
+  margin-top: 1rem; padding: 1.1rem 1.2rem;
+  background: #fff; border: 1px solid var(--sun-200); border-radius: 14px;
+  max-width: 34rem;
+}
+.install-drop[hidden] { display: none; }
+.drop-title { margin: 0 0 0.7rem; font-size: 0.92rem; color: var(--navy-700); }
+.install-drop .code { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.82rem; }
+.drop-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem; margin-top: 0.8rem; }
+.drop-more { font-size: 0.88rem; text-decoration: none; }
+.drop-more:hover { text-decoration: underline; }

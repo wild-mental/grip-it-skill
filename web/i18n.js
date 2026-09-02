@@ -13,6 +13,8 @@ window.COPY = {
     "s0.catch": "작업 실행은 Hands Off, 의사 결정은 Grip Tight!",
     "s0.def": "일을 시작하기 전에, 아직 정하지 않은 것들을 전부 꺼내 하나씩 함께 정합니다. 정한 것은 문서에 남아 이후 AI 작업이 그것을 따릅니다. <code>grip-it</code> 스킬 하나면 됩니다.",
     "s0.installCta": "설치 방법 보기",
+    "s0.dropTitle": "쓰시는 에이전트에게 이 문장을 붙여 넣으시면 됩니다.",
+    "s0.dropMore": "직접 설치하는 방법도 보기 →",
     "s0.repoCta": "GitHub에서 보기",
     "s0.crack": "그런데 실제로 해보면, 결정까지 함께 넘어가 있습니다.",
 
@@ -164,6 +166,8 @@ window.COPY = {
     "s0.catch": "작업 실행은 Hands Off, 의사 결정은 Grip Tight!",
     "s0.def": "GRIP IT is the <code>grip-it</code> skill: before the work starts it surfaces every decision that is still open, settles them with you one at a time, and pins each decision into your documents so later AI work has to follow it.",
     "s0.installCta": "How to install",
+    "s0.dropTitle": "Paste this line to the agent you use.",
+    "s0.dropMore": "See how to install it yourself →",
     "s0.repoCta": "View on GitHub",
     "s0.crack": "In practice, though, the deciding gets handed over too.",
 

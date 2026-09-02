@@ -419,16 +419,18 @@ main, .footer { position: relative; z-index: 1; }
 /* ---------- 상단 네비 섹션 바로가기 ---------- */
 .navlinks {
   flex: 1 1 auto; min-width: 0;
-  display: flex; align-items: center; justify-content: space-around;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;    /* 링크가 물려받는다 — gap 의 em 기준이 된다 */
+  gap: 2em;             /* 한글 두 글자 폭 */
 }
 .navlinks a {
-  font-size: 1.46rem; text-decoration: none; color: var(--navy-700);
+  font-size: inherit; text-decoration: none; color: var(--navy-700);
   white-space: nowrap; padding: 0.15rem 0;
   border-bottom: 2px solid transparent;
 }
 .navlinks a:hover { color: var(--blue-600); border-bottom-color: var(--blue-500); }
 /* 좁은 화면에서는 로고·언어·저장소만 남긴다 */
-@media (max-width: 1260px) { .navlinks { display: none; } }
+@media (max-width: 1280px) { .navlinks { display: none; } }
 
 /* ---------- 히어로 설치 요약 — 두 방식을 좌우로 ---------- */
 .drop-ways { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }

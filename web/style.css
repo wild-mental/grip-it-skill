@@ -403,6 +403,9 @@ main, .footer { position: relative; z-index: 1; }
 /* 한 행의 카드는 높이가 같으므로, 터미널 창이 남는 높이를 전부 차지하게 한다 */
 .cut-grid .term-win { flex: 1 1 auto; display: flex; flex-direction: column; margin-top: 0.7rem; }
 .cut-grid .term-win .table-scroll { flex: 1 1 auto; display: flex; }
+/* 위 규칙의 display:flex 가 .term-win[hidden] 과 특이도가 같아(0,2,0) 뒤에 온 쪽이
+   이겨 버린다. 언어별 블록이 둘 다 보이던 원인이므로 한 단계 위로 다시 눌러 준다. */
+.cut-grid .term-win[hidden] { display: none; }
 .cut-grid .code.term { flex: 1 1 auto; width: 100%; }
 /* 좁은 칸이므로 긴 줄은 접는다 — 기록부 행은 짧게 축약해 접히지 않는다 */
 .cut-grid .code.term {
